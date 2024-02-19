@@ -1,0 +1,21 @@
+/* styles.css */
+.list-group {
+    background-color: #f8f9fa;
+    padding: 10px;
+    border-radius: 5px;
+    margin-top: 20px;
+  }
+  
+  .list-group h4 {
+    color: #343a40;
+    margin-bottom: 15px;
+  }
+  
+  .list-group-item {
+    background-color: #ffffff;
+    border: 1px solid #dee2e6;
+    margin-bottom: 5px;
+    color: #495057;
+    cursor: pointer;
+  }
+  
