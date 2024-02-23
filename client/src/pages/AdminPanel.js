@@ -5,6 +5,10 @@ import AdminMenu from "./AdminMenu.js";
 
 const AdminPanel = () => {
   const [categories, setCategories] = useState([]);
+  const [updatedCategoryName, setUpdatedCategoryName] = useState("");
+  const [updatedSubcategoryName, setUpdatedSubcategoryName] = useState("");
+  const [updatedSubcategoryNames, setUpdatedSubcategoryNames] = useState({});
+  const [updatedCategoryNames, setUpdatedCategoryNames] = useState({});
 
   const fetchCategories = async () => {
     try {
@@ -31,27 +35,53 @@ const AdminPanel = () => {
     }
   };
 
-  const handleDeleteSubcategory = async (categoryId, subcategoryId) => {
+  useEffect(() => {
+    fetchCategories();
+  }, []);
+
+  const handleUpdateCategory = async (categoryId) => {
     try {
-      const response = await axios.delete(
-        `http://localhost:8087/api/v1/category/delete-subcategory/${subcategoryId}`
+      const response = await axios.put(
+        `http://localhost:8087/api/v1/category/update-category/${categoryId}`,
+        { name: updatedCategoryNames[categoryId] }
       );
 
       if (response.data.success) {
-        // If deletion is successful, fetch categories again to update the list
+        // If update is successful, fetch categories again to update the list
         fetchCategories();
-        console.log(`Subcategory with ID ${subcategoryId} deleted successfully`);
+        setUpdatedCategoryNames((prevNames) => ({
+          ...prevNames,
+          [categoryId]: "", // Clear the input field
+        }));
+        console.log(`Category with ID ${categoryId} updated successfully`);
       } else {
         console.error(response.data.message);
       }
     } catch (error) {
-      console.error("Error deleting subcategory", error);
+      console.error("Error updating category", error);
     }
   };
 
-  useEffect(() => {
-    fetchCategories();
-  }, []);
+  const handleUpdateSubcategory = async (categoryId, subcategoryId) => {
+    try {
+      const response = await axios.put(
+        `http://localhost:8087/api/v1/category/update-subcategory/${categoryId}/${subcategoryId}`,
+        { name: updatedSubcategoryNames[subcategoryId] }
+      );
+
+      if (response.data.success) {
+        // If update is successful, fetch categories again to update the list
+        fetchCategories();
+        console.log(
+          `Subcategory with ID ${subcategoryId} updated successfully`
+        );
+      } else {
+        console.error(response.data.message);
+      }
+    } catch (error) {
+      console.error("Error updating subcategory", error);
+    }
+  };
 
   const handleDeleteCategory = async (categoryId) => {
     try {
@@ -68,6 +98,26 @@ const AdminPanel = () => {
       }
     } catch (error) {
       console.error("Error deleting category", error);
+    }
+  };
+
+  const handleDeleteSubcategory = async (categoryId, subcategoryId) => {
+    try {
+      const response = await axios.delete(
+        `http://localhost:8087/api/v1/category/delete-subcategory/${subcategoryId}`
+      );
+
+      if (response.data.success) {
+        // If deletion is successful, fetch categories again to update the list
+        fetchCategories();
+        console.log(
+          `Subcategory with ID ${subcategoryId} deleted successfully`
+        );
+      } else {
+        console.error(response.data.message);
+      }
+    } catch (error) {
+      console.error("Error deleting subcategory", error);
     }
   };
 
@@ -90,25 +140,61 @@ const AdminPanel = () => {
         {categories.map((category) => (
           <li key={category._id} style={{ fontWeight: "bold" }}>
             {category.name} (Category)
+            <div>
+              <input
+                type="text"
+                placeholder="Updated Category Name"
+                value={updatedCategoryNames[category._id] || ""}
+                onChange={(e) =>
+                  setUpdatedCategoryNames((prevNames) => ({
+                    ...prevNames,
+                    [category._id]: e.target.value,
+                  }))
+                }
+              />
+              <button onClick={() => handleUpdateCategory(category._id)}>
+                Update Category
+              </button>
+              <button onClick={() => handleDeleteCategory(category._id)}>
+                Delete Category
+              </button>
+            </div>
             {category.subcategories && category.subcategories.length > 0 && (
               <ul style={{ listStyleType: "circle", marginLeft: "20px" }}>
                 {category.subcategories.map((subcategory) => (
                   <li key={subcategory._id} style={{ fontWeight: "normal" }}>
                     {subcategory.name} (Subcategory)
-                    <button
-                      onClick={() =>
-                        handleDeleteSubcategory(category._id, subcategory._id)
-                      }
-                    >
-                      Delete Subcategory
-                    </button>
+                    <div>
+                      <input
+                        type="text"
+                        placeholder="Updated Subcategory Name"
+                        value={updatedSubcategoryNames[subcategory._id] || ""}
+                        onChange={(e) =>
+                          setUpdatedSubcategoryNames((prevNames) => ({
+                            ...prevNames,
+                            [subcategory._id]: e.target.value,
+                          }))
+                        }
+                      />
+                      <button
+                        onClick={() =>
+                          handleUpdateSubcategory(category._id, subcategory._id)
+                        }
+                      >
+                        Update Subcategory
+                      </button>
+                      <button
+                        onClick={() =>
+                          handleDeleteSubcategory(category._id, subcategory._id)
+                        }
+                      >
+                        Delete Subcategory
+                      </button>
+                    </div>
                   </li>
                 ))}
               </ul>
             )}
-            <button onClick={() => handleDeleteCategory(category._id)}>
-              Delete Category
-            </button>
           </li>
         ))}
       </ul>

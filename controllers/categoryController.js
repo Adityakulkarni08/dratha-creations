@@ -147,3 +147,35 @@ export const deleteSubcategory = async (req, res) => {
     res.status(500).json({ success: false, message: "Internal server error" });
   }
 };
+
+export const updateSubcategory = async (req, res) => {
+  try {
+    const { categoryId, subcategoryId } = req.params;
+    const { name } = req.body;
+
+    // Find the category
+    const existingCategory = await Category.findById(categoryId);
+
+    if (!existingCategory) {
+      return res.status(404).json({ success: false, message: 'Category not found' });
+    }
+
+    // Find the subcategory within the category
+    const existingSubcategory = existingCategory.subcategories.find(subcategory => subcategory._id.toString() === subcategoryId);
+
+    if (!existingSubcategory) {
+      return res.status(404).json({ success: false, message: 'Subcategory not found' });
+    }
+
+    // Update the subcategory name
+    existingSubcategory.name = name;
+
+    // Save changes to the database
+    await existingCategory.save();
+
+    res.status(200).json({ success: true, message: 'Subcategory updated successfully' });
+  } catch (error) {
+    console.error('Error updating subcategory', error);
+    res.status(500).json({ success: false, message: 'Internal server error' });
+  }
+};
