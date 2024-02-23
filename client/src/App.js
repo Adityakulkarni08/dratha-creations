@@ -14,6 +14,7 @@ import "./styles/main-content.css";
 import NavBar from "./components/Navbar/NavBar";
 import AdminPanel from "./pages/AdminPanel";
 import CreateCategory from "./pages/Admin/CreateCategory.js";
+import CreateSubcategory from "./pages/Admin/CreateSubcategory.js";
 
 function App() {
   useEffect(() => {
@@ -45,6 +46,7 @@ function App() {
               <Route path="/get-demo" element={<DemoProduct />} />
               <Route path="/admin-panel" element={<AdminPanel />} />
               <Route path="/dashboard/admin/create-category" element={<CreateCategory />} />
+              <Route path="/dashboard/admin/create-subcategory" element={<CreateSubcategory />} />
             </Routes>
           </ScrollToTop>
         </Router>

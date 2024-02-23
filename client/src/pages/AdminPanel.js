@@ -1,25 +1,41 @@
-import React, {useState, useEffect} from "react";
+import React, { useState, useEffect } from "react";
 import axios from "axios";
 import NavBar from "../components/Navbar/NavBar";
 import AdminMenu from "./AdminMenu.js";
 
 const AdminPanel = () => {
-    const [categories, setCategories] = useState([]);
+  const [categories, setCategories] = useState([]);
 
-    useEffect(() => {
-        // Fetch categories from the server
-        const fetchCategories = async () => {
-          try {
-            const response = await axios.get('http://localhost:8086/api/v1/category/get-category');
-            setCategories(response.data.categories);
-          } catch (error) {
-            console.error('Error fetching categories', error);
-            // Handle errors or show a notification to the user
-          }
-        };
-    
-        fetchCategories();
-      }, []);
+  useEffect(() => {
+    // Fetch categories from the server
+    const fetchCategories = async () => {
+      try {
+        const response = await axios.get(
+          "http://localhost:8087/api/v1/category/get-category"
+        );
+
+        const categoriesWithSubcategories = await Promise.all(
+          response.data.categories.map(async (category) => {
+            const subcategoriesResponse = await axios.get(
+              `http://localhost:8087/api/v1/category/get-subcategories/${category._id}`
+            );
+
+            return {
+              ...category,
+              subcategories: subcategoriesResponse.data.subcategories,
+            };
+          })
+        );
+
+        setCategories(categoriesWithSubcategories);
+      } catch (error) {
+        console.error("Error fetching categories", error);
+      }
+    };
+
+    fetchCategories();
+  }, []);
+
   return (
     <>
       <div>
@@ -30,19 +46,27 @@ const AdminPanel = () => {
           <div className="col-md-3">
             <AdminMenu />
           </div>
-          {/* <div className="col-md-9">
-            <div className="card w-75 p-3">
-              <h3> Admin Name : </h3>
-              <h3> Admin Email : </h3>
-              <h3> Admin Contact : </h3>
-            </div>
-          </div> */}
         </div>
       </div>
-      <h2>Categories:</h2>
+      <div className="text-center">
+        {" "}
+        {/* Center the heading */}
+        <h2>Categories and Subcategories:</h2>
+      </div>{" "}
       <ul>
         {categories.map((category) => (
-          <li key={category._id}>{category.name}</li>
+          <li key={category._id} style={{ fontWeight: "bold" }}>
+            {category.name} (Category)
+            {category.subcategories && category.subcategories.length > 0 && (
+              <ul style={{ listStyleType: "circle", marginLeft: "20px" }}>
+                {category.subcategories.map((subcategory) => (
+                  <li key={subcategory._id} style={{ fontWeight: "normal" }}>
+                    {subcategory.name} (Subcategory)
+                  </li>
+                ))}
+              </ul>
+            )}
+          </li>
         ))}
       </ul>
     </>

@@ -1,6 +1,6 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
-import "../styles/admin-menu.css"
+import "../styles/admin-menu.css";
 const AdminMenu = () => {
   return (
     <>
@@ -12,6 +12,12 @@ const AdminMenu = () => {
             className="list-group-item list-group-item-action"
           >
             Create Category
+          </NavLink>
+          <NavLink
+            to="/dashboard/admin/create-subcategory"
+            className="list-group-item list-group-item-action"
+          >
+            Create Subcategory
           </NavLink>
           <NavLink
             to="/dashboard/admin/create-product"

@@ -82,34 +82,43 @@ const DropdownsComponent = () => {
   };
 
   useEffect(() => {
-    // Fetch categories from the server
+    // Fetch categories and subcategories from the server
     const fetchCategories = async () => {
       try {
         const response = await axios.get(
-          "http://localhost:8086/api/v1/category/get-categories"
+          "http://localhost:8087/api/v1/category/get-categories"
         );
         const categories = response.data.categories;
-
-        // Generate dropdown items based on categories
-        const generatedItems = categories.map((category) => ({
-          title: category.name,
-          items: [
-            { label: "Party Ideas", path: `/${category.name.toLowerCase()}/party-ideas` },
-            { label: "Cakes", path: `/${category.name.toLowerCase()}/cakes` },
-            // Add more items as needed
-          ],
-        }));
   
-
+        // Fetch subcategories dynamically for each category
+        const subcategoriesPromises = categories.map(async (category) => {
+          const subcategoriesResponse = await axios.get(
+            `http://localhost:8087/api/v1/category/get-subcategories/${category._id}`
+          );
+  
+          const subcategories = subcategoriesResponse.data.subcategories;
+  
+          return {
+            title: category.name,
+            items: subcategories.map((subcategory) => ({
+              label: subcategory.name,
+              path: `/${category.name.toLowerCase()}/${subcategory.name.toLowerCase()}`,
+            })),
+          };
+        });
+  
+        // Wait for all subcategory fetches to complete
+        const generatedItems = await Promise.all(subcategoriesPromises);
+  
         setDropdownItems(generatedItems);
       } catch (error) {
-        console.error("Error fetching categories", error);
+        console.error("Error fetching categories and subcategories", error);
       }
     };
-
+  
     fetchCategories();
   }, []);
-
+  
   return (
     <div className="dropdowns-container">
       {dropdownItems.map((dropdown, index) => (
