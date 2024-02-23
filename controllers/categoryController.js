@@ -1,4 +1,4 @@
-import Category from "../models/Category.js"
+import Category from "../models/Category.js";
 
 export const createCategory = async (req, res) => {
   try {
@@ -8,33 +8,33 @@ export const createCategory = async (req, res) => {
     res.json({ success: true, category: savedCategory });
   } catch (error) {
     console.error(error);
-    res.status(500).json({ success: false, message: 'Internal Server Error' });
+    res.status(500).json({ success: false, message: "Internal Server Error" });
   }
 };
 
 export const getCategories = async (req, res) => {
-    try {
-      // Fetch categories from the database
-      const categories = await Category.find();
-  
-      const formattedCategories = categories.map((category) => ({
-        _id: category._id,
-        name: category.name,
-      }));
-  
-      // Send the response
-      res.status(200).json({
-        success: true,
-        categories: formattedCategories,
-      });
-    } catch (error) {
-      console.error('Error fetching categories', error);
-      res.status(500).json({
-        success: false,
-        message: 'Internal server error',
-      });
-    }
-  };
+  try {
+    // Fetch categories from the database
+    const categories = await Category.find();
+
+    const formattedCategories = categories.map((category) => ({
+      _id: category._id,
+      name: category.name,
+    }));
+
+    // Send the response
+    res.status(200).json({
+      success: true,
+      categories: formattedCategories,
+    });
+  } catch (error) {
+    console.error("Error fetching categories", error);
+    res.status(500).json({
+      success: false,
+      message: "Internal server error",
+    });
+  }
+};
 
 export const updateCategory = async (req, res) => {
   try {
@@ -48,7 +48,7 @@ export const updateCategory = async (req, res) => {
     res.json({ success: true, category: updatedCategory });
   } catch (error) {
     console.error(error);
-    res.status(500).json({ success: false, message: 'Internal Server Error' });
+    res.status(500).json({ success: false, message: "Internal Server Error" });
   }
 };
 
@@ -56,10 +56,10 @@ export const deleteCategory = async (req, res) => {
   try {
     const { id } = req.params;
     await Category.findByIdAndDelete(id);
-    res.json({ success: true, message: 'Category deleted successfully' });
+    res.json({ success: true, message: "Category deleted successfully" });
   } catch (error) {
     console.error(error);
-    res.status(500).json({ success: false, message: 'Internal Server Error' });
+    res.status(500).json({ success: false, message: "Internal Server Error" });
   }
 };
 
@@ -70,7 +70,9 @@ export const createSubcategory = async (req, res) => {
     // Check if the selected category exists
     const existingCategory = await Category.findById(selectedCategory);
     if (!existingCategory) {
-      return res.status(404).json({ success: false, message: 'Selected category not found' });
+      return res
+        .status(404)
+        .json({ success: false, message: "Selected category not found" });
     }
 
     // Create a new subcategory
@@ -84,10 +86,12 @@ export const createSubcategory = async (req, res) => {
     // Save the changes to the database
     await existingCategory.save();
 
-    res.status(201).json({ success: true, message: 'Subcategory created successfully' });
+    res
+      .status(201)
+      .json({ success: true, message: "Subcategory created successfully" });
   } catch (error) {
-    console.error('Error creating subcategory', error);
-    res.status(500).json({ success: false, message: 'Internal server error' });
+    console.error("Error creating subcategory", error);
+    res.status(500).json({ success: false, message: "Internal server error" });
   }
 };
 
@@ -98,14 +102,48 @@ export const getSubcategories = async (req, res) => {
     // Check if the category exists in the database
     const existingCategory = await Category.findById(categoryId);
     if (!existingCategory) {
-      return res.status(404).json({ success: false, message: 'Category not found' });
+      return res
+        .status(404)
+        .json({ success: false, message: "Category not found" });
     }
 
     // Retrieve and return the subcategories of the specified category
     const subcategories = existingCategory.subcategories;
     res.status(200).json({ success: true, subcategories });
   } catch (error) {
-    console.error('Error getting subcategories', error);
-    res.status(500).json({ success: false, message: 'Internal server error' });
+    console.error("Error getting subcategories", error);
+    res.status(500).json({ success: false, message: "Internal server error" });
+  }
+};
+
+export const deleteSubcategory = async (req, res) => {
+  try {
+    const { subcategoryId } = req.params;
+
+    // Find the category containing the subcategory
+    const category = await Category.findOne({
+      "subcategories._id": subcategoryId,
+    });
+
+    if (!category) {
+      return res
+        .status(404)
+        .json({ success: false, message: "Category or subcategory not found" });
+    }
+
+    // Remove the subcategory from the category's subcategories array
+    category.subcategories = category.subcategories.filter(
+      (subcategory) => subcategory._id.toString() !== subcategoryId
+    );
+
+    // Save the changes to the database
+    await category.save();
+
+    res
+      .status(200)
+      .json({ success: true, message: "Subcategory deleted successfully" });
+  } catch (error) {
+    console.error("Error deleting subcategory", error);
+    res.status(500).json({ success: false, message: "Internal server error" });
   }
 };
