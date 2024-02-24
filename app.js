@@ -1,11 +1,19 @@
 import express from "express";
 import cors from "cors"
 import path, { dirname } from "path";
+import multer from "multer";
+import { fileURLToPath } from "url";
 import authRoutes from "./routes/authRoutes.js"
 import dotenv from "dotenv"
 import connectDB from './config/db.js';
 import categoryRoutes from "./routes/categoryRoutes.js"
 import Category from "./models/Category.js";
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = dirname(__filename);
+
+const storage = multer.memoryStorage();
+const upload = multer({ storage: storage });
 
 // Load environment variables from .env
 dotenv.config();
@@ -39,13 +47,14 @@ app.get('/api/v1/category/get-categories', async (req, res) => {
   }
 });
 
+app.use(express.static(path.join(__dirname, 'client', 'build')));
 
 app.get('*', function (req, res) {
   const index = path.join(__dirname,'client', 'build', 'index.html');
   res.sendFile(index);
 });
 
-const PORT = process.env.PORT || 5000;
+const PORT = process.env.PORT || 8087;
 
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);
