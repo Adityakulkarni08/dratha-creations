@@ -1,5 +1,6 @@
 import express from "express";
 import cors from "cors"
+import path, { dirname } from "path";
 import authRoutes from "./routes/authRoutes.js"
 import dotenv from "dotenv"
 import connectDB from './config/db.js';
@@ -39,8 +40,9 @@ app.get('/api/v1/category/get-categories', async (req, res) => {
 });
 
 
-app.get('/', (req, res) => {
-  res.send('Hello World from the backend!');
+app.get('*', function (req, res) {
+  const index = path.join(__dirname,'client', 'build', 'index.html');
+  res.sendFile(index);
 });
 
 const PORT = process.env.PORT || 5000;
