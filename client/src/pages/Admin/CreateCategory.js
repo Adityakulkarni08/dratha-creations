@@ -15,7 +15,7 @@ const CreateCategory = () => {
     e.preventDefault();
     try {
       const { data } = await axios.post(
-        "http://localhost:8087/api/v1/category/create-category",
+        "https://dratha-creations.onrender.com/api/v1/category/create-category",
         {
           name,
         }
@@ -36,7 +36,7 @@ const CreateCategory = () => {
   const getAllCategory = async () => {
     try {
       const { data } = await axios.get(
-        "http://localhost:8087/api/v1/category/get-category"
+        "https://dratha-creations.onrender.com/api/v1/category/get-category"
       );
       if (data?.success) {
         setCategories(data?.category);
@@ -56,7 +56,7 @@ const CreateCategory = () => {
     e.preventDefault();
     try {
       const { data } = await axios.put(
-        `http://localhost:8087/api/v1/category/update-category/${selected._id}`,
+        `https://dratha-creations.onrender.com/api/v1/category/update-category/${selected._id}`,
         { name: updatedName }
       );
       if (data.success) {
@@ -77,7 +77,7 @@ const CreateCategory = () => {
   const handleDelete = async (pId) => {
     try {
       const { data } = await axios.delete(
-        `http://localhost:8087/api/v1/category/delete-category/${pId}`
+        `https://dratha-creations.onrender.com/api/v1/category/delete-category/${pId}`
       );
       if (data.success) {
         toast.success(`category is deleted`);

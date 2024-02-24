@@ -86,14 +86,14 @@ const DropdownsComponent = () => {
     const fetchCategories = async () => {
       try {
         const response = await axios.get(
-          "http://localhost:8087/api/v1/category/get-categories"
+          "https://dratha-creations.onrender.com/api/v1/category/get-categories"
         );
         const categories = response.data.categories;
   
         // Fetch subcategories dynamically for each category
         const subcategoriesPromises = categories.map(async (category) => {
           const subcategoriesResponse = await axios.get(
-            `http://localhost:8087/api/v1/category/get-subcategories/${category._id}`
+            `https://dratha-creations.onrender.com/api/v1/category/get-subcategories/${category._id}`
           );
   
           const subcategories = subcategoriesResponse.data.subcategories;

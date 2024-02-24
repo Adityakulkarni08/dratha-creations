@@ -13,13 +13,13 @@ const AdminPanel = () => {
   const fetchCategories = async () => {
     try {
       const response = await axios.get(
-        "http://localhost:8087/api/v1/category/get-category"
+        "https://dratha-creations.onrender.com/api/v1/category/get-category"
       );
 
       const categoriesWithSubcategories = await Promise.all(
         response.data.categories.map(async (category) => {
           const subcategoriesResponse = await axios.get(
-            `http://localhost:8087/api/v1/category/get-subcategories/${category._id}`
+            `https://dratha-creations.onrender.com/api/v1/category/get-subcategories/${category._id}`
           );
 
           return {
@@ -42,7 +42,7 @@ const AdminPanel = () => {
   const handleUpdateCategory = async (categoryId) => {
     try {
       const response = await axios.put(
-        `http://localhost:8087/api/v1/category/update-category/${categoryId}`,
+        `https://dratha-creations.onrender.com/api/v1/category/update-category/${categoryId}`,
         { name: updatedCategoryNames[categoryId] }
       );
 
@@ -65,7 +65,7 @@ const AdminPanel = () => {
   const handleUpdateSubcategory = async (categoryId, subcategoryId) => {
     try {
       const response = await axios.put(
-        `http://localhost:8087/api/v1/category/update-subcategory/${categoryId}/${subcategoryId}`,
+        `https://dratha-creations.onrender.com/api/v1/category/update-subcategory/${categoryId}/${subcategoryId}`,
         { name: updatedSubcategoryNames[subcategoryId] }
       );
 
@@ -86,7 +86,7 @@ const AdminPanel = () => {
   const handleDeleteCategory = async (categoryId) => {
     try {
       const response = await axios.delete(
-        `http://localhost:8087/api/v1/category/delete-category/${categoryId}`
+        `https://dratha-creations.onrender.com/api/v1/category/delete-category/${categoryId}`
       );
 
       if (response.data.success) {
@@ -104,7 +104,7 @@ const AdminPanel = () => {
   const handleDeleteSubcategory = async (categoryId, subcategoryId) => {
     try {
       const response = await axios.delete(
-        `http://localhost:8087/api/v1/category/delete-subcategory/${subcategoryId}`
+        `https://dratha-creations.onrender.com/api/v1/category/delete-subcategory/${subcategoryId}`
       );
 
       if (response.data.success) {
