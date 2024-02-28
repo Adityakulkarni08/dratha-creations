@@ -41,19 +41,19 @@ const Intro = () => {
               <div>
               <div className="icon-menu-item">
                 <FaCameraRetro size={50} />
-                <p>PHOTOGRAPHY</p>
+                <p>CAKES</p>
               </div>
               </div>
               <div>
               <div className="icon-menu-item">
                 <FaCameraRetro size={50} />
-                <p>PHOTOGRAPHY</p>
+                <p>GIFTS</p>
               </div>
               </div>
               <div>
               <div className="icon-menu-item">
                 <FaCameraRetro size={50} />
-                <p>PHOTOGRAPHY</p>
+                <p>FOOD</p>
               </div>
               </div>
               {/* Add more slides as needed */}
