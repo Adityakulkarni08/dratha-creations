@@ -13,7 +13,7 @@ const Intro = () => {
     dots: true,
     infinite: true,
     speed: 500,
-    slidesToShow: 1,
+    slidesToShow: 2,
     slidesToScroll: 1,
   };
 
@@ -30,6 +30,24 @@ const Intro = () => {
               <div className="icon-menu-item">
                 <MdOutlineRoomService size={50} />
                 <p>SERVICES</p>
+              </div>
+              </div>
+              <div>
+              <div className="icon-menu-item">
+                <FaCameraRetro size={50} />
+                <p>PHOTOGRAPHY</p>
+              </div>
+              </div>
+              <div>
+              <div className="icon-menu-item">
+                <FaCameraRetro size={50} />
+                <p>PHOTOGRAPHY</p>
+              </div>
+              </div>
+              <div>
+              <div className="icon-menu-item">
+                <FaCameraRetro size={50} />
+                <p>PHOTOGRAPHY</p>
               </div>
               </div>
               <div>
