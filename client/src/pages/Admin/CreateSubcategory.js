@@ -10,7 +10,7 @@ const CreateSubcategory = () => {
     // Fetch categories from the server
     const fetchCategories = async () => {
       try {
-        const response = await axios.get('https://dratha-creations.onrender.com/api/v1/category/get-category');
+        const response = await axios.get('https://dratha-creations-t4ls.onrender.com/api/v1/category/get-category');
         setCategories(response.data.categories);
       } catch (error) {
         console.error('Error fetching categories', error);
@@ -24,7 +24,7 @@ const CreateSubcategory = () => {
   const handleSubcategoryCreation = async () => {
     try {
       // Make a request to create the subcategory on the backend
-      await axios.post('https://dratha-creations.onrender.com/api/v1/category/create-subcategory', {
+      await axios.post('https://dratha-creations-t4ls.onrender.com/api/v1/category/create-subcategory', {
         subcategoryName,
         selectedCategory,
       });

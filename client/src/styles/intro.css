@@ -40,3 +40,20 @@
     color: white; /* Change the color on hover */
   }
   
+  @media (max-width: 768px) {
+    .icon-menu-container {
+      flex-direction: column; /* Stack items vertically on mobile */
+    }
+  
+    .icon-menu-item {
+      margin-bottom: 20px; /* Add some space between items */
+    }
+    
+    /* Optional: If you want to increase the size of the icons on mobile for better touch targets */
+    .icon-menu-item img,
+    .icon-menu-item svg {
+      width: 60px; /* Slightly larger size on mobile */
+      padding: 20px; /* Larger padding on mobile */
+    }
+  }
+  
