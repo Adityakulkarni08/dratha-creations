@@ -42,18 +42,35 @@
   
   @media (max-width: 768px) {
     .icon-menu-container {
-      flex-direction: column; /* Stack items vertically on mobile */
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+      gap: 10px;
+      padding: 10px;
     }
   
     .icon-menu-item {
-      margin-bottom: 20px; /* Add some space between items */
+      background: #fff;
+      border: 1px solid #eaeaea;
+      padding: 15px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      border-radius: 10px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      height: 150px;
     }
-    
-    /* Optional: If you want to increase the size of the icons on mobile for better touch targets */
-    .icon-menu-item img,
-    .icon-menu-item svg {
-      width: 60px; /* Slightly larger size on mobile */
-      padding: 20px; /* Larger padding on mobile */
+  
+    .icon-menu-item p {
+      margin-top: 8px;
+    }
+  
+    /* Ensure that slick slider does not apply its own styles on top of your grid */
+    .mobile-carousel .slick-slide > div {
+      margin: 0;
+      padding: 0;
     }
   }
+  
   
