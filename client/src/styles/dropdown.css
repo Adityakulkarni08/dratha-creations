@@ -140,3 +140,39 @@ button {
 button:hover {
   background: #ff69b4;
 }
+
+/* Mobile view */
+@media (max-width: 768px) {
+  .dropdowns-container {
+    overflow-x: auto;
+    display: flex;
+    gap: 10px;
+  }
+
+  .dropdown {
+    flex: 0 0 auto; /* Do not grow, do not shrink, auto basis */
+    margin: 5px;
+  }
+
+  .dropdown-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: transparent;
+    border: none;
+    text-align: center;
+  }
+
+  .dropdown-content {
+    display: none; /* Only show the dropdown content when clicked, not hovered */
+  }
+  
+  /* Add your styles for dropdown-item here to match the design in the image */
+  .dropdown-item {
+    display: block;
+    text-decoration: none;
+    color: #000; /* Adjust color to match your design */
+    /* Add more styling as necessary */
+  }
+}
+
