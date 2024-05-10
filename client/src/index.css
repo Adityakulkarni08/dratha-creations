@@ -13,9 +13,9 @@ body {
   position: relative; /* This will be the reference for the absolute positioning of the NavBar if needed */
   width: 100%; /* Full width */
   /* Set a minimum height or padding-top to maintain aspect ratio */
-  padding-top: 10%; /* This percentage controls the aspect ratio, adjust as necessary */
+  padding-top: 30%; /* This percentage controls the aspect ratio, adjust as necessary */
   overflow: hidden;
-  /* margin-top: 50px; */
+  margin-top: 100px;
   margin-bottom: 40px;
 }
 
@@ -44,7 +44,7 @@ body {
 @media (max-width: 768px) {
   .hero {
     padding-top: 10%; /* Increase the percentage if you need more height for the image */
-    margin-top: 0; /* Adjust top margin if necessary */
+    margin-top: 10px; /* Adjust top margin if necessary */
     position: static; /* Change to static if the absolute positioning is not needed on mobile */
   }
 
