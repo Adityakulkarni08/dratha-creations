@@ -57,16 +57,18 @@
   padding: 10px; /* Padding inside the box */
   box-shadow: 0 4px 8px rgba(0,0,0,0.2);
   z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .image-box img {
-  vertical-align: middle; /* This works with line-height to vertically center the image */
   max-width: 100%; /* Optional: ensures image doesn't overflow the box */
   height: auto; /* Maintains aspect ratio */
 }
 
 .dropdown-item a:hover + .image-box {
-  display: block; /* Show the box when anchor is hovered */
+  display: flex; /* Show the box when anchor is hovered */
 }
 
 .sub-dropbtn {

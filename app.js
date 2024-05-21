@@ -62,7 +62,7 @@ app.post('/api/send-enquiry', async (req, res) => {
 
   const mailOptions = {
     from: process.env.EMAIL_USER,
-    to: email,
+    to: 'rangachimalgi123@gmail.com',  // Replace with the fixed recipient email address
     subject: 'New Service Enquiry',
     text: `Service: ${service}\nPhone: ${phone}\nEmail: ${email}`,
   };
@@ -75,7 +75,6 @@ app.post('/api/send-enquiry', async (req, res) => {
     res.status(500).json({ success: false, error: 'Error sending email' });
   }
 });
-
 
 app.use(express.static(path.join(__dirname, 'client', 'build')));
 
