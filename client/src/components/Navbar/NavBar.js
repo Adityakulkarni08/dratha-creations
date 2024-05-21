@@ -47,7 +47,7 @@ const NavBar = () => {
           {/* Search Bar Container */}
           {/* Centered Search Bar */}
           <div className="search-container">
-            <form onSubmit={handleSearchSubmit} className="search-form">
+            <form onSubmit={handleSearchSubmit} className="search-form" style={{ width: '800px' }}>
               <input
                 type="search"
                 value={searchText}

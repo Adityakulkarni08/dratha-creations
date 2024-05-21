@@ -15,6 +15,7 @@ import NavBar from "./components/Navbar/NavBar";
 import AdminPanel from "./pages/AdminPanel";
 import CreateCategory from "./pages/Admin/CreateCategory.js";
 import CreateSubcategory from "./pages/Admin/CreateSubcategory.js";
+import 'semantic-ui-css/semantic.min.css';
 
 function App() {
   useEffect(() => {

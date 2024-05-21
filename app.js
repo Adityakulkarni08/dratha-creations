@@ -4,6 +4,7 @@ import path, { dirname } from "path";
 import multer from "multer";
 import { fileURLToPath } from "url";
 import authRoutes from "./routes/authRoutes.js"
+import nodemailer from 'nodemailer';
 import dotenv from "dotenv"
 import connectDB from './config/db.js';
 import categoryRoutes from "./routes/categoryRoutes.js"
@@ -46,6 +47,35 @@ app.get('/api/v1/category/get-categories', async (req, res) => {
     res.status(500).json({ success: false, error: 'Internal Server Error' });
   }
 });
+
+// Add route for sending emails
+app.post('/api/send-enquiry', async (req, res) => {
+  const { service, phone, email } = req.body;
+
+  const transporter = nodemailer.createTransport({
+    service: 'gmail',
+    auth: {
+      user: process.env.EMAIL_USER,
+      pass: process.env.EMAIL_PASS,
+    },
+  });
+
+  const mailOptions = {
+    from: process.env.EMAIL_USER,
+    to: email,
+    subject: 'New Service Enquiry',
+    text: `Service: ${service}\nPhone: ${phone}\nEmail: ${email}`,
+  };
+
+  try {
+    await transporter.sendMail(mailOptions);
+    res.status(200).json({ success: true, message: 'Email sent successfully' });
+  } catch (error) {
+    console.error('Error sending email:', error);
+    res.status(500).json({ success: false, error: 'Error sending email' });
+  }
+});
+
 
 app.use(express.static(path.join(__dirname, 'client', 'build')));
 

@@ -1,9 +1,18 @@
-import React from "react";
+import React, { useState } from "react";
+import axios from "axios";
 import img from "../images/web.svg";
 import img2 from "../images/app.svg";
 import img3 from "../images/hosting.svg";
 import img4 from "../images/consultation.svg";
-import { FaRegCalendarCheck, FaQuoteRight, FaBullhorn } from "react-icons/fa";
+import {
+  FaRegCalendarCheck,
+  FaQuoteRight,
+  FaBullhorn,
+  FaUser,
+  FaPhone,
+  FaVoicemail,
+} from "react-icons/fa";
+import { Button, Modal, Form, Input } from "semantic-ui-react";
 import "../styles/services.css";
 
 const Card = ({ icon, title, description }) => {
@@ -16,12 +25,94 @@ const Card = ({ icon, title, description }) => {
   );
 };
 
-const ServiceCard = ({ image, title, price }) => {
+const ServiceCard = ({ image, title }) => {
+  const [modalOpen, setModalOpen] = useState(false);
+  const [selectedService, setSelectedService] = useState("");
+  const [phoneNumber, setPhoneNumber] = useState("");
+  const [emailId, setEmailId] = useState("");
+
+  const handleOpen = (title) => {
+    setSelectedService(title);
+    setModalOpen(true);
+  };
+
+  const handleClose = () => {
+    setModalOpen(false);
+    setSelectedService("");
+    setPhoneNumber("");
+  };
+
+  const handleSubmit = async () => {
+    try {
+      const response = await axios.post('http://localhost:8087/api/send-enquiry', {
+        service: title,
+        phone: phoneNumber,
+        email: emailId,
+      });
+      console.log(response.data);
+      handleClose();
+    } catch (error) {
+      console.error('Error sending enquiry:', error);
+    }
+  };
+
   return (
     <div className="service-card">
       <img src={image} alt={title} className="service-image" />
       <h3 className="service-title">{title}</h3>
-      <p className="service-price">{price}</p>
+      <Button primary onClick={() => handleOpen(title)}>
+        Send Enquiry
+      </Button>
+      <Modal open={modalOpen} onClose={handleClose} size="tiny">
+        <Modal.Header>Send Enquiry</Modal.Header>
+        <Modal.Content>
+          <Form onSubmit={handleSubmit}>
+            <Form.Field>
+              <label>Name</label>
+              <Input
+                icon={<FaUser />}
+                iconPosition="left"
+                placeholder="Name"
+                required
+              />
+            </Form.Field>
+            <Form.Field>
+              <label>Service</label>
+              <Input
+                icon="tag"
+                iconPosition="left"
+                placeholder={selectedService}
+                disabled
+              />
+            </Form.Field>
+            <Form.Field>
+              <label>Phone Number</label>
+              <Input
+                icon={<FaPhone />}
+                iconPosition="left"
+                placeholder="Phone Number"
+                value={phoneNumber}
+                onChange={(e) => setPhoneNumber(e.target.value)}
+                required
+              />
+            </Form.Field>
+            <Form.Field>
+              <label>Email id</label>
+              <Input
+                icon={<FaVoicemail />}
+                iconPosition="left"
+                placeholder="email id"
+                value={emailId}
+                onChange={(e) => setEmailId(e.target.value)}
+                required
+              />
+            </Form.Field>
+            <Button type="submit" primary>
+              Submit
+            </Button>
+          </Form>
+        </Modal.Content>
+      </Modal>
     </div>
   );
 };
@@ -31,19 +122,17 @@ const Services = () => {
     {
       image: img,
       title: "Birthday Decorations",
-      price: "From ₹6999 Onwards",
     },
     {
       image: img2,
       title: "Baby Shower Decorations",
-      price: "From ₹12999 Onwards",
     },
     {
       image: img3,
       title: "Housewarming Decoration",
-      price: "From ₹19999 Onwards",
     },
   ];
+
   return (
     <div id="services" className="bg-gray-100 py-12">
       <section data-aos="zoom-in-down">
@@ -59,34 +148,11 @@ const Services = () => {
             Get Druthi creations event experts on board in 3 easy steps to get
             your celebration mode on!
           </h2>
-        </div>
-
-        <div className="featuresContainer">
-          <Card
-            icon={<FaRegCalendarCheck size={50} color="#E91E63" />}
-            title="Plan your Event"
-            description="Send us your event details and we will plan everything to perfection to your preferences."
-          />
-          <Card
-            icon={<FaQuoteRight size={50} color="#FFC107" />}
-            title="Get a Quote"
-            description="Get a transparent and comprehensive quote of all anticipated expenses and miscellaneous."
-          />
-          <Card
-            icon={<FaBullhorn size={50} color="#00BCD4" />}
-            title="Celebrate your Events"
-            description="Sit back and celebrate your event with loved ones as Homevents takes care of everything else."
-          />
-          {/* Add more cards as needed */}
-        </div>
+        </div>{" "}
       </section>
 
       <section>
         <div className="m-auto max-w-6xl p-2 md:p-12 h-5/6">
-          <div
-            className="flex flex-col-reverse lg:flex-row py-8 justify-between lg:text-left"
-            data-aos="zoom-out"
-          ></div>
           <h2 className="my-2 text-center text-3xl text-blue-900 uppercase font-bold">
             Decorations
           </h2>
