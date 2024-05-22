@@ -1,10 +1,24 @@
 {
   "files": {
-    "main.css": "/static/css/main.ea881b27.css",
-    "main.js": "/static/js/main.d472058c.js",
+    "main.css": "/static/css/main.b34219ef.css",
+    "main.js": "/static/js/main.f49d4bf7.js",
+    "static/media/yourcelebbanner.png": "/static/media/yourcelebbanner.3b316bb04b2eee52993f.png",
+    "static/media/birthdaybanner.png": "/static/media/birthdaybanner.1e6676e6cbd3c4756955.png",
+    "static/media/housewarmingbanner.png": "/static/media/housewarmingbanner.02cb760af00b318a8ea2.png",
+    "static/media/puberty.png": "/static/media/puberty.6f71068a0a7914831ed8.png",
+    "static/media/banner.png": "/static/media/banner.c8a52d900ee966582a55.png",
+    "static/media/surpriseparty.png": "/static/media/surpriseparty.5cb0dbce9cc929ea02ed.png",
+    "static/media/wedding.png": "/static/media/wedding.c80ed1287d23467f4ae8.png",
+    "static/media/housewarming.png": "/static/media/housewarming.e2d3627d390acc6e2719.png",
+    "static/media/engagement.png": "/static/media/engagement.d2bc026e3c9e789e002e.png",
+    "static/media/happybirthday.png": "/static/media/happybirthday.b5b496ec0334684a2096.png",
+    "static/media/bayshower.png": "/static/media/bayshower.861d34536bbf4c9ffb27.png",
     "static/media/brand-icons.svg": "/static/media/brand-icons.6729d29753e000c17489.svg",
     "static/media/babyshower.png": "/static/media/babyshower.57d3068156169ed8dcf1.png",
+    "static/media/babyshowerdecor.png": "/static/media/babyshowerdecor.180abe5d03577c8f54cc.png",
+    "static/media/housewarmingdecor.png": "/static/media/housewarmingdecor.b7e14872d5e2aba00bce.png",
     "static/media/icons.svg": "/static/media/icons.62d9dae4e0040e81c980.svg",
+    "static/media/birthdaydecor.png": "/static/media/birthdaydecor.b155ef4aa0e83b689cc1.png",
     "static/media/outline-icons.svg": "/static/media/outline-icons.9c4845b4b41ef40a22fa.svg",
     "static/media/icons.eot": "/static/media/icons.a01e3f2d6c83dc3aee17.eot",
     "static/media/icons.ttf": "/static/media/icons.c656b8caa454ed19b9a2.ttf",
@@ -32,11 +46,11 @@
     "static/media/slick.ttf": "/static/media/slick.c94f7671dcc99dce43e2.ttf",
     "static/media/slick.woff": "/static/media/slick.295183786cd8a1389865.woff",
     "index.html": "/index.html",
-    "main.ea881b27.css.map": "/static/css/main.ea881b27.css.map",
-    "main.d472058c.js.map": "/static/js/main.d472058c.js.map"
+    "main.b34219ef.css.map": "/static/css/main.b34219ef.css.map",
+    "main.f49d4bf7.js.map": "/static/js/main.f49d4bf7.js.map"
   },
   "entrypoints": [
-    "static/css/main.ea881b27.css",
-    "static/js/main.d472058c.js"
+    "static/css/main.b34219ef.css",
+    "static/js/main.f49d4bf7.js"
   ]
 }

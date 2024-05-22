@@ -1,0 +1,29 @@
+.hero {
+    position: relative;
+    text-align: center;
+}
+
+.hero-banner-image {
+    width: 100%;
+    height: auto;
+}
+
+.prev-arrow,
+.next-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 2rem; /* Adjust size as needed */
+    color: white;
+    cursor: pointer;
+    z-index: 10;
+    user-select: none;
+}
+
+.prev-arrow {
+    left: 20px; /* Adjust positioning as needed */
+}
+
+.next-arrow {
+    right: 20px; /* Adjust positioning as needed */
+}

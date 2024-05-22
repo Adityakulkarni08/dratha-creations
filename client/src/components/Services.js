@@ -4,6 +4,9 @@ import img from "../images/web.svg";
 import img2 from "../images/app.svg";
 import img3 from "../images/hosting.svg";
 import img4 from "../images/consultation.svg";
+import birthdayDecor from "../images/birthdaydecor.png"
+import babyShowerDecor from "../images/babyshowerdecor.png"
+import houseWarmingDecor from "../images/housewarmingdecor.png"
 import {
   FaRegCalendarCheck,
   FaQuoteRight,
@@ -120,15 +123,15 @@ const ServiceCard = ({ image, title }) => {
 const Services = () => {
   const services = [
     {
-      image: img,
+      image: birthdayDecor,
       title: "Birthday Decorations",
     },
     {
-      image: img2,
+      image: babyShowerDecor,
       title: "Baby Shower Decorations",
     },
     {
-      image: img3,
+      image: houseWarmingDecor,
       title: "Housewarming Decoration",
     },
   ];

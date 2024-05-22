@@ -2,6 +2,13 @@ import React from "react";
 import "../styles/dropdown.css";
 import newbornImage from "../images/birthday.jpg";
 import babyImage from "../images/babyshower.png";
+import babyShower from "../images/bayshower.png"
+import happyBirthday from "../images/happybirthday.png"
+import houseWarming from "../images/housewarming.png"
+import engagement from "../images/engagement.png"
+import wedding from "../images/wedding.png"
+import puberty from "../images/puberty.png"
+import surpriseParty from "../images/surpriseparty.png"
 
 const DropdownComponent = () => {
   return (
@@ -101,7 +108,7 @@ const DropdownComponent = () => {
               <a href="#">New Born Photo Shoot</a>
               <div className="image-box">
                 <img
-                  src={babyImage}
+                  src={babyShower}
                   alt="New Born Photo Shoot"
                   className="small-image"
                 />
@@ -109,7 +116,7 @@ const DropdownComponent = () => {
               <a href="#">Digital Photography</a>
               <div className="image-box">
                 <img
-                  src={babyImage}
+                  src={babyShower}
                   alt="New Born Photo Shoot"
                   className="small-image"
                 />
@@ -117,7 +124,7 @@ const DropdownComponent = () => {
               <a href="#">Photo + Album</a>
               <div className="image-box">
                 <img
-                  src={babyImage}
+                  src={babyShower}
                   alt="New Born Photo Shoot"
                   className="small-image"
                 />
@@ -125,7 +132,7 @@ const DropdownComponent = () => {
               <a href="#">Photo + Album + Video</a>
               <div className="image-box">
                 <img
-                  src={babyImage}
+                  src={babyShower}
                   alt="New Born Photo Shoot"
                   className="small-image"
                 />
@@ -138,7 +145,7 @@ const DropdownComponent = () => {
               <a href="#">Catering Options</a>
               <div className="image-box">
                 <img
-                  src={babyImage}
+                  src={babyShower}
                   alt="New Born Photo Shoot"
                   className="small-image"
                 />
@@ -146,7 +153,7 @@ const DropdownComponent = () => {
               <a href="#">Custom Menu Designs</a>
               <div className="image-box">
                 <img
-                  src={babyImage}
+                  src={babyShower}
                   alt="New Born Photo Shoot"
                   className="small-image"
                 />
@@ -154,7 +161,7 @@ const DropdownComponent = () => {
               <a href="#">Buffet Setups</a>
               <div className="image-box">
                 <img
-                  src={babyImage}
+                  src={babyShower}
                   alt="New Born Photo Shoot"
                   className="small-image"
                 />
@@ -162,7 +169,7 @@ const DropdownComponent = () => {
               <a href="#">Full-Service Dining</a>
               <div className="image-box">
                 <img
-                  src={babyImage}
+                  src={babyShower}
                   alt="New Born Photo Shoot"
                   className="small-image"
                 />
@@ -184,7 +191,7 @@ const DropdownComponent = () => {
               <a href="#">New Born Photo Shoot</a>
               <div className="image-box">
                 <img
-                  src={babyImage}
+                  src={happyBirthday}
                   alt="New Born Photo Shoot"
                   className="small-image"
                 />
@@ -192,7 +199,7 @@ const DropdownComponent = () => {
               <a href="#">Digital Photography</a>
               <div className="image-box">
                 <img
-                  src={babyImage}
+                  src={happyBirthday}
                   alt="New Born Photo Shoot"
                   className="small-image"
                 />
@@ -200,7 +207,7 @@ const DropdownComponent = () => {
               <a href="#">Photo + Album</a>
               <div className="image-box">
                 <img
-                  src={babyImage}
+                  src={happyBirthday}
                   alt="New Born Photo Shoot"
                   className="small-image"
                 />
@@ -208,7 +215,7 @@ const DropdownComponent = () => {
               <a href="#">Photo + Album + Video</a>
               <div className="image-box">
                 <img
-                  src={babyImage}
+                  src={happyBirthday}
                   alt="New Born Photo Shoot"
                   className="small-image"
                 />
@@ -221,7 +228,7 @@ const DropdownComponent = () => {
               <a href="#">Catering Options</a>
               <div className="image-box">
                 <img
-                  src={babyImage}
+                  src={happyBirthday}
                   alt="New Born Photo Shoot"
                   className="small-image"
                 />
@@ -229,7 +236,7 @@ const DropdownComponent = () => {
               <a href="#">Custom Menu Designs</a>
               <div className="image-box">
                 <img
-                  src={babyImage}
+                  src={happyBirthday}
                   alt="New Born Photo Shoot"
                   className="small-image"
                 />
@@ -237,7 +244,7 @@ const DropdownComponent = () => {
               <a href="#">Buffet Setups</a>
               <div className="image-box">
                 <img
-                  src={babyImage}
+                  src={happyBirthday}
                   alt="New Born Photo Shoot"
                   className="small-image"
                 />
@@ -245,7 +252,7 @@ const DropdownComponent = () => {
               <a href="#">Full-Service Dining</a>
               <div className="image-box">
                 <img
-                  src={babyImage}
+                  src={happyBirthday}
                   alt="New Born Photo Shoot"
                   className="small-image"
                 />
@@ -267,7 +274,7 @@ const DropdownComponent = () => {
               <a href="#">New Born Photo Shoot</a>
               <div className="image-box">
                 <img
-                  src={babyImage}
+                  src={houseWarming}
                   alt="New Born Photo Shoot"
                   className="small-image"
                 />
@@ -275,7 +282,7 @@ const DropdownComponent = () => {
               <a href="#">Digital Photography</a>
               <div className="image-box">
                 <img
-                  src={babyImage}
+                  src={houseWarming}
                   alt="New Born Photo Shoot"
                   className="small-image"
                 />
@@ -283,7 +290,7 @@ const DropdownComponent = () => {
               <a href="#">Photo + Album</a>
               <div className="image-box">
                 <img
-                  src={babyImage}
+                  src={houseWarming}
                   alt="New Born Photo Shoot"
                   className="small-image"
                 />
@@ -291,7 +298,7 @@ const DropdownComponent = () => {
               <a href="#">Photo + Album + Video</a>
               <div className="image-box">
                 <img
-                  src={babyImage}
+                  src={houseWarming}
                   alt="New Born Photo Shoot"
                   className="small-image"
                 />
@@ -304,7 +311,7 @@ const DropdownComponent = () => {
               <a href="#">Catering Options</a>
               <div className="image-box">
                 <img
-                  src={babyImage}
+                  src={houseWarming}
                   alt="New Born Photo Shoot"
                   className="small-image"
                 />
@@ -312,7 +319,7 @@ const DropdownComponent = () => {
               <a href="#">Custom Menu Designs</a>
               <div className="image-box">
                 <img
-                  src={babyImage}
+                  src={houseWarming}
                   alt="New Born Photo Shoot"
                   className="small-image"
                 />
@@ -320,7 +327,7 @@ const DropdownComponent = () => {
               <a href="#">Buffet Setups</a>
               <div className="image-box">
                 <img
-                  src={babyImage}
+                  src={houseWarming}
                   alt="New Born Photo Shoot"
                   className="small-image"
                 />
@@ -328,7 +335,7 @@ const DropdownComponent = () => {
               <a href="#">Full-Service Dining</a>
               <div className="image-box">
                 <img
-                  src={babyImage}
+                  src={houseWarming}
                   alt="New Born Photo Shoot"
                   className="small-image"
                 />
@@ -350,7 +357,7 @@ const DropdownComponent = () => {
               <a href="#">New Born Photo Shoot</a>
               <div className="image-box">
                 <img
-                  src={babyImage}
+                  src={engagement}
                   alt="New Born Photo Shoot"
                   className="small-image"
                 />
@@ -358,7 +365,7 @@ const DropdownComponent = () => {
               <a href="#">Digital Photography</a>
               <div className="image-box">
                 <img
-                  src={babyImage}
+                  src={engagement}
                   alt="New Born Photo Shoot"
                   className="small-image"
                 />
@@ -366,7 +373,7 @@ const DropdownComponent = () => {
               <a href="#">Photo + Album</a>
               <div className="image-box">
                 <img
-                  src={babyImage}
+                  src={engagement}
                   alt="New Born Photo Shoot"
                   className="small-image"
                 />
@@ -374,7 +381,7 @@ const DropdownComponent = () => {
               <a href="#">Photo + Album + Video</a>
               <div className="image-box">
                 <img
-                  src={babyImage}
+                  src={engagement}
                   alt="New Born Photo Shoot"
                   className="small-image"
                 />
@@ -387,7 +394,7 @@ const DropdownComponent = () => {
               <a href="#">Catering Options</a>
               <div className="image-box">
                 <img
-                  src={babyImage}
+                  src={engagement}
                   alt="New Born Photo Shoot"
                   className="small-image"
                 />
@@ -395,7 +402,7 @@ const DropdownComponent = () => {
               <a href="#">Custom Menu Designs</a>
               <div className="image-box">
                 <img
-                  src={babyImage}
+                  src={engagement}
                   alt="New Born Photo Shoot"
                   className="small-image"
                 />
@@ -403,7 +410,7 @@ const DropdownComponent = () => {
               <a href="#">Buffet Setups</a>
               <div className="image-box">
                 <img
-                  src={babyImage}
+                  src={engagement}
                   alt="New Born Photo Shoot"
                   className="small-image"
                 />
@@ -411,7 +418,7 @@ const DropdownComponent = () => {
               <a href="#">Full-Service Dining</a>
               <div className="image-box">
                 <img
-                  src={babyImage}
+                  src={engagement}
                   alt="New Born Photo Shoot"
                   className="small-image"
                 />
@@ -433,7 +440,7 @@ const DropdownComponent = () => {
               <a href="#">New Born Photo Shoot</a>
               <div className="image-box">
                 <img
-                  src={babyImage}
+                  src={wedding}
                   alt="New Born Photo Shoot"
                   className="small-image"
                 />
@@ -441,7 +448,7 @@ const DropdownComponent = () => {
               <a href="#">Digital Photography</a>
               <div className="image-box">
                 <img
-                  src={babyImage}
+                  src={wedding}
                   alt="New Born Photo Shoot"
                   className="small-image"
                 />
@@ -449,7 +456,7 @@ const DropdownComponent = () => {
               <a href="#">Photo + Album</a>
               <div className="image-box">
                 <img
-                  src={babyImage}
+                  src={wedding}
                   alt="New Born Photo Shoot"
                   className="small-image"
                 />
@@ -457,7 +464,7 @@ const DropdownComponent = () => {
               <a href="#">Photo + Album + Video</a>
               <div className="image-box">
                 <img
-                  src={babyImage}
+                  src={wedding}
                   alt="New Born Photo Shoot"
                   className="small-image"
                 />
@@ -470,7 +477,7 @@ const DropdownComponent = () => {
               <a href="#">Catering Options</a>
               <div className="image-box">
                 <img
-                  src={babyImage}
+                  src={wedding}
                   alt="New Born Photo Shoot"
                   className="small-image"
                 />
@@ -478,7 +485,7 @@ const DropdownComponent = () => {
               <a href="#">Custom Menu Designs</a>
               <div className="image-box">
                 <img
-                  src={babyImage}
+                  src={wedding}
                   alt="New Born Photo Shoot"
                   className="small-image"
                 />
@@ -486,7 +493,7 @@ const DropdownComponent = () => {
               <a href="#">Buffet Setups</a>
               <div className="image-box">
                 <img
-                  src={babyImage}
+                  src={wedding}
                   alt="New Born Photo Shoot"
                   className="small-image"
                 />
@@ -494,7 +501,7 @@ const DropdownComponent = () => {
               <a href="#">Full-Service Dining</a>
               <div className="image-box">
                 <img
-                  src={babyImage}
+                  src={wedding}
                   alt="New Born Photo Shoot"
                   className="small-image"
                 />
@@ -516,7 +523,7 @@ const DropdownComponent = () => {
               <a href="#">New Born Photo Shoot</a>
               <div className="image-box">
                 <img
-                  src={babyImage}
+                  src={puberty}
                   alt="New Born Photo Shoot"
                   className="small-image"
                 />
@@ -524,7 +531,7 @@ const DropdownComponent = () => {
               <a href="#">Digital Photography</a>
               <div className="image-box">
                 <img
-                  src={babyImage}
+                  src={puberty}
                   alt="New Born Photo Shoot"
                   className="small-image"
                 />
@@ -532,7 +539,7 @@ const DropdownComponent = () => {
               <a href="#">Photo + Album</a>
               <div className="image-box">
                 <img
-                  src={babyImage}
+                  src={puberty}
                   alt="New Born Photo Shoot"
                   className="small-image"
                 />
@@ -540,7 +547,7 @@ const DropdownComponent = () => {
               <a href="#">Photo + Album + Video</a>
               <div className="image-box">
                 <img
-                  src={babyImage}
+                  src={puberty}
                   alt="New Born Photo Shoot"
                   className="small-image"
                 />
@@ -553,7 +560,7 @@ const DropdownComponent = () => {
               <a href="#">Catering Options</a>
               <div className="image-box">
                 <img
-                  src={babyImage}
+                  src={puberty}
                   alt="New Born Photo Shoot"
                   className="small-image"
                 />
@@ -561,7 +568,7 @@ const DropdownComponent = () => {
               <a href="#">Custom Menu Designs</a>
               <div className="image-box">
                 <img
-                  src={babyImage}
+                  src={puberty}
                   alt="New Born Photo Shoot"
                   className="small-image"
                 />
@@ -569,7 +576,7 @@ const DropdownComponent = () => {
               <a href="#">Buffet Setups</a>
               <div className="image-box">
                 <img
-                  src={babyImage}
+                  src={puberty}
                   alt="New Born Photo Shoot"
                   className="small-image"
                 />
@@ -577,7 +584,7 @@ const DropdownComponent = () => {
               <a href="#">Full-Service Dining</a>
               <div className="image-box">
                 <img
-                  src={babyImage}
+                  src={puberty}
                   alt="New Born Photo Shoot"
                   className="small-image"
                 />
@@ -599,7 +606,7 @@ const DropdownComponent = () => {
               <a href="#">New Born Photo Shoot</a>
               <div className="image-box">
                 <img
-                  src={babyImage}
+                  src={surpriseParty}
                   alt="New Born Photo Shoot"
                   className="small-image"
                 />
@@ -607,7 +614,7 @@ const DropdownComponent = () => {
               <a href="#">Digital Photography</a>
               <div className="image-box">
                 <img
-                  src={babyImage}
+                  src={surpriseParty}
                   alt="New Born Photo Shoot"
                   className="small-image"
                 />
@@ -615,7 +622,7 @@ const DropdownComponent = () => {
               <a href="#">Photo + Album</a>
               <div className="image-box">
                 <img
-                  src={babyImage}
+                  src={surpriseParty}
                   alt="New Born Photo Shoot"
                   className="small-image"
                 />
@@ -623,7 +630,7 @@ const DropdownComponent = () => {
               <a href="#">Photo + Album + Video</a>
               <div className="image-box">
                 <img
-                  src={babyImage}
+                  src={surpriseParty}
                   alt="New Born Photo Shoot"
                   className="small-image"
                 />
@@ -636,7 +643,7 @@ const DropdownComponent = () => {
               <a href="#">Catering Options</a>
               <div className="image-box">
                 <img
-                  src={babyImage}
+                  src={surpriseParty}
                   alt="New Born Photo Shoot"
                   className="small-image"
                 />
@@ -644,7 +651,7 @@ const DropdownComponent = () => {
               <a href="#">Custom Menu Designs</a>
               <div className="image-box">
                 <img
-                  src={babyImage}
+                  src={surpriseParty}
                   alt="New Born Photo Shoot"
                   className="small-image"
                 />
@@ -652,7 +659,7 @@ const DropdownComponent = () => {
               <a href="#">Buffet Setups</a>
               <div className="image-box">
                 <img
-                  src={babyImage}
+                  src={surpriseParty}
                   alt="New Born Photo Shoot"
                   className="small-image"
                 />
@@ -660,7 +667,7 @@ const DropdownComponent = () => {
               <a href="#">Full-Service Dining</a>
               <div className="image-box">
                 <img
-                  src={babyImage}
+                  src={surpriseParty}
                   alt="New Born Photo Shoot"
                   className="small-image"
                 />
