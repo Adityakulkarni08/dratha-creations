@@ -79,5 +79,11 @@
     text-align: center; /* Center the price text */
     background-color: #f8f8f8; /* Light grey background for the price */
   }
+
+  @media (max-width: 600px) {
+    .services-grid {
+      grid-template-columns: repeat(2, 1fr); /* Display two cards per row in mobile view */
+    }
+  }
   
   

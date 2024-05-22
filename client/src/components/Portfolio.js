@@ -8,7 +8,6 @@ import birthdayTrending from "../images/birthdayTrending.png"
 import newBornTrending from "../images/newBornTrending.png";
 import cakeTrending from "../images/cakeTrending.png"
 import gifts from "../images/giftsTrending.png"
-
 import "../styles/portfolio.css";
 import {
   FaUser,
