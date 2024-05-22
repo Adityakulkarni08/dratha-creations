@@ -4,6 +4,11 @@ import { Button, Modal, Form, Input } from "semantic-ui-react";
 import img from "../images/web.svg";
 import img2 from "../images/app.svg";
 import img3 from "../images/hosting.svg";
+import birthdayTrending from "../images/birthdayTrending.png"
+import newBornTrending from "../images/newBornTrending.png";
+import cakeTrending from "../images/cakeTrending.png"
+import gifts from "../images/giftsTrending.png"
+
 import "../styles/portfolio.css";
 import {
   FaUser,
@@ -45,19 +50,19 @@ const Portfolio = () => {
 
   const trends = [
     {
-      image: img,
+      image: birthdayTrending,
       title: "Birthday Decorations",
     },
     {
-      image: img2,
+      image: newBornTrending,
       title: "New Born Photography",
     },
     {
-      image: img3,
+      image: cakeTrending,
       title: "Birthday Cakes",
     },
     {
-      image: img3,
+      image: gifts,
       title: "Wedding Return Gifts",
     },
   ];
