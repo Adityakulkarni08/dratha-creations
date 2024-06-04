@@ -88,9 +88,9 @@ const Portfolio = () => {
               <div key={index} className="trend-card">
                 <img src={trend.image} alt={trend.title} />
                 <h3>{trend.title}</h3>
-                <Button primary onClick={() => handleOpen(trend.title)}>
+                {/* <Button primary onClick={() => handleOpen(trend.title)}>
                   Send Enquiry
-                </Button>
+                </Button> */}
               </div>
             ))}
           </div>

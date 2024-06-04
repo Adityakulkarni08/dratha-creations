@@ -1,12 +1,13 @@
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import axios from "axios";
 import img from "../images/web.svg";
 import img2 from "../images/app.svg";
 import img3 from "../images/hosting.svg";
 import img4 from "../images/consultation.svg";
-import birthdayDecor from "../images/birthdaydecor.png"
-import babyShowerDecor from "../images/babyshowerdecor.png"
-import houseWarmingDecor from "../images/housewarmingdecor.png"
+import birthdayDecor from "../images/birthdaydecor.png";
+import babyShowerDecor from "../images/babyshowerdecor.png";
+import houseWarmingDecor from "../images/housewarmingdecor.png";
 import {
   FaRegCalendarCheck,
   FaQuoteRight,
@@ -29,10 +30,15 @@ const Card = ({ icon, title, description }) => {
 };
 
 const ServiceCard = ({ image, title }) => {
+  const navigate = useNavigate();
   const [modalOpen, setModalOpen] = useState(false);
   const [selectedService, setSelectedService] = useState("");
   const [phoneNumber, setPhoneNumber] = useState("");
   const [emailId, setEmailId] = useState("");
+
+  const handleCardClick = () => {
+    navigate(`/service/${title}`);
+  };
 
   const handleOpen = (title) => {
     setSelectedService(title);
@@ -47,25 +53,25 @@ const ServiceCard = ({ image, title }) => {
 
   const handleSubmit = async () => {
     try {
-      const response = await axios.post('http://localhost:8087/api/send-enquiry', {
-        service: title,
-        phone: phoneNumber,
-        email: emailId,
-      });
+      const response = await axios.post(
+        "http://localhost:8087/api/send-enquiry",
+        {
+          service: title,
+          phone: phoneNumber,
+          email: emailId,
+        }
+      );
       console.log(response.data);
       handleClose();
     } catch (error) {
-      console.error('Error sending enquiry:', error);
+      console.error("Error sending enquiry:", error);
     }
   };
 
   return (
-    <div className="service-card">
+    <div className="service-card" onClick={handleCardClick}>
       <img src={image} alt={title} className="service-image" />
       <h3 className="service-title">{title}</h3>
-      <Button primary onClick={() => handleOpen(title)}>
-        Send Enquiry
-      </Button>
       <Modal open={modalOpen} onClose={handleClose} size="tiny">
         <Modal.Header>Send Enquiry</Modal.Header>
         <Modal.Content>
@@ -157,7 +163,7 @@ const Services = () => {
       <section>
         <div className="m-auto max-w-6xl p-2 md:p-12 h-5/6">
           <h2 className="my-2 text-center text-3xl text-blue-900 uppercase font-bold">
-            Decorations
+            Decoration By Occassions
           </h2>
           <div className="services-grid">
             {services.map((service, index) => (
