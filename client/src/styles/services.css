@@ -80,6 +80,21 @@
     background-color: #f8f8f8; /* Light grey background for the price */
   }
 
+  .service-button {
+  display: block;
+  margin: 10px auto;
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.service-button:hover {
+  background-color: #0056b3;
+}
+
   @media (max-width: 600px) {
     .services-grid {
       grid-template-columns: repeat(2, 1fr); /* Display two cards per row in mobile view */

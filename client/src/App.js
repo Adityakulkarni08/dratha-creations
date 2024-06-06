@@ -16,6 +16,7 @@ import AdminPanel from "./pages/AdminPanel";
 import CreateCategory from "./pages/Admin/CreateCategory.js";
 import CreateSubcategory from "./pages/Admin/CreateSubcategory.js";
 import ServiceDetail from "./components/ServiceDetail.js";
+import SubServiceDetail from "./components/SubServiceDetail.js";
 import 'semantic-ui-css/semantic.min.css';
 
 function App() {
@@ -50,6 +51,7 @@ function App() {
               <Route path="/dashboard/admin/create-category" element={<CreateCategory />} />
               <Route path="/dashboard/admin/create-subcategory" element={<CreateSubcategory />} />
               <Route path="/service/:title" element={<ServiceDetail />} />
+              <Route path="/service/:title/:subTitle" element={<SubServiceDetail />} />
             </Routes>
           </ScrollToTop>
         </Router>
