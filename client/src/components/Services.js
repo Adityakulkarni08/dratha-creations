@@ -31,6 +31,14 @@ const Services = () => {
       image: houseWarmingDecor,
       title: "Housewarming Decoration",
     },
+    {
+      image: houseWarmingDecor,
+      title: "Puberty Decorations",
+    },
+    {
+      image: houseWarmingDecor,
+      title: "Wedding Decorations",
+    }
   ];
 
   return (
@@ -48,7 +56,7 @@ const Services = () => {
             Get Druthi creations event experts on board in 3 easy steps to get
             your celebration mode on!
           </h2>
-        </div>{" "}
+        </div>
       </section>
 
       <section>

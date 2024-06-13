@@ -84,21 +84,30 @@ export const serviceDetails = {
     ],
   },
   "Baby Shower Decorations": {
-    description:
-      "Here you can add more content specific to Baby Shower Decorations.",
     image: babyShowerImage,
     subServices: [
       {
-        title: "Real Flower Decorations",
-        description:
-          "Here you can add more content specific to Real Flower Decorations.",
+        title: "Decorations",
         image: realFlowerImage,
+        subServices: [
+          {
+            title: "Banquet Hall Decoration",
+            image: heliumImage
+          },
+          {
+            title: "Decorations at Home",
+            image: heliumImage
+          }
+        ]
       },
       {
         title: "Flower and Garlands",
-        description:
-          "Here you can add more content specific to Flower and Garlands.",
         image: garlandImage,
+        subServices: [
+          {
+            title: ""
+          }
+        ]
       },
     ],
   },
@@ -107,7 +116,88 @@ export const serviceDetails = {
       "Here you can add more content specific to Housewarming Decoration.",
     image: houseWarmingImage,
     subServices: [
-      // Add sub-services for Housewarming Decoration if needed
+      {
+        title: "Decorations",
+        image: houseWarmingImage,
+      },
+      {
+        title: "Flowers and Garland",
+        image: houseWarmingImage,
+      }
     ],
   },
+  "Puberty Decorations": {
+    description:
+    "Puberty Decor",
+    image: houseWarmingImage,
+    subServices: [
+      {
+        title: "Decorations",
+        image: houseWarmingImage,
+        subServices: [
+          {
+            title: "Banquet Hall Decorations",
+            image: houseWarmingImage,
+          },
+          {
+            title: "Decorations at Home",
+            image: houseWarmingImage
+          }
+        ]
+      },
+      {
+        title: "Flower and Garland",
+        image: houseWarmingImage,
+      }
+    ]
+  },
+
+  "Wedding Decorations": {
+    description: "wedding decor",
+    image: houseWarmingImage,
+    subServices: [
+      {
+        title: "Decorations",
+        image: houseWarmingImage,
+        subServices: [
+          {
+            title: "Haldi Decoration",
+            image: houseWarmingImage,
+          },
+          {
+            title: "Mehndi Ceremony Decoration",
+            image: houseWarmingImage,
+          },
+          {
+            title: "Sangeet Decoration",
+            image: houseWarmingImage,
+          },
+          {
+            title: "Reception Decoration",
+            image: houseWarmingImage,
+          },
+          {
+            title: "Mandap Decoration",
+            image: houseWarmingImage,
+          },
+          {
+            title: "Romantic Room Decoration",
+            image: houseWarmingImage,
+          },
+          {
+            title: "Beach Wedding Decoration",
+            image: houseWarmingImage,
+          },
+          {
+            title: "Car Decoration",
+            image: houseWarmingImage,
+          }
+        ],
+      },
+      {
+        title: "Flower and Garland",
+        image: houseWarmingImage,
+      },
+    ]
+  }
 };
