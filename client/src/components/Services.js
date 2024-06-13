@@ -1,22 +1,8 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import axios from "axios";
-import img from "../images/web.svg";
-import img2 from "../images/app.svg";
-import img3 from "../images/hosting.svg";
-import img4 from "../images/consultation.svg";
 import birthdayDecor from "../images/birthdaydecor.png";
 import babyShowerDecor from "../images/babyshowerdecor.png";
 import houseWarmingDecor from "../images/housewarmingdecor.png";
-import {
-  FaRegCalendarCheck,
-  FaQuoteRight,
-  FaBullhorn,
-  FaUser,
-  FaPhone,
-  FaVoicemail,
-} from "react-icons/fa";
-import { Button, Modal, Form, Input } from "semantic-ui-react";
 import ServiceCard from "./ServiceCard.js";
 import "../styles/services.css";
 
@@ -81,7 +67,7 @@ const Services = () => {
             ))}
           </div>
         </div>
-      </section>
+      </section>  
     </div>
   );
 };
