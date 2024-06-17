@@ -1,47 +1,26 @@
-import React, { useState } from "react";
+import React from "react";
 import { useNavigate } from "react-router-dom";
 import birthdayDecor from "../images/birthdaydecor.png";
 import babyShowerDecor from "../images/babyshowerdecor.png";
 import houseWarmingDecor from "../images/housewarmingdecor.png";
+import pubertyDecor from "../images/pubertyDecor.png";
+import weddingDecor from "../images/weddingDecor.png";
 import ServiceCard from "./ServiceCard.js";
-import pubertyDecor from "../images/pubertyDecor.png"
-import weddingDecor from "../images/weddingDecor.png"
 import "../styles/services.css";
-
-const Card = ({ icon, title, description }) => {
-  return (
-    <div className="card">
-      <div className="cardIcon">{icon}</div>
-      <h3 className="cardTitle">{title}</h3>
-      <p className="cardDescription">{description}</p>
-    </div>
-  );
-};
 
 const Services = () => {
   const navigate = useNavigate();
   const services = [
-    {
-      image: birthdayDecor,
-      title: "Birthday Decorations",
-    },
-    {
-      image: babyShowerDecor,
-      title: "Baby Shower Decorations",
-    },
-    {
-      image: houseWarmingDecor,
-      title: "Housewarming Decoration",
-    },
-    {
-      image: pubertyDecor,
-      title: "Puberty Decorations",
-    },
-    {
-      image: weddingDecor,
-      title: "Wedding Decorations",
-    }
+    { image: birthdayDecor, title: "Birthday Decorations" },
+    { image: babyShowerDecor, title: "Baby Shower Decorations" },
+    { image: houseWarmingDecor, title: "Housewarming Decoration" },
+    { image: pubertyDecor, title: "Puberty Decorations" },
+    { image: weddingDecor, title: "Wedding Decorations" },
   ];
+
+  const handleServiceCardClick = (title) => {
+    navigate(`/service/${title}`);
+  };
 
   return (
     <div id="services" className="bg-gray-100 py-12">
@@ -50,7 +29,6 @@ const Services = () => {
           <h2 className="my-2 text-center text-3xl text-blue-900 uppercase font-bold">
             How it Works
           </h2>
-
           <div className="flex justify-center">
             <div className="w-24 border-b-4 border-blue-900"></div>
           </div>
@@ -72,12 +50,12 @@ const Services = () => {
                 key={index}
                 image={service.image}
                 title={service.title}
-                onClick={() => navigate(`/service/${service.title}`)}
+                onClick={() => handleServiceCardClick(service.title)}
               />
             ))}
           </div>
         </div>
-      </section>  
+      </section>
     </div>
   );
 };

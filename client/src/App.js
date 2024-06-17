@@ -17,6 +17,8 @@ import CreateCategory from "./pages/Admin/CreateCategory.js";
 import CreateSubcategory from "./pages/Admin/CreateSubcategory.js";
 import ServiceDetail from "./components/ServiceDetail.js";
 import SubServiceDetail from "./components/SubServiceDetail.js";
+import TrendDetail from "./components/TrendDetail.js"
+import SubTrendDetail from "./components/SubTrendDetail.js"
 import 'semantic-ui-css/semantic.min.css';
 
 function App() {
@@ -52,6 +54,8 @@ function App() {
               <Route path="/dashboard/admin/create-subcategory" element={<CreateSubcategory />} />
               <Route path="/service/:title" element={<ServiceDetail />} />
               <Route path="/service/:title/:subTitle" element={<SubServiceDetail />} />
+              <Route path="/trend/:title" element={<TrendDetail />} />
+              <Route path="/trend/:title/:subTitle" element={<SubTrendDetail />} />
             </Routes>
           </ScrollToTop>
         </Router>

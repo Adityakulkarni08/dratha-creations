@@ -1,19 +1,13 @@
 import React, { useState } from "react";
 import axios from "axios";
 import { Button, Modal, Form, Input } from "semantic-ui-react";
-import img from "../images/web.svg";
-import img2 from "../images/app.svg";
-import img3 from "../images/hosting.svg";
-import birthdayTrending from "../images/birthdayTrending.png"
+import birthdayTrending from "../images/birthdayTrending.png";
 import newBornTrending from "../images/newBornTrending.png";
-import cakeTrending from "../images/cakeTrending.png"
-import gifts from "../images/giftsTrending.png"
+import cakeTrending from "../images/cakeTrending.png";
+import gifts from "../images/giftsTrending.png";
+import ServiceCard from "./ServiceCard";
 import "../styles/portfolio.css";
-import {
-  FaUser,
-  FaPhone,
-  FaVoicemail,
-} from "react-icons/fa";
+import { FaUser, FaPhone, FaVoicemail } from "react-icons/fa";
 
 const Portfolio = () => {
   const [modalOpen, setModalOpen] = useState(false);
@@ -48,22 +42,10 @@ const Portfolio = () => {
   };
 
   const trends = [
-    {
-      image: birthdayTrending,
-      title: "Birthday Decorations",
-    },
-    {
-      image: newBornTrending,
-      title: "New Born Photography",
-    },
-    {
-      image: cakeTrending,
-      title: "Birthday Cakes",
-    },
-    {
-      image: gifts,
-      title: "Wedding Return Gifts",
-    },
+    { image: birthdayTrending, title: "Birthday Decorations" },
+    { image: newBornTrending, title: "New Born Photography" },
+    { image: cakeTrending, title: "Birthday Cakes" },
+    { image: gifts, title: "Wedding Return Gifts" },
   ];
 
   return (
@@ -85,13 +67,13 @@ const Portfolio = () => {
           </p>
           <div className="trend-grid">
             {trends.map((trend, index) => (
-              <div key={index} className="trend-card">
-                <img src={trend.image} alt={trend.title} />
-                <h3>{trend.title}</h3>
-                {/* <Button primary onClick={() => handleOpen(trend.title)}>
-                  Send Enquiry
-                </Button> */}
-              </div>
+              <ServiceCard
+                key={index}
+                image={trend.image}
+                title={trend.title}
+                route={`/trend/${trend.title}`} // Pass the route prop for trends
+                onClick={() => handleOpen(trend.title)} // Optional: if you want a modal for enquiry
+              />
             ))}
           </div>
         </div>
