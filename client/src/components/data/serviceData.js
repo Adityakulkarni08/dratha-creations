@@ -8,6 +8,44 @@ import realFlowerImage from "../../images/birthdaybanner.png";
 import garlandImage from "../../images/birthdaybanner.png";
 import heliumImage from "../../images/birthdaybanner.png";
 import foilImage from "../../images/birthdaybanner.png";
+import pubertyDecor from "../../images/pubertyDecor.png"
+import baloonDecor from "../../images/baloonDecor.png"
+import themeDecor from "../../images/themeDecor.png"
+import simpleBaloon from "../../images/simpleBaloon.png"
+import terraceBaloon from "../../images/terraceBaloon.png"
+import baloonDecorHome from "../../images/baloonDecorHome.png"
+import cocomelonTheme from "../../images/cocomelonTheme.png"
+import butterflyTheme from "../../images/butterflyTheme.png"
+import bossBabyTheme from "../../images/bossBabyTheme.png"
+import kingCrown from "../../images/kingCrown.png"
+import mermaidTheme from "../../images/mermaidTheme.png"
+import unicornTheme from "../../images/unicornTheme.png"
+import jungleTheme from "../../images/jungleTheme.png"
+import candyTheme from "../../images/candyTheme.png"
+import carTheme from "../../images/carTheme.png"
+import princessTheme from "../../images/princessTheme.png"
+import assortedTheme from "../../images/assortedTheme.png"
+import fairyTaleTheme from "../../images/fairyTaleTheme.png"
+import Decorations from "../../images/Decorations.png"
+import flowerGarlands from "../../images/flowerGarlands.png"
+import decorationHome from "../../images/decorationHome.png"
+import decorationsHouseWarming from "../../images/decorationsHouseWarming.png"
+import flowersGarlandHouseWarm from "../../images/flowersGarlandHouseWarm.png"
+import decorationsPuberty from "../../images/decorationsPuberty.png"
+import flowersGarlandPuberty from "../../images/flowersGarlandPuberty.png"
+import banquetHallPuberty from "../../images/banquetHallPuberty.png"
+import decorationsHomePuberty from "../../images/decorationsHomePuberty.png"
+import decorationsWedding from "../../images/decorationsWedding.png"
+import flowersGarlandsWedding from "../../images/flowersGarlandsWedding.png"
+import haldiWedding from "../../images/haldiWedding.png"
+import mehndiDecor from "../../images/mehndiDecor.png"
+import sangeetDecor from "../../images/sangeetDecor.png"
+import receptionDecor from "../../images/receptionDecor.png"
+import mandapDecor from "../../images/mandapDecor.png"
+import romanticRoomDecor from "../../images/romanticRoomDecor.png"
+import beachDecor from "../../images/beachDecor.png"
+import carDecor from "../../images/carDecor.png"
+
 import { ItemHeader } from "semantic-ui-react";
 
 export const serviceDetails = {
@@ -18,66 +56,58 @@ export const serviceDetails = {
     subServices: [
       {
         title: "Balloon Decorations",
-        // description:
-        //   "Here you can add more content specific to Balloon Decorations.",
-        image: balloonImage,
+        image: baloonDecor,
         subServices: [
           {
             title: "Simple Baloon Decorations",
-            image: heliumImage,
-            button: {
-              text: "Book Now",
-              link: "/book/helium-balloons", // Example link
-            },
+            image: simpleBaloon,
           },
           {
             title: "Terrace Baloon Decorations",
-            image: foilImage,
+            image: terraceBaloon,
           },
           {
             title: " Balloon Decoration at Home",
-            image: foilImage,
+            image: baloonDecorHome,
           },
         ],
       },
       {
         title: "Theme Decorations",
-        // description:
-        //   "Here you can add more content specific to Theme Decorations.",
-        image: themeImage,
-        subServices: [{ title: "Cocomelon Theme", image: heliumImage },
+        image: themeDecor,
+        subServices: [{ title: "Cocomelon Theme", image: cocomelonTheme },
       {
-        title: "Butterfly Theme", image: heliumImage
+        title: "Butterfly Theme", image: butterflyTheme
       },
       {
-        title: "Boss Baby Theme", image: heliumImage
+        title: "Boss Baby Theme", image: bossBabyTheme
       },
       {
-        title: "King Crown Theme", image: heliumImage
+        title: "King Crown Theme", image: kingCrown
       },
       {
-        title: "Mermaid Theme", image: heliumImage
+        title: "Mermaid Theme", image: mermaidTheme
       },
       {
-        title: "Unicorn Theme", image: heliumImage
+        title: "Unicorn Theme", image: unicornTheme
       },
       {
-        title: "Jungle Theme", image: heliumImage
+        title: "Jungle Theme", image: jungleTheme
       },
       {
-        title: "Candle Theme", image: heliumImage
+        title: "Candle Theme", image: candyTheme
       },
       {
-        title: "Car Theme", image: heliumImage
+        title: "Car Theme", image: carTheme
       },
       {
-        title: "Princess Theme", image: heliumImage
+        title: "Princess Theme", image: princessTheme
       },
       {
-        title: "Assorted Themes", image: heliumImage
+        title: "Assorted Themes", image: assortedTheme
       },
       {
-        title: "Fairy Tale Theme", image: heliumImage 
+        title: "Fairy Tale Theme", image: fairyTaleTheme 
       },
     ],
       },
@@ -88,21 +118,21 @@ export const serviceDetails = {
     subServices: [
       {
         title: "Decorations",
-        image: realFlowerImage,
+        image: Decorations,
         subServices: [
           {
             title: "Banquet Hall Decoration",
-            image: heliumImage
+            image: Decorations
           },
           {
             title: "Decorations at Home",
-            image: heliumImage
+            image: decorationHome
           }
         ]
       },
       {
         title: "Flower and Garlands",
-        image: garlandImage,
+        image: flowerGarlands,
         subServices: [
           {
             title: ""
@@ -118,36 +148,36 @@ export const serviceDetails = {
     subServices: [
       {
         title: "Decorations",
-        image: houseWarmingImage,
+        image: decorationsHouseWarming,
       },
       {
         title: "Flowers and Garland",
-        image: houseWarmingImage,
+        image: flowersGarlandHouseWarm,
       }
     ],
   },
   "Puberty Decorations": {
     description:
     "Puberty Decor",
-    image: houseWarmingImage,
+    image: pubertyDecor,
     subServices: [
       {
         title: "Decorations",
-        image: houseWarmingImage,
+        image: decorationsPuberty,
         subServices: [
           {
             title: "Banquet Hall Decorations",
-            image: houseWarmingImage,
+            image: banquetHallPuberty,
           },
           {
             title: "Decorations at Home",
-            image: houseWarmingImage
+            image: decorationsHomePuberty
           }
         ]
       },
       {
         title: "Flower and Garland",
-        image: houseWarmingImage,
+        image: flowersGarlandPuberty,
       }
     ]
   },
@@ -158,45 +188,45 @@ export const serviceDetails = {
     subServices: [
       {
         title: "Decorations",
-        image: houseWarmingImage,
+        image: decorationsWedding,
         subServices: [
           {
             title: "Haldi Decoration",
-            image: houseWarmingImage,
+            image: haldiWedding,
           },
           {
             title: "Mehndi Ceremony Decoration",
-            image: houseWarmingImage,
+            image: mehndiDecor,
           },
           {
             title: "Sangeet Decoration",
-            image: houseWarmingImage,
+            image: sangeetDecor,
           },
           {
             title: "Reception Decoration",
-            image: houseWarmingImage,
+            image: receptionDecor,
           },
           {
             title: "Mandap Decoration",
-            image: houseWarmingImage,
+            image: mandapDecor,
           },
           {
             title: "Romantic Room Decoration",
-            image: houseWarmingImage,
+            image: romanticRoomDecor,
           },
           {
             title: "Beach Wedding Decoration",
-            image: houseWarmingImage,
+            image: beachDecor,
           },
           {
             title: "Car Decoration",
-            image: houseWarmingImage,
+            image: carDecor,
           }
         ],
       },
       {
         title: "Flower and Garland",
-        image: houseWarmingImage,
+        image: flowersGarlandsWedding,
       },
     ]
   }

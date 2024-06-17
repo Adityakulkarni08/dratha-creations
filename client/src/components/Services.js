@@ -4,6 +4,8 @@ import birthdayDecor from "../images/birthdaydecor.png";
 import babyShowerDecor from "../images/babyshowerdecor.png";
 import houseWarmingDecor from "../images/housewarmingdecor.png";
 import ServiceCard from "./ServiceCard.js";
+import pubertyDecor from "../images/pubertyDecor.png"
+import weddingDecor from "../images/weddingDecor.png"
 import "../styles/services.css";
 
 const Card = ({ icon, title, description }) => {
@@ -32,11 +34,11 @@ const Services = () => {
       title: "Housewarming Decoration",
     },
     {
-      image: houseWarmingDecor,
+      image: pubertyDecor,
       title: "Puberty Decorations",
     },
     {
-      image: houseWarmingDecor,
+      image: weddingDecor,
       title: "Wedding Decorations",
     }
   ];
