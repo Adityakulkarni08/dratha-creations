@@ -40,6 +40,27 @@ import kumkumHolders from "../../images/kumkumHolders.png"
 import handBags from "../../images/handBags.png"
 import clutches from "../../images/clutches.png"
 import stringBags from "../../images/stringBags.png"
+import traditionalMakeup from "../../images/traditionalMakeup.png"
+import hdMakeup from "../../images/hdMakeup.png"
+import bridalMakeup from "../../images/bridalMakeup.png"
+import groomMakeup from "../../images/groomMakeup.png"
+import bridalMakeupHD from "../../images/bridalMakeupHD.png"
+import groomMakeupHD from "../../images/groomMakeupHD.png"
+import bridalMehndi from "../../images/bridalMehndi.png"
+import indianDesigns from "../../images/indianDesigns.png"
+import rajasthaniDesigns from "../../images/rajasthaniDesigns.png"
+import indoor from "../../images/indoor.png"
+import outdoor from "../../images/outdoor.png"
+import others from "../../images/others.png"
+import dj from "../../images/dj.png"
+import chandamellam from "../../images/chandamellam.png"
+import dance from "../../images/dance.png"
+import baloonShooting from "../../images/baloonShooting.png"
+import ringToss from "../../images/ringToss.png"
+import archery from "../../images/archery.png"
+import dartBoard from "../../images/dartBoard.png"
+import tinThrowing from "../../images/tinThrowing.png"
+import slidingCastle from "../../images/slidingCastle.png"
 
 export const trendsData = {
   "Birthday Decorations": {
@@ -239,4 +260,134 @@ export const trendsData = {
       }
     ],
   },
+  "Engagement Makeups": {
+    description:
+      "Engagement Makeups",
+    image: birthdayImage,
+    subServices: [
+      {
+        title: "Traditional Makeup",
+        image: traditionalMakeup,
+        subServices: [
+          {
+            title: "Bridal Makeup",
+            image: bridalMakeup,
+          },
+          {
+            title: "Groom Makeup",
+            image: groomMakeup,
+          },
+        ],
+      },
+      {
+        title: "HD Makeup",
+        image: hdMakeup,
+        subServices: [
+            {
+                title: "Bridal Makeup",
+                image: bridalMakeupHD,
+            },
+            {
+                title: "Groom Makeup",
+                image: groomMakeupHD,
+            },
+        ]
+      }
+    ],
+  },
+  "Wedding Mehndi": {
+    description:
+      "Wedding Mehndi",
+    image: birthdayImage,
+    subServices: [
+      {
+        title: "Bridal Mehndi",
+        image: bridalMehndi,
+      },
+      {
+        title: "Indian Designs",
+        image: indianDesigns,
+       
+      },
+      {
+        title: "Rajasthani Designs",
+        image: rajasthaniDesigns,
+        
+      }
+    ],
+  },
+  "Birthday Entertainment": {
+    description:
+      "Birthday Entertainment",
+    image: birthdayImage,
+    subServices: [
+      {
+        title: "Indoor",
+        image: indoor,
+        subServices: [
+          {
+            title: "DJ",
+            image: dj,
+          },
+          {
+            title: "Chandamellam",
+            image: chandamellam,
+           
+          },
+          {
+            title: "Dance",
+            image: dance,
+            
+          }
+        ],
+      },
+      {
+        title: "Outdoor",
+        image: outdoor,
+        subServices: [
+          {
+            title: "Balloon Shooting",
+            image: baloonShooting,
+          },
+          {
+            title: "Ring Toss",
+            image: ringToss,
+           
+          },
+          {
+            title: "Archery",
+            image: archery,
+            
+          },
+          {
+            title: "Dart Board",
+            image: dartBoard,
+            
+          },
+          {
+            title: "Tin Throwing",
+            image: tinThrowing,
+            
+          },
+          {
+            title: "Sliding Castle",
+            image: slidingCastle,
+            
+          }
+        ],
+       
+      },
+      {
+        title: "Others",
+        image: others,
+        subServices: [
+          {
+            title: "Baby Entry",
+            image: others,
+          },
+        ],
+      }
+    ],
+  },
+
 };

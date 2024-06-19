@@ -1,55 +1,96 @@
 .trending-container {
-    text-align: center;
-    padding: 20px;
-    background-color: #fff; /* or any other color you prefer */
+  text-align: center;
+  padding: 20px;
+  background-color: #fff; /* or any other color you prefer */
+}
+
+.trending-container h2 {
+  color: #000; /* Title color */
+  margin-bottom: 10px;
+}
+
+.trending-container p {
+  color: #666; /* Paragraph color */
+  margin-bottom: 20px;
+}
+
+.trend-card-wrapper {
+  padding: 0 10px;
+  box-sizing: border-box;
+}
+
+.slider-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  height: 100%;
+}
+
+.slider-card .service-card {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  background-color: #f9f9f9; /* Card background color */
+  border-radius: 10px; /* Rounded corners for the card */
+  overflow: hidden; /* Ensures the content fits within the card */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Card shadow */
+  transition: transform 0.3s ease-in-out; /* Smooth transition for hover effect */
+}
+
+.slider-card .service-card:hover {
+  transform: scale(1.05); /* Slightly scale up the card on hover */
+}
+
+.slider-card .service-card img {
+  width: 100%;
+  height: auto; /* Maintain aspect ratio */
+}
+
+.slider-card .service-title {
+  color: #000; /* Title color inside the card */
+  padding: 10px; /* Padding around the title */
+}
+
+.slider-card .service-description {
+  color: #E91E63; /* Price color inside the card */
+  padding: 0 10px 10px; /* Padding around the price */
+}
+
+@media (max-width: 768px) {
+  .slick-slide {
+    padding: 0 5px; /* Reduce padding for smaller screens */
   }
-  
-  .trending-container h2 {
-    color: #000; /* Title color */
-    margin-bottom: 10px;
+
+  .slider-card .service-card {
+    padding: 10px; /* Add some padding inside the cards for smaller screens */
   }
-  
-  .trending-container p {
-    color: #666; /* Paragraph color */
-    margin-bottom: 20px;
+
+  .slider-card .service-title, 
+  .slider-card .service-description {
+    font-size: 0.9rem; /* Reduce font size for smaller screens */
   }
-  
-  .trend-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 20px;
-    padding: 20px;
+
+  .slick-dots {
+    bottom: -30px; /* Adjust dot position if necessary */
   }
-  
-  .trend-card {
-    background-color: #f9f9f9; /* Card background color */
-    border-radius: 10px; /* Rounded corners for the card */
-    overflow: hidden; /* Ensures the content fits within the card */
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Card shadow */
-    transition: transform 0.3s ease-in-out; /* Smooth transition for hover effect */
+}
+
+@media (max-width: 480px) {
+  .slick-slide {
+    padding: 0 5px; /* Reduce padding for smaller screens */
   }
-  
-  .trend-card:hover {
-    transform: scale(1.05); /* Slightly scale up the card on hover */
+
+  .slider-card .service-card {
+    padding: 10px; /* Add some padding inside the cards for smaller screens */
   }
-  
-  .trend-card img {
-    width: 100%;
-    height: auto; /* Maintain aspect ratio */
+
+  .slider-card .service-title, 
+  .slider-card .service-description {
+    font-size: 0.8rem; /* Reduce font size for smaller screens */
   }
-  
-  .trend-card h3 {
-    color: #000; /* Title color inside the card */
-    padding: 10px; /* Padding around the title */
+
+  .slick-dots {
+    bottom: -30px; /* Adjust dot position if necessary */
   }
-  
-  .trend-card p {
-    color: #E91E63; /* Price color inside the card */
-    padding: 0 10px 10px; /* Padding around the price */
-  }
-  
-  @media (max-width: 600px) {
-    .trend-grid {
-      grid-template-columns: repeat(2, 1fr);
-    }
-  }
+}
