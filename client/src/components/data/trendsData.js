@@ -1,4 +1,3 @@
-// serviceData.js
 import birthdayImage from "../../images/birthdaydecor.png";
 import baloonDecor from "../../images/baloonDecor.png";
 import themeDecor from "../../images/themeDecor.png";
@@ -17,50 +16,50 @@ import carTheme from "../../images/carTheme.png";
 import princessTheme from "../../images/princessTheme.png";
 import assortedTheme from "../../images/assortedTheme.png";
 import fairyTaleTheme from "../../images/fairyTaleTheme.png";
-import newBornPhotoShoot from "../../images/newBornPhotoShoot.png"
-import digitalPhoto from "../../images/digitalPhoto.png"
-import photoAlbum from "../../images/photoAlbum.png"
-import photoAlbumVideo from "../../images/photoAlbumVideo.png"
-import themeCakes from "../../images/themeCakes.png"
-import assortedCake from "../../images/assortedCake.png"
-import barbieCake from "../../images/barbieCake.png"
-import bossBaby from "../../images/bossBaby.png"
-import cocomelonCake from "../../images/cocomelonCake.png"
-import fairyTheme from "../../images/fairyTheme.png"
-import bearTheme from "../../images/bearTheme.png"
-import lionKing from "../../images/lionKing.png"
-import princessThemeCake from "../../images/princessThemeCake.png"
-import butterflyThemeCake from "../../images/butterflyThemeCake.png"
-import unicornThemeCake from "../../images/unicornThemeCake.png"
-import traditionalGifts from "../../images/traditionalGifts.png"
-import fancyGifts from "../../images/fancyGifts.png"
-import divineFigurines from "../../images/divineFigurines.png"
-import diyas from "../../images/diyas.png"
-import kumkumHolders from "../../images/kumkumHolders.png"
-import handBags from "../../images/handBags.png"
-import clutches from "../../images/clutches.png"
-import stringBags from "../../images/stringBags.png"
-import traditionalMakeup from "../../images/traditionalMakeup.png"
-import hdMakeup from "../../images/hdMakeup.png"
-import bridalMakeup from "../../images/bridalMakeup.png"
-import groomMakeup from "../../images/groomMakeup.png"
-import bridalMakeupHD from "../../images/bridalMakeupHD.png"
-import groomMakeupHD from "../../images/groomMakeupHD.png"
-import bridalMehndi from "../../images/bridalMehndi.png"
-import indianDesigns from "../../images/indianDesigns.png"
-import rajasthaniDesigns from "../../images/rajasthaniDesigns.png"
-import indoor from "../../images/indoor.png"
-import outdoor from "../../images/outdoor.png"
-import others from "../../images/others.png"
-import dj from "../../images/dj.png"
-import chandamellam from "../../images/chandamellam.png"
-import dance from "../../images/dance.png"
-import baloonShooting from "../../images/baloonShooting.png"
-import ringToss from "../../images/ringToss.png"
-import archery from "../../images/archery.png"
-import dartBoard from "../../images/dartBoard.png"
-import tinThrowing from "../../images/tinThrowing.png"
-import slidingCastle from "../../images/slidingCastle.png"
+import newBornPhotoShoot from "../../images/newBornPhotoShoot.png";
+import digitalPhoto from "../../images/digitalPhoto.png";
+import photoAlbum from "../../images/photoAlbum.png";
+import photoAlbumVideo from "../../images/photoAlbumVideo.png";
+import themeCakes from "../../images/themeCakes.png";
+import assortedCake from "../../images/assortedCake.png";
+import barbieCake from "../../images/barbieCake.png";
+import bossBaby from "../../images/bossBaby.png";
+import cocomelonCake from "../../images/cocomelonCake.png";
+import fairyTheme from "../../images/fairyTheme.png";
+import bearTheme from "../../images/bearTheme.png";
+import lionKing from "../../images/lionKing.png";
+import princessThemeCake from "../../images/princessThemeCake.png";
+import butterflyThemeCake from "../../images/butterflyThemeCake.png";
+import unicornThemeCake from "../../images/unicornThemeCake.png";
+import traditionalGifts from "../../images/traditionalGifts.png";
+import fancyGifts from "../../images/fancyGifts.png";
+import divineFigurines from "../../images/divineFigurines.png";
+import diyas from "../../images/diyas.png";
+import kumkumHolders from "../../images/kumkumHolders.png";
+import handBags from "../../images/handBags.png";
+import clutches from "../../images/clutches.png";
+import stringBags from "../../images/stringBags.png";
+import traditionalMakeup from "../../images/traditionalMakeup.png";
+import hdMakeup from "../../images/hdMakeup.png";
+import bridalMakeup from "../../images/bridalMakeup.png";
+import groomMakeup from "../../images/groomMakeup.png";
+import bridalMakeupHD from "../../images/bridalMakeupHD.png";
+import groomMakeupHD from "../../images/groomMakeupHD.png";
+import bridalMehndi from "../../images/bridalMehndi.png";
+import indianDesigns from "../../images/indianDesigns.png";
+import rajasthaniDesigns from "../../images/rajasthaniDesigns.png";
+import indoor from "../../images/indoor.png";
+import outdoor from "../../images/outdoor.png";
+import others from "../../images/others.png";
+import dj from "../../images/dj.png";
+import chandamellam from "../../images/chandamellam.png";
+import dance from "../../images/dance.png";
+import baloonShooting from "../../images/baloonShooting.png";
+import ringToss from "../../images/ringToss.png";
+import archery from "../../images/archery.png";
+import dartBoard from "../../images/dartBoard.png";
+import tinThrowing from "../../images/tinThrowing.png";
+import slidingCastle from "../../images/slidingCastle.png";
 
 export const trendsData = {
   "Birthday Decorations": {
@@ -165,61 +164,59 @@ export const trendsData = {
     ],
   },
   "Birthday Cakes": {
-    description: 
-        "Birthday Cakes",
+    description: "Birthday Cakes",
     image: birthdayImage,
     subServices: [
-        {
-            title: "Theme Cakes",
-            image: themeCakes,
-            subServices: [
-                {
-                    title: "Assorted Cakes",
-                    image: assortedCake,
-                },
-                {
-                    title: "Barbie Theme",
-                    image: barbieCake,
-                },
-                {
-                    title: "Boss Baby Theme",
-                    image: bossBaby,
-                },
-                {
-                    title: "Cocomelon Theme",
-                    image: cocomelonCake,
-                },
-                {
-                    title: "Fairy Theme",
-                    image: fairyTheme,
-                },
-                {
-                    title: "Bear Theme",
-                    image: bearTheme,
-                },
-                {
-                    title: "Lion King Theme",
-                    image: lionKing,
-                },
-                {
-                    title: "Princess Theme",
-                    image: princessThemeCake,
-                },
-                {
-                    title: "Butterfly Theme",
-                    image: butterflyThemeCake,
-                },
-                {
-                    title: "Unicorn Theme",
-                    image: unicornThemeCake,
-                }
-            ]
-        }
-    ]
+      {
+        title: "Theme Cakes",
+        image: themeCakes,
+        subServices: [
+          {
+            title: "Assorted Cakes",
+            image: assortedCake,
+          },
+          {
+            title: "Barbie Theme",
+            image: barbieCake,
+          },
+          {
+            title: "Boss Baby Theme",
+            image: bossBaby,
+          },
+          {
+            title: "Cocomelon Theme",
+            image: cocomelonCake,
+          },
+          {
+            title: "Fairy Theme",
+            image: fairyTheme,
+          },
+          {
+            title: "Bear Theme",
+            image: bearTheme,
+          },
+          {
+            title: "Lion King Theme",
+            image: lionKing,
+          },
+          {
+            title: "Princess Theme",
+            image: princessThemeCake,
+          },
+          {
+            title: "Butterfly Theme",
+            image: butterflyThemeCake,
+          },
+          {
+            title: "Unicorn Theme",
+            image: unicornThemeCake,
+          },
+        ],
+      },
+    ],
   },
   "Wedding Return Gifts": {
-    description:
-      "Wedding Return Gifts",
+    description: "Wedding Return Gifts",
     image: birthdayImage,
     subServices: [
       {
@@ -244,25 +241,24 @@ export const trendsData = {
         title: "Fancy Gifts",
         image: fancyGifts,
         subServices: [
-            {
-                title: "Hand Bags",
-                image: handBags,
-            },
-            {
-                title: "Clutches & Purses",
-                image: clutches,
-            },
-            {
-                title: "String Bags",
-                image: stringBags,
-            }
-        ]
-      }
+          {
+            title: "Hand Bags",
+            image: handBags,
+          },
+          {
+            title: "Clutches & Purses",
+            image: clutches,
+          },
+          {
+            title: "String Bags",
+            image: stringBags,
+          },
+        ],
+      },
     ],
   },
   "Engagement Makeups": {
-    description:
-      "Engagement Makeups",
+    description: "Engagement Makeups",
     image: birthdayImage,
     subServices: [
       {
@@ -283,21 +279,20 @@ export const trendsData = {
         title: "HD Makeup",
         image: hdMakeup,
         subServices: [
-            {
-                title: "Bridal Makeup",
-                image: bridalMakeupHD,
-            },
-            {
-                title: "Groom Makeup",
-                image: groomMakeupHD,
-            },
-        ]
-      }
+          {
+            title: "Bridal Makeup",
+            image: bridalMakeupHD,
+          },
+          {
+            title: "Groom Makeup",
+            image: groomMakeupHD,
+          },
+        ],
+      },
     ],
   },
   "Wedding Mehndi": {
-    description:
-      "Wedding Mehndi",
+    description: "Wedding Mehndi",
     image: birthdayImage,
     subServices: [
       {
@@ -307,18 +302,15 @@ export const trendsData = {
       {
         title: "Indian Designs",
         image: indianDesigns,
-       
       },
       {
         title: "Rajasthani Designs",
         image: rajasthaniDesigns,
-        
-      }
+      },
     ],
   },
   "Birthday Entertainment": {
-    description:
-      "Birthday Entertainment",
+    description: "Birthday Entertainment",
     image: birthdayImage,
     subServices: [
       {
@@ -332,13 +324,11 @@ export const trendsData = {
           {
             title: "Chandamellam",
             image: chandamellam,
-           
           },
           {
             title: "Dance",
             image: dance,
-            
-          }
+          },
         ],
       },
       {
@@ -352,30 +342,24 @@ export const trendsData = {
           {
             title: "Ring Toss",
             image: ringToss,
-           
           },
           {
             title: "Archery",
             image: archery,
-            
           },
           {
             title: "Dart Board",
             image: dartBoard,
-            
           },
           {
             title: "Tin Throwing",
             image: tinThrowing,
-            
           },
           {
             title: "Sliding Castle",
             image: slidingCastle,
-            
-          }
+          },
         ],
-       
       },
       {
         title: "Others",
@@ -386,8 +370,7 @@ export const trendsData = {
             image: others,
           },
         ],
-      }
+      },
     ],
   },
-
 };
