@@ -7,6 +7,7 @@ import Intro from '../components/Intro';
 import Portfolio from '../components/Portfolio';
 import Services from '../components/Services';
 import EventPackages from '../components/EventPackages';
+import WhyHomeEvents from "../components/WhyHomeEvents"
 
 
 const Home = () => {
@@ -17,6 +18,7 @@ const Home = () => {
             <Services />
             <Portfolio />
             <EventPackages />
+            <WhyHomeEvents />
             <Clients />
             <Cta/>
             <Footer />
