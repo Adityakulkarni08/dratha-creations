@@ -6,6 +6,7 @@ import Hero from '../components/Hero';
 import Intro from '../components/Intro';
 import Portfolio from '../components/Portfolio';
 import Services from '../components/Services';
+import EventPackages from '../components/EventPackages';
 
 
 const Home = () => {
@@ -15,6 +16,7 @@ const Home = () => {
             <Intro />
             <Services />
             <Portfolio />
+            <EventPackages />
             <Clients />
             <Cta/>
             <Footer />

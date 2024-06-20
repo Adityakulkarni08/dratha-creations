@@ -1,4 +1,3 @@
-// ServiceDetail.js
 import React from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import { trendsData } from "./data/trendsData.js";

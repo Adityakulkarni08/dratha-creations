@@ -19,6 +19,8 @@ import ServiceDetail from "./components/ServiceDetail.js";
 import SubServiceDetail from "./components/SubServiceDetail.js";
 import TrendDetail from "./components/TrendDetail.js"
 import SubTrendDetail from "./components/SubTrendDetail.js"
+import EventDetail from "./components/EventDetail.js"
+import SubEventDetail from "./components/SubEventDetail.js"
 import 'semantic-ui-css/semantic.min.css';
 
 function App() {
@@ -56,6 +58,8 @@ function App() {
               <Route path="/service/:title/:subTitle" element={<SubServiceDetail />} />
               <Route path="/trend/:title" element={<TrendDetail />} />
               <Route path="/trend/:title/:subTitle" element={<SubTrendDetail />} />
+              <Route path="/event/:title" element={<EventDetail />} />
+              <Route path="/event/:title/:subTitle" element={<SubEventDetail />} />
             </Routes>
           </ScrollToTop>
         </Router>
