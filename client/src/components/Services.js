@@ -6,7 +6,18 @@ import houseWarmingDecor from "../images/housewarmingdecor.png";
 import pubertyDecor from "../images/pubertyDecor.png";
 import weddingDecor from "../images/weddingDecor.png";
 import ServiceCard from "./ServiceCard.js";
+import { FaRegCalendarCheck, FaQuoteRight, FaBullhorn } from "react-icons/fa";
 import "../styles/services.css";
+
+const Card = ({ icon, title, description }) => {
+  return (
+    <div className="card">
+      <div className="cardIcon">{icon}</div>
+      <h3 className="cardTitle">{title}</h3>
+      <p className="cardDescription">{description}</p>
+    </div>
+  );
+};
 
 const Services = () => {
   const navigate = useNavigate();
@@ -29,6 +40,7 @@ const Services = () => {
           <h2 className="my-2 text-center text-3xl text-blue-900 uppercase font-bold">
             How it Works
           </h2>
+          
           <div className="flex justify-center">
             <div className="w-24 border-b-4 border-blue-900"></div>
           </div>
@@ -36,6 +48,24 @@ const Services = () => {
             Get Druthi creations event experts on board in 3 easy steps to get
             your celebration mode on!
           </h2>
+        </div>
+        <div className="featuresContainer">
+          <Card
+            icon={<FaRegCalendarCheck size={50} color="#E91E63" />}
+            title="Plan your Event"
+            description="Send us your event details and we will plan everything to perfection to your preferences."
+          />
+          <Card
+            icon={<FaQuoteRight size={50} color="#FFC107" />}
+            title="Get a Quote"
+            description="Get a transparent and comprehensive quote of all anticipated expenses and miscellaneous."
+          />
+          <Card
+            icon={<FaBullhorn size={50} color="#00BCD4" />}
+            title="Celebrate your Events"
+            description="Sit back and celebrate your event with loved ones as Homevents takes care of everything else."
+          />
+          {/* Add more cards as needed */}
         </div>
       </section>
 
