@@ -32,7 +32,14 @@
     border: none;
     cursor: pointer;
     font-size: 16px;
-    margin-top: 20px;
+    border-radius: 25px; /* Make the button more rounded */
+    font-weight: 700;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.know-more-btn:hover {
+    background-color: #32cacf; /* Darken the button color on hover */
+    transform: scale(1.05); /* Slightly enlarge the button on hover */
 }
 
 .image-container {

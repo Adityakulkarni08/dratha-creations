@@ -8,7 +8,7 @@ import Portfolio from '../components/Portfolio';
 import Services from '../components/Services';
 import EventPackages from '../components/EventPackages';
 import WhyHomeEvents from "../components/WhyHomeEvents"
-
+import Celebration from '../components/Celebration';
 
 const Home = () => {
     return (
@@ -20,6 +20,7 @@ const Home = () => {
             <EventPackages />
             <WhyHomeEvents />
             <Clients />
+            <Celebration />
             <Cta/>
             <Footer />
         </>
