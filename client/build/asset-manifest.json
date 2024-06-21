@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.37aef36a.css",
-    "main.js": "/static/js/main.703d386a.js",
+    "main.css": "/static/css/main.51b8160a.css",
+    "main.js": "/static/js/main.5974cd29.js",
     "static/media/yourcelebbanner.png": "/static/media/yourcelebbanner.3b316bb04b2eee52993f.png",
     "static/media/newBornPhotoShoot.png": "/static/media/newBornPhotoShoot.d4169ca4836ef55cff26.png",
     "static/media/birthdaybanner.png": "/static/media/birthdaybanner.1e6676e6cbd3c4756955.png",
@@ -74,6 +74,7 @@
     "static/media/decorationsHouseWarming.png": "/static/media/decorationsHouseWarming.9a38ec114949635f20b7.png",
     "static/media/digitalPhoto.png": "/static/media/digitalPhoto.6b48b5687dcf5228811f.png",
     "static/media/jungleTheme.png": "/static/media/jungleTheme.65dd87df512f3697c08b.png",
+    "static/media/enquiry.png": "/static/media/enquiry.3f6d2a9258267f052bf1.png",
     "static/media/bearTheme.png": "/static/media/bearTheme.6be7e64b8bf116c190ce.png",
     "static/media/photoAlbum.png": "/static/media/photoAlbum.09f76f15c8332d8976f7.png",
     "static/media/housewarmingdecor.png": "/static/media/housewarmingdecor.b7e14872d5e2aba00bce.png",
@@ -134,11 +135,11 @@
     "static/media/slick.ttf": "/static/media/slick.c94f7671dcc99dce43e2.ttf",
     "static/media/slick.woff": "/static/media/slick.295183786cd8a1389865.woff",
     "index.html": "/index.html",
-    "main.37aef36a.css.map": "/static/css/main.37aef36a.css.map",
-    "main.703d386a.js.map": "/static/js/main.703d386a.js.map"
+    "main.51b8160a.css.map": "/static/css/main.51b8160a.css.map",
+    "main.5974cd29.js.map": "/static/js/main.5974cd29.js.map"
   },
   "entrypoints": [
-    "static/css/main.37aef36a.css",
-    "static/js/main.703d386a.js"
+    "static/css/main.51b8160a.css",
+    "static/js/main.5974cd29.js"
   ]
 }
