@@ -7,7 +7,6 @@ const NavBar = () => {
   const [top, setTop] = useState(true);
   const [isOpen, setisOpen] = React.useState(false);
   const [searchText, setSearchText] = useState("");
-  
 
   const handleSearchChange = (e) => {
     setSearchText(e.target.value);
@@ -15,12 +14,12 @@ const NavBar = () => {
 
   const handleSearchSubmit = (e) => {
     e.preventDefault();
-    // Implement your search logic here
     console.log(searchText);
   };
-  function handleClick() {
+
+  const handleClick = () => {
     setisOpen(!isOpen);
-  }
+  };
 
   useEffect(() => {
     const scrollHandler = () => {
@@ -36,32 +35,27 @@ const NavBar = () => {
         !top && "bg-white shadow-lg"
       }`}
     >
-        
-      <div className="flex flex-row justify-between items-center py-2">
-        <div className="flex flex-row justify-center md:px-12 md:mx-12 items-center text-center font-semibold">
+      <div className="flex flex-row justify-between items-center py-2 px-4 md:px-12">
+        <div className="flex items-center">
           <Link to="/">
-            <h1 className="font-extrabold text-4xl text-blue-900">
-              Dratha<br />{" "}
-            </h1>
+            <h1 className="font-extrabold text-4xl text-blue-900">Dratha</h1>
           </Link>
-          {/* Search Bar Container */}
-          {/* Centered Search Bar */}
-          <div className="search-container">
-            <form onSubmit={handleSearchSubmit} className="search-form" style={{ width: '800px' }}>
-              <input
-                type="search"
-                value={searchText}
-                onChange={handleSearchChange}
-                placeholder="What are you looking for?"
-                className="pl-10 pr-3 py-2 border rounded-full text-sm w-full focus:outline-none focus:ring-2 focus:ring-blue-600 focus:border-transparent"
-              />
-              <button type="submit" className="search-button">
-                {/* Insert search icon SVG or image here */}
-              </button>
-            </form>
-          </div>
         </div>
-        <div className="group flex flex-col items-center">
+        <div className="flex-1 mx-4">
+          <form onSubmit={handleSearchSubmit} className="search-form">
+            <input
+              type="search"
+              value={searchText}
+              onChange={handleSearchChange}
+              placeholder="What are you looking for?"
+              className="search-input"
+            />
+            <button type="submit" className="search-button">
+              {/* Insert search icon SVG or image here */}
+            </button>
+          </form>
+        </div>
+        <div className="flex items-center">
           <button
             className="p-2 rounded-lg lg:hidden text-blue-900"
             onClick={handleClick}
@@ -71,14 +65,13 @@ const NavBar = () => {
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 24 24"
             >
-              {isOpen && (
+              {isOpen ? (
                 <path
                   fillRule="evenodd"
                   clipRule="evenodd"
                   d="M18.278 16.864a1 1 0 0 1-1.414 1.414l-4.829-4.828-4.828 4.828a1 1 0 0 1-1.414-1.414l4.828-4.829-4.828-4.828a1 1 0 0 1 1.414-1.414l4.829 4.828 4.828-4.828a1 1 0 1 1 1.414 1.414l-4.828 4.829 4.828 4.828z"
                 />
-              )}
-              {!isOpen && (
+              ) : (
                 <path
                   fillRule="evenodd"
                   d="M4 5h16a1 1 0 0 1 0 2H4a1 1 0 1 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2z"
@@ -89,17 +82,15 @@ const NavBar = () => {
           <div className="hidden space-x-6 lg:inline-block p-5">
             <NavLinks />
           </div>
-
-          <div
-            className={`fixed transition-transform duration-300 ease-in-out transit flex justify-center left-0 w-full h-auto rounded-md p-24 bg-white rounded-lg block lg:hidden shadow-xl top-14 ${
-              isOpen ? "block" : "hidden"
-            } `}
-          >
-            <div className="flex flex-col space-y-6">
-              <NavLinks />
-            </div>
-          </div>
-          
+        </div>
+      </div>
+      <div
+        className={`fixed transition-transform duration-300 ease-in-out transit flex justify-center left-0 w-full h-auto p-24 bg-white block lg:hidden shadow-xl top-14 ${
+          isOpen ? "block" : "hidden"
+        } `}
+      >
+        <div className="flex flex-col space-y-6">
+          <NavLinks />
         </div>
       </div>
     </nav>
