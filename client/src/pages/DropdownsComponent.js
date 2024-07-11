@@ -677,9 +677,14 @@ const DropdownComponent = () => {
         </div>
       </div>
 
-      {/* Other dropdowns can remain unchanged */}
-    </div>
+      <div className="dropdown right-end">
+        <button className="dropbtn">
+          <img src={newbornImage} alt="Packages" />
+          <span>Packages</span>
+        </button>
+        
+      </div>
+    </div>  
   );
 };
-
 export default DropdownComponent;
