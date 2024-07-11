@@ -679,12 +679,26 @@ const DropdownComponent = () => {
 
       <div className="dropdown right-end">
         <button className="dropbtn">
-          <img src={newbornImage} alt="Packages" />
           <span>Packages</span>
         </button>
-        
+        <div className="dropdown-content">
+          <div className="dropdown-item">
+            <img src={engagement} alt="Birthday Packages" />
+            <h3>Birthday Packages</h3>
+            <p>Curated event packages from the best event planners.</p>
+          </div>
+          <div className="dropdown-item">
+            <img src={engagement} alt="Housewarming Packages" />
+            <h3>Housewarming Packages</h3>
+            <p>Curated event packages from the best event planners.</p>
+          </div>
+          <div className="dropdown-item">
+            <img src={engagement} alt="Wedding Packages" />
+            <h3>Wedding Packages</h3>
+            <p>Curated event packages from the best event planners.</p>
+          </div>
+        </div>
       </div>
-    </div>  
+    </div>
   );
-};
-export default DropdownComponent;
+};export default DropdownComponent;
