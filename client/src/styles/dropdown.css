@@ -250,4 +250,8 @@
   .dropdown-item a {
     text-align: center;
   }
+
+  .right-end {
+    display: none; /* Hide the Packages button */
+  }
 }
