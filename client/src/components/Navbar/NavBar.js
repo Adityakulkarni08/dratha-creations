@@ -21,6 +21,10 @@ const NavBar = () => {
     setisOpen(!isOpen);
   };
 
+  const handleCloseMenu = () => {
+    setisOpen(false);
+  };
+
   useEffect(() => {
     const scrollHandler = () => {
       window.pageYOffset > 10 ? setTop(false) : setTop(true);
@@ -37,7 +41,7 @@ const NavBar = () => {
     >
       <div className="flex flex-row justify-between items-center py-2 px-4 md:px-12">
         <div className="flex items-center">
-          <Link to="/">
+          <Link to="/" onClick={handleCloseMenu}>
             <h1 className="font-extrabold text-4xl text-blue-900">Dratha</h1>
           </Link>
         </div>
@@ -80,7 +84,7 @@ const NavBar = () => {
             </svg>
           </button>
           <div className="hidden space-x-6 lg:inline-block p-5">
-            <NavLinks />
+            <NavLinks handleCloseMenu={handleCloseMenu} />
           </div>
         </div>
       </div>
@@ -90,7 +94,7 @@ const NavBar = () => {
         } `}
       >
         <div className="flex flex-col space-y-6">
-          <NavLinks />
+          <NavLinks handleCloseMenu={handleCloseMenu} />
         </div>
       </div>
     </nav>
