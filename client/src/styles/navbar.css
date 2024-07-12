@@ -89,6 +89,10 @@
   .top-bar span {
     margin-bottom: 5px;
   }
+
+  .fixed + .flex {
+    padding-top: 120px; /* Adjust this value to ensure the content below the navbar is not overlapped */
+  }
 }
 
 /* Desktop Styles */
@@ -107,10 +111,14 @@ nav.fixed {
   top: 60px; /* Adjust this value to ensure the navbar is below the top bar */
 }
 
-.fixed + .flex {
-  padding-top: 70px; /* Adjust this value to ensure the content below the navbar is not overlapped */
-}
-
 nav.fixed.bg-white {
   top: 60px; /* Adjust this value to ensure the navbar is below the top bar when scrolled */
+}
+
+/* Additional Styles for Close Button */
+.close-button {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
 }

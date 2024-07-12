@@ -7,7 +7,7 @@ import "../../styles/navbar.css";
 
 const NavBar = () => {
   const [top, setTop] = useState(true);
-  const [isOpen, setisOpen] = React.useState(false);
+  const [isOpen, setisOpen] = useState(false);
   const [searchText, setSearchText] = useState("");
 
   const handleSearchChange = (e) => {
@@ -101,11 +101,24 @@ const NavBar = () => {
           </div>
         </div>
         <div
-          className={`fixed transition-transform duration-300 ease-in-out transit flex justify-center left-0 w-full h-auto p-24 bg-white block lg:hidden shadow-xl top-14 ${
+          className={`fixed transition-transform duration-300 ease-in-out transit flex justify-center left-0 w-full h-auto bg-white block lg:hidden shadow-xl top-14 ${
             isOpen ? "block" : "hidden"
           } `}
         >
-          <div className="flex flex-col space-y-6">
+          <div className="flex flex-col space-y-6 p-5">
+            <button onClick={handleCloseMenu} className="self-end close-button">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                width="24"
+                height="24"
+              >
+                <path
+                  fill="currentColor"
+                  d="M18.278 16.864a1 1 0 0 1-1.414 1.414l-4.829-4.828-4.828 4.828a1 1 0 0 1-1.414-1.414l4.828-4.829-4.828-4.828a1 1 0 0 1 1.414-1.414l4.829 4.828 4.828-4.828a1 1 0 1 1 1.414 1.414l-4.828 4.829 4.828 4.828z"
+                />
+              </svg>
+            </button>
             <NavLinks handleCloseMenu={handleCloseMenu} />
           </div>
         </div>
