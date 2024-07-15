@@ -1,16 +1,13 @@
 {
   "files": {
-    "main.css": "/static/css/main.e34075a3.css",
-    "main.js": "/static/js/main.e745c5f3.js",
+    "main.css": "/static/css/main.8c04c4a5.css",
+    "main.js": "/static/js/main.9d5417d4.js",
     "static/media/yourcelebbanner.png": "/static/media/yourcelebbanner.3b316bb04b2eee52993f.png",
     "static/media/newBornPhotoShoot.png": "/static/media/newBornPhotoShoot.d4169ca4836ef55cff26.png",
     "static/media/birthdaybanner.png": "/static/media/birthdaybanner.1e6676e6cbd3c4756955.png",
     "static/media/themeCakes.png": "/static/media/themeCakes.486085e64ab162e7fe3b.png",
     "static/media/housewarmingbanner.png": "/static/media/housewarmingbanner.02cb760af00b318a8ea2.png",
-    "static/media/puberty.png": "/static/media/puberty.6f71068a0a7914831ed8.png",
     "static/media/banner.png": "/static/media/banner.c8a52d900ee966582a55.png",
-    "static/media/surpriseparty.png": "/static/media/surpriseparty.5cb0dbce9cc929ea02ed.png",
-    "static/media/wedding.png": "/static/media/wedding.c80ed1287d23467f4ae8.png",
     "static/media/bridalMakeup.png": "/static/media/bridalMakeup.aef2e77f7e9bf7a9f1e8.png",
     "static/media/traditionalMakeup.png": "/static/media/traditionalMakeup.802439523b9b688cb108.png",
     "static/media/themeDecor.png": "/static/media/themeDecor.365e3dcfd0164f359d96.png",
@@ -19,11 +16,8 @@
     "static/media/baloonDecor.png": "/static/media/baloonDecor.8ca5c786bce5ec46ed77.png",
     "static/media/flowersGarlandsWedding.png": "/static/media/flowersGarlandsWedding.506537bc734c4219c74e.png",
     "static/media/decorationHome.png": "/static/media/decorationHome.4fa391336df20ce91d29.png",
-    "static/media/housewarming.png": "/static/media/housewarming.e2d3627d390acc6e2719.png",
     "static/media/banquetHallPuberty.png": "/static/media/banquetHallPuberty.efb2330d5edcd081e718.png",
-    "static/media/engagement.png": "/static/media/engagement.d2bc026e3c9e789e002e.png",
     "static/media/baloonDecorHome.png": "/static/media/baloonDecorHome.9822450fb5bb65cd672a.png",
-    "static/media/happybirthday.png": "/static/media/happybirthday.b5b496ec0334684a2096.png",
     "static/media/decorationsHomePuberty.png": "/static/media/decorationsHomePuberty.a0ea708fe334f9c1f04c.png",
     "static/media/decorationsWedding.png": "/static/media/decorationsWedding.96ec6d01658b6e2fe70a.png",
     "static/media/decorationsPuberty.png": "/static/media/decorationsPuberty.470f8897e830c79526e0.png",
@@ -36,7 +30,6 @@
     "static/media/flowersGarlandHouseWarm.png": "/static/media/flowersGarlandHouseWarm.66d2d036cc4411587e7e.png",
     "static/media/Decorations.png": "/static/media/Decorations.8f1e399728350fab82a2.png",
     "static/media/princessTheme.png": "/static/media/princessTheme.15ecec485fa023d1e6c6.png",
-    "static/media/bayshower.png": "/static/media/bayshower.861d34536bbf4c9ffb27.png",
     "static/media/haldiWedding.png": "/static/media/haldiWedding.0d5569fc5c87f794bfc7.png",
     "static/media/indianDesigns.png": "/static/media/indianDesigns.35adf54694eddf987219.png",
     "static/media/diyas.png": "/static/media/diyas.dac0b7eed188936660e4.png",
@@ -57,7 +50,6 @@
     "static/media/bossBaby.png": "/static/media/bossBaby.9066ad7c99fcf64979d7.png",
     "static/media/princessThemeCake.png": "/static/media/princessThemeCake.0c07f5b4d7ce3ee50e7c.png",
     "static/media/weddingDecor.png": "/static/media/weddingDecor.c11423a74a758d30a606.png",
-    "static/media/babyshower.png": "/static/media/babyshower.57d3068156169ed8dcf1.png",
     "static/media/bridalMehndi.png": "/static/media/bridalMehndi.d3840031f80c325f41c3.png",
     "static/media/indoor.png": "/static/media/indoor.cfc530cdf28411f5113b.png",
     "static/media/assortedTheme.png": "/static/media/assortedTheme.5d727ed2b285a3167b20.png",
@@ -135,11 +127,11 @@
     "static/media/slick.ttf": "/static/media/slick.c94f7671dcc99dce43e2.ttf",
     "static/media/slick.woff": "/static/media/slick.295183786cd8a1389865.woff",
     "index.html": "/index.html",
-    "main.e34075a3.css.map": "/static/css/main.e34075a3.css.map",
-    "main.e745c5f3.js.map": "/static/js/main.e745c5f3.js.map"
+    "main.8c04c4a5.css.map": "/static/css/main.8c04c4a5.css.map",
+    "main.9d5417d4.js.map": "/static/js/main.9d5417d4.js.map"
   },
   "entrypoints": [
-    "static/css/main.e34075a3.css",
-    "static/js/main.e745c5f3.js"
+    "static/css/main.8c04c4a5.css",
+    "static/js/main.9d5417d4.js"
   ]
 }

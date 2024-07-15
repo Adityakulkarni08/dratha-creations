@@ -1,704 +1,119 @@
-import React from "react";
+import React, { useState } from "react";
 import "../styles/dropdown.css";
-import newbornImage from "../images/birthday.jpg";
-import babyImage from "../images/babyshower.png";
-import babyShower from "../images/bayshower.png"
-import happyBirthday from "../images/happybirthday.png"
-import houseWarming from "../images/housewarming.png"
-import engagement from "../images/engagement.png"
-import wedding from "../images/wedding.png"
-import puberty from "../images/puberty.png"
-import surpriseParty from "../images/surpriseparty.png"
+import newbornImage from "../images/birthday.jpg"; // Import the image
 
 const DropdownComponent = () => {
+  const [activeSection, setActiveSection] = useState(null);
+
+  const handleMouseEnter = (section) => {
+    setActiveSection(section);
+  };
+
+  const handleMouseLeave = () => {
+    setActiveSection(null);
+  };
+
   return (
-    <div className="navbar">
+    <div className="navbar" onMouseLeave={handleMouseLeave}>
       <div className="dropdown">
-        <button className="dropbtn">
-          <img src={newbornImage} alt="New Born" />
-          <span>New Born</span>
-        </button>
+        <button className="dropbtn">Decorations</button>
         <div className="dropdown-content">
-          <div className="dropdown-item">
-            <button className="sub-dropbtn">Photography</button>
-            <div className="sub-dropdown-content">
-              <a href="#">New Born Photo Shoot</a>
-              <div className="image-box">
-                <img
-                  src={babyImage}
-                  alt="New Born Photo Shoot"
-                  className="small-image"
-                />
+          <div
+            className="dropdown-item"
+            onMouseEnter={() => handleMouseEnter("Photography")}
+            onMouseLeave={handleMouseLeave}
+          >
+            Photography
+            {activeSection === "Photography" && (
+              <div className="dropdown-subcontent">
+                <div className="dropdown-section">
+                  <h3>Photography</h3>
+                  <a href="#">New Born Photo Shoot</a>
+                  <a href="#">Digital Photography</a>
+                  <a href="#">Photo + Album</a>
+                  <a href="#">Photo + Album + Video</a>
+                </div>
+                <img src={newbornImage} alt="Photography" className="dropdown-image" />
               </div>
-              <a href="#">Digital Photography</a>
-              <div className="image-box">
-                <img
-                  src={babyImage}
-                  alt="New Born Photo Shoot"
-                  className="small-image"
-                />
-              </div>
-              <a href="#">Photo + Album</a>
-              <div className="image-box">
-                <img
-                  src={babyImage}
-                  alt="New Born Photo Shoot"
-                  className="small-image"
-                />
-              </div>
-              <a href="#">Photo + Album + Video</a>
-              <div className="image-box">
-                <img
-                  src={babyImage}
-                  alt="New Born Photo Shoot"
-                  className="small-image"
-                />
-              </div>
-            </div>
+            )}
           </div>
-          <div className="dropdown-item">
-            <button className="sub-dropbtn">Food</button>
-            <div className="sub-dropdown-content">
-              <a href="#">Catering Options</a>
-              <div className="image-box">
-                <img
-                  src={babyImage}
-                  alt="New Born Photo Shoot"
-                  className="small-image"
-                />
+          <div
+            className="dropdown-item"
+            onMouseEnter={() => handleMouseEnter("Cakes")}
+            onMouseLeave={handleMouseLeave}
+          >
+            Cakes
+            {activeSection === "Cakes" && (
+              <div className="dropdown-subcontent">
+                <div className="dropdown-section">
+                  <h3>Cakes</h3>
+                  <a href="#">Birthday Cakes</a>
+                  <a href="#">Wedding Cakes</a>
+                  <a href="#">Custom Cakes</a>
+                </div>
+                <img src={newbornImage} alt="Cakes" className="dropdown-image" />
               </div>
-              <a href="#">Custom Menu Designs</a>
-              <div className="image-box">
-                <img
-                  src={babyImage}
-                  alt="New Born Photo Shoot"
-                  className="small-image"
-                />
-              </div>
-              <a href="#">Buffet Setups</a>
-              <div className="image-box">
-                <img
-                  src={babyImage}
-                  alt="New Born Photo Shoot"
-                  className="small-image"
-                />
-              </div>
-              <a href="#">Full-Service Dining</a>
-              <div className="image-box">
-                <img
-                  src={babyImage}
-                  alt="New Born Photo Shoot"
-                  className="small-image"
-                />
-              </div>
-            </div>
+            )}
           </div>
-        </div>
-      </div>
-
-      <div className="dropdown">
-        <button className="dropbtn">
-          <img src={newbornImage} alt="New Born" />
-          <span>Baby Shower</span>
-        </button>
-        <div className="dropdown-content">
-          <div className="dropdown-item">
-            <button className="sub-dropbtn">Photography</button>
-            <div className="sub-dropdown-content">
-              <a href="#">New Born Photo Shoot</a>
-              <div className="image-box">
-                <img
-                  src={babyShower}
-                  alt="New Born Photo Shoot"
-                  className="small-image"
-                />
+          <div
+            className="dropdown-item"
+            onMouseEnter={() => handleMouseEnter("Entertainment")}
+            onMouseLeave={handleMouseLeave}
+          >
+            Entertainment
+            {activeSection === "Entertainment" && (
+              <div className="dropdown-subcontent">
+                <div className="dropdown-section">
+                  <h3>Entertainment</h3>
+                  <a href="#">Magicians</a>
+                  <a href="#">Clowns</a>
+                  <a href="#">Live Bands</a>
+                </div>
+                <img src={newbornImage} alt="Entertainment" className="dropdown-image" />
               </div>
-              <a href="#">Digital Photography</a>
-              <div className="image-box">
-                <img
-                  src={babyShower}
-                  alt="New Born Photo Shoot"
-                  className="small-image"
-                />
-              </div>
-              <a href="#">Photo + Album</a>
-              <div className="image-box">
-                <img
-                  src={babyShower}
-                  alt="New Born Photo Shoot"
-                  className="small-image"
-                />
-              </div>
-              <a href="#">Photo + Album + Video</a>
-              <div className="image-box">
-                <img
-                  src={babyShower}
-                  alt="New Born Photo Shoot"
-                  className="small-image"
-                />
-              </div>
-            </div>
+            )}
           </div>
-          <div className="dropdown-item">
-            <button className="sub-dropbtn">Food</button>
-            <div className="sub-dropdown-content">
-              <a href="#">Catering Options</a>
-              <div className="image-box">
-                <img
-                  src={babyShower}
-                  alt="New Born Photo Shoot"
-                  className="small-image"
-                />
+          <div
+            className="dropdown-item"
+            onMouseEnter={() => handleMouseEnter("Return Gifts")}
+            onMouseLeave={handleMouseLeave}
+          >
+            Return Gifts
+            {activeSection === "Return Gifts" && (
+              <div className="dropdown-subcontent">
+                <div className="dropdown-section">
+                  <h3>Return Gifts</h3>
+                  <a href="#">Toys</a>
+                  <a href="#">Books</a>
+                  <a href="#">Gift Cards</a>
+                </div>
+                <img src={newbornImage} alt="Return Gifts" className="dropdown-image" />
               </div>
-              <a href="#">Custom Menu Designs</a>
-              <div className="image-box">
-                <img
-                  src={babyShower}
-                  alt="New Born Photo Shoot"
-                  className="small-image"
-                />
-              </div>
-              <a href="#">Buffet Setups</a>
-              <div className="image-box">
-                <img
-                  src={babyShower}
-                  alt="New Born Photo Shoot"
-                  className="small-image"
-                />
-              </div>
-              <a href="#">Full-Service Dining</a>
-              <div className="image-box">
-                <img
-                  src={babyShower}
-                  alt="New Born Photo Shoot"
-                  className="small-image"
-                />
-              </div>
-            </div>
+            )}
           </div>
-        </div>
-      </div>
-
-      <div className="dropdown">
-        <button className="dropbtn">
-          <img src={newbornImage} alt="New Born" />
-          <span>Birthday</span>
-        </button>
-        <div className="dropdown-content">
-          <div className="dropdown-item">
-            <button className="sub-dropbtn">Photography</button>
-            <div className="sub-dropdown-content">
-              <a href="#">New Born Photo Shoot</a>
-              <div className="image-box">
-                <img
-                  src={happyBirthday}
-                  alt="New Born Photo Shoot"
-                  className="small-image"
-                />
+          <div
+            className="dropdown-item"
+            onMouseEnter={() => handleMouseEnter("Food")}
+            onMouseLeave={handleMouseLeave}
+          >
+            Food
+            {activeSection === "Food" && (
+              <div className="dropdown-subcontent">
+                <div className="dropdown-section">
+                  <h3>Food</h3>
+                  <a href="#">Catering Options</a>
+                  <a href="#">Custom Menu Designs</a>
+                  <a href="#">Buffet Setups</a>
+                  <a href="#">Full-Service Dining</a>
+                </div>
+                <img src={newbornImage} alt="Food" className="dropdown-image" />
               </div>
-              <a href="#">Digital Photography</a>
-              <div className="image-box">
-                <img
-                  src={happyBirthday}
-                  alt="New Born Photo Shoot"
-                  className="small-image"
-                />
-              </div>
-              <a href="#">Photo + Album</a>
-              <div className="image-box">
-                <img
-                  src={happyBirthday}
-                  alt="New Born Photo Shoot"
-                  className="small-image"
-                />
-              </div>
-              <a href="#">Photo + Album + Video</a>
-              <div className="image-box">
-                <img
-                  src={happyBirthday}
-                  alt="New Born Photo Shoot"
-                  className="small-image"
-                />
-              </div>
-            </div>
-          </div>
-          <div className="dropdown-item">
-            <button className="sub-dropbtn">Food</button>
-            <div className="sub-dropdown-content">
-              <a href="#">Catering Options</a>
-              <div className="image-box">
-                <img
-                  src={happyBirthday}
-                  alt="New Born Photo Shoot"
-                  className="small-image"
-                />
-              </div>
-              <a href="#">Custom Menu Designs</a>
-              <div className="image-box">
-                <img
-                  src={happyBirthday}
-                  alt="New Born Photo Shoot"
-                  className="small-image"
-                />
-              </div>
-              <a href="#">Buffet Setups</a>
-              <div className="image-box">
-                <img
-                  src={happyBirthday}
-                  alt="New Born Photo Shoot"
-                  className="small-image"
-                />
-              </div>
-              <a href="#">Full-Service Dining</a>
-              <div className="image-box">
-                <img
-                  src={happyBirthday}
-                  alt="New Born Photo Shoot"
-                  className="small-image"
-                />
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div className="dropdown">
-        <button className="dropbtn">
-          <img src={newbornImage} alt="New Born" />
-          <span>House Warming</span>
-        </button>
-        <div className="dropdown-content">
-          <div className="dropdown-item">
-            <button className="sub-dropbtn">Photography</button>
-            <div className="sub-dropdown-content">
-              <a href="#">New Born Photo Shoot</a>
-              <div className="image-box">
-                <img
-                  src={houseWarming}
-                  alt="New Born Photo Shoot"
-                  className="small-image"
-                />
-              </div>
-              <a href="#">Digital Photography</a>
-              <div className="image-box">
-                <img
-                  src={houseWarming}
-                  alt="New Born Photo Shoot"
-                  className="small-image"
-                />
-              </div>
-              <a href="#">Photo + Album</a>
-              <div className="image-box">
-                <img
-                  src={houseWarming}
-                  alt="New Born Photo Shoot"
-                  className="small-image"
-                />
-              </div>
-              <a href="#">Photo + Album + Video</a>
-              <div className="image-box">
-                <img
-                  src={houseWarming}
-                  alt="New Born Photo Shoot"
-                  className="small-image"
-                />
-              </div>
-            </div>
-          </div>
-          <div className="dropdown-item">
-            <button className="sub-dropbtn">Food</button>
-            <div className="sub-dropdown-content">
-              <a href="#">Catering Options</a>
-              <div className="image-box">
-                <img
-                  src={houseWarming}
-                  alt="New Born Photo Shoot"
-                  className="small-image"
-                />
-              </div>
-              <a href="#">Custom Menu Designs</a>
-              <div className="image-box">
-                <img
-                  src={houseWarming}
-                  alt="New Born Photo Shoot"
-                  className="small-image"
-                />
-              </div>
-              <a href="#">Buffet Setups</a>
-              <div className="image-box">
-                <img
-                  src={houseWarming}
-                  alt="New Born Photo Shoot"
-                  className="small-image"
-                />
-              </div>
-              <a href="#">Full-Service Dining</a>
-              <div className="image-box">
-                <img
-                  src={houseWarming}
-                  alt="New Born Photo Shoot"
-                  className="small-image"
-                />
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div className="dropdown">
-        <button className="dropbtn">
-          <img src={newbornImage} alt="New Born" />
-          <span>Engagement</span>
-        </button>
-        <div className="dropdown-content">
-          <div className="dropdown-item">
-            <button className="sub-dropbtn">Photography</button>
-            <div className="sub-dropdown-content">
-              <a href="#">New Born Photo Shoot</a>
-              <div className="image-box">
-                <img
-                  src={engagement}
-                  alt="New Born Photo Shoot"
-                  className="small-image"
-                />
-              </div>
-              <a href="#">Digital Photography</a>
-              <div className="image-box">
-                <img
-                  src={engagement}
-                  alt="New Born Photo Shoot"
-                  className="small-image"
-                />
-              </div>
-              <a href="#">Photo + Album</a>
-              <div className="image-box">
-                <img
-                  src={engagement}
-                  alt="New Born Photo Shoot"
-                  className="small-image"
-                />
-              </div>
-              <a href="#">Photo + Album + Video</a>
-              <div className="image-box">
-                <img
-                  src={engagement}
-                  alt="New Born Photo Shoot"
-                  className="small-image"
-                />
-              </div>
-            </div>
-          </div>
-          <div className="dropdown-item">
-            <button className="sub-dropbtn">Food</button>
-            <div className="sub-dropdown-content">
-              <a href="#">Catering Options</a>
-              <div className="image-box">
-                <img
-                  src={engagement}
-                  alt="New Born Photo Shoot"
-                  className="small-image"
-                />
-              </div>
-              <a href="#">Custom Menu Designs</a>
-              <div className="image-box">
-                <img
-                  src={engagement}
-                  alt="New Born Photo Shoot"
-                  className="small-image"
-                />
-              </div>
-              <a href="#">Buffet Setups</a>
-              <div className="image-box">
-                <img
-                  src={engagement}
-                  alt="New Born Photo Shoot"
-                  className="small-image"
-                />
-              </div>
-              <a href="#">Full-Service Dining</a>
-              <div className="image-box">
-                <img
-                  src={engagement}
-                  alt="New Born Photo Shoot"
-                  className="small-image"
-                />
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div className="dropdown">
-        <button className="dropbtn">
-          <img src={newbornImage} alt="New Born" />
-          <span>Wedding</span>
-        </button>
-        <div className="dropdown-content">
-          <div className="dropdown-item">
-            <button className="sub-dropbtn">Photography</button>
-            <div className="sub-dropdown-content">
-              <a href="#">New Born Photo Shoot</a>
-              <div className="image-box">
-                <img
-                  src={wedding}
-                  alt="New Born Photo Shoot"
-                  className="small-image"
-                />
-              </div>
-              <a href="#">Digital Photography</a>
-              <div className="image-box">
-                <img
-                  src={wedding}
-                  alt="New Born Photo Shoot"
-                  className="small-image"
-                />
-              </div>
-              <a href="#">Photo + Album</a>
-              <div className="image-box">
-                <img
-                  src={wedding}
-                  alt="New Born Photo Shoot"
-                  className="small-image"
-                />
-              </div>
-              <a href="#">Photo + Album + Video</a>
-              <div className="image-box">
-                <img
-                  src={wedding}
-                  alt="New Born Photo Shoot"
-                  className="small-image"
-                />
-              </div>
-            </div>
-          </div>
-          <div className="dropdown-item">
-            <button className="sub-dropbtn">Food</button>
-            <div className="sub-dropdown-content">
-              <a href="#">Catering Options</a>
-              <div className="image-box">
-                <img
-                  src={wedding}
-                  alt="New Born Photo Shoot"
-                  className="small-image"
-                />
-              </div>
-              <a href="#">Custom Menu Designs</a>
-              <div className="image-box">
-                <img
-                  src={wedding}
-                  alt="New Born Photo Shoot"
-                  className="small-image"
-                />
-              </div>
-              <a href="#">Buffet Setups</a>
-              <div className="image-box">
-                <img
-                  src={wedding}
-                  alt="New Born Photo Shoot"
-                  className="small-image"
-                />
-              </div>
-              <a href="#">Full-Service Dining</a>
-              <div className="image-box">
-                <img
-                  src={wedding}
-                  alt="New Born Photo Shoot"
-                  className="small-image"
-                />
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div className="dropdown">
-        <button className="dropbtn">
-          <img src={newbornImage} alt="New Born" />
-          <span>Puberty</span>
-        </button>
-        <div className="dropdown-content">
-          <div className="dropdown-item">
-            <button className="sub-dropbtn">Photography</button>
-            <div className="sub-dropdown-content">
-              <a href="#">New Born Photo Shoot</a>
-              <div className="image-box">
-                <img
-                  src={puberty}
-                  alt="New Born Photo Shoot"
-                  className="small-image"
-                />
-              </div>
-              <a href="#">Digital Photography</a>
-              <div className="image-box">
-                <img
-                  src={puberty}
-                  alt="New Born Photo Shoot"
-                  className="small-image"
-                />
-              </div>
-              <a href="#">Photo + Album</a>
-              <div className="image-box">
-                <img
-                  src={puberty}
-                  alt="New Born Photo Shoot"
-                  className="small-image"
-                />
-              </div>
-              <a href="#">Photo + Album + Video</a>
-              <div className="image-box">
-                <img
-                  src={puberty}
-                  alt="New Born Photo Shoot"
-                  className="small-image"
-                />
-              </div>
-            </div>
-          </div>
-          <div className="dropdown-item">
-            <button className="sub-dropbtn">Food</button>
-            <div className="sub-dropdown-content">
-              <a href="#">Catering Options</a>
-              <div className="image-box">
-                <img
-                  src={puberty}
-                  alt="New Born Photo Shoot"
-                  className="small-image"
-                />
-              </div>
-              <a href="#">Custom Menu Designs</a>
-              <div className="image-box">
-                <img
-                  src={puberty}
-                  alt="New Born Photo Shoot"
-                  className="small-image"
-                />
-              </div>
-              <a href="#">Buffet Setups</a>
-              <div className="image-box">
-                <img
-                  src={puberty}
-                  alt="New Born Photo Shoot"
-                  className="small-image"
-                />
-              </div>
-              <a href="#">Full-Service Dining</a>
-              <div className="image-box">
-                <img
-                  src={puberty}
-                  alt="New Born Photo Shoot"
-                  className="small-image"
-                />
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div className="dropdown">
-        <button className="dropbtn">
-          <img src={newbornImage} alt="New Born" />
-          <span>Surprise Party</span>
-        </button>
-        <div className="dropdown-content">
-          <div className="dropdown-item">
-            <button className="sub-dropbtn">Photography</button>
-            <div className="sub-dropdown-content">
-              <a href="#">New Born Photo Shoot</a>
-              <div className="image-box">
-                <img
-                  src={surpriseParty}
-                  alt="New Born Photo Shoot"
-                  className="small-image"
-                />
-              </div>
-              <a href="#">Digital Photography</a>
-              <div className="image-box">
-                <img
-                  src={surpriseParty}
-                  alt="New Born Photo Shoot"
-                  className="small-image"
-                />
-              </div>
-              <a href="#">Photo + Album</a>
-              <div className="image-box">
-                <img
-                  src={surpriseParty}
-                  alt="New Born Photo Shoot"
-                  className="small-image"
-                />
-              </div>
-              <a href="#">Photo + Album + Video</a>
-              <div className="image-box">
-                <img
-                  src={surpriseParty}
-                  alt="New Born Photo Shoot"
-                  className="small-image"
-                />
-              </div>
-            </div>
-          </div>
-          <div className="dropdown-item">
-            <button className="sub-dropbtn">Food</button>
-            <div className="sub-dropdown-content">
-              <a href="#">Catering Options</a>
-              <div className="image-box">
-                <img
-                  src={surpriseParty}
-                  alt="New Born Photo Shoot"
-                  className="small-image"
-                />
-              </div>
-              <a href="#">Custom Menu Designs</a>
-              <div className="image-box">
-                <img
-                  src={surpriseParty}
-                  alt="New Born Photo Shoot"
-                  className="small-image"
-                />
-              </div>
-              <a href="#">Buffet Setups</a>
-              <div className="image-box">
-                <img
-                  src={surpriseParty}
-                  alt="New Born Photo Shoot"
-                  className="small-image"
-                />
-              </div>
-              <a href="#">Full-Service Dining</a>
-              <div className="image-box">
-                <img
-                  src={surpriseParty}
-                  alt="New Born Photo Shoot"
-                  className="small-image"
-                />
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div className="dropdown right-end">
-        <button className="dropbtn">
-          <span>Packages</span>
-        </button>
-        <div className="dropdown-content">
-          <div className="dropdown-item">
-            <img src={engagement} alt="Birthday Packages" />
-            <h3>Birthday Packages</h3>
-            <p>Curated event packages from the best event planners.</p>
-          </div>
-          <div className="dropdown-item">
-            <img src={engagement} alt="Housewarming Packages" />
-            <h3>Housewarming Packages</h3>
-            <p>Curated event packages from the best event planners.</p>
-          </div>
-          <div className="dropdown-item">
-            <img src={engagement} alt="Wedding Packages" />
-            <h3>Wedding Packages</h3>
-            <p>Curated event packages from the best event planners.</p>
+            )}
           </div>
         </div>
       </div>
     </div>
   );
-};export default DropdownComponent;
+};
+
+export default DropdownComponent;

@@ -2,125 +2,90 @@
 .navbar {
   width: 100%;
   background-color: #f04e98; /* Example color */
-  overflow-x: auto;
-  overflow-y: hidden; /* Hide vertical scrollbar */
-  -ms-overflow-style: none;  /* Internet Explorer 10+ */
-  scrollbar-width: none;  /* Firefox */
-  display: flex; /* Use flexbox */
+  display: flex;
   align-items: center;
   margin-top: 50px;
 }
 
-/* Hide scrollbar for Chrome, Safari and Opera */
-.navbar::-webkit-scrollbar {
-  display: none;
-}
-
 /* General styles for dropdown */
 .dropdown {
-  float: left;
-  overflow: hidden;
+  position: relative;
+  display: inline-block;
 }
 
 .dropdown-content {
+  display: none;
   position: absolute;
   background-color: white; /* Set to white */
   box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
   z-index: 1;
-  width: 160px; /* Adjust width as necessary */
+  width: 200px; /* Adjust width as necessary */
+  padding: 10px; /* Padding inside the box */
+  box-sizing: border-box;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
 }
 
 .dropdown-item {
-  position: relative;
-  background-color: white; /* Ensure the background for each item is white */
-}
-
-.dropdown-item a {
-  position: relative;
-  display: block;
-  padding: 12px 16px;
-  color: black;
-  text-decoration: none;
-  background-color: white;
-  border-bottom: 1px solid #ccc;
-  z-index: 1; /* Ensures the link stays clickable */
-}
-
-.dropdown-item a:hover {
-  background-color: #ddd; /* Highlight on hover */
-}
-
-.image-box {
-  display: none; /* Hidden by default */
-  position: absolute;
-  left: 100%; /* Position the box to the right of the anchor tags */
-  top: 0;
-  width: 900px; /* Adjust as needed */
-  height: 316px; /* Adjust as needed */
-  background-color: #f1f1f1; /* Example background color */
-  color: black; /* Text color inside the box */
-  padding: 10px; /* Padding inside the box */
-  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-  z-index: 2;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.image-box img {
-  max-width: 100%; /* Optional: ensures image doesn't overflow the box */
-  height: auto; /* Maintains aspect ratio */
-}
-
-.dropdown-item a:hover + .image-box {
-  display: flex; /* Show the box when anchor is hovered */
-}
-
-.sub-dropbtn {
-  background-color: white; /* Set button background to white */
-  color: black;
-  padding: 12px 16px;
-  width: 100%;
-  border: none;
-  text-align: left;
+  padding: 10px;
   cursor: pointer;
-  outline: none;
-  border-bottom: 1px solid #ccc; /* Adds a separator between items */
+  white-space: nowrap;
 }
 
-.sub-dropdown-content {
+.dropdown-item:hover {
+  background-color: #ddd;
+}
+
+.dropdown-subcontent {
   display: none;
   position: absolute;
-  left: 100%; /* Adjust if necessary to control where the submenu appears */
-  top: 0;
-  background-color: white; /* Set submenu background to white */
-  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2); /* Consistent shadow with the main dropdown */
+  top: 0; /* Align with the top of the first box */
+  left: 200px; /* Align to the right of the parent dropdown */
+  background-color: white;
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
   z-index: 1;
+  width: 600px; /* Adjust width as necessary */
+  height: 220px; /* Set the height as specified */
+  padding: 20px; /* Padding inside the box */
+  box-sizing: border-box;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between; /* Ensure items are spaced out */
 }
 
-.sub-dropbtn:hover .sub-dropdown-content,
-.dropdown-item:hover .sub-dropdown-content {
-  display: block;
+.dropdown-item:hover .dropdown-subcontent {
+  display: flex; /* Ensure it uses flexbox */
 }
 
-.sub-dropdown-content a {
+.dropdown-section {
+  flex: 1; /* Take up remaining space */
+  padding: 10px;
+  margin-top: 1px; /* Adjust margin as needed */
+}
+
+.dropdown-section h3 {
+  margin-top: 0;
+}
+
+.dropdown-section a {
   color: black;
-  padding: 12px 16px;
+  padding: 5px 0;
   text-decoration: none;
   display: block;
-  text-align: left;
-  background-color: white; /* Ensures links also have a white background */
 }
 
-.sub-dropdown-content a:hover {
-  background-color: #ddd; /* Light grey background on hover for links */
+.dropdown-section a:hover {
+  background-color: #ddd;
 }
 
-.small-image {
-  width: 500px; /* or any specific pixel value */
-  height: auto;
-  max-width: 500px; /* max size limit */
-  max-height: 316px;
+.dropdown-image {
+  flex: 0 0 200px; /* Fix width */
+  margin-left: 20px; /* Space between text and image */
+  width: 300px; /* Adjust width as needed */
+  height: 150px; /* Maintain aspect ratio */
+  align-self: flex-start; /* Align image to the top */
 }
 
 .dropbtn {
@@ -134,79 +99,8 @@
   margin: 0;
 }
 
-.dropbtn img {
-  display: none; /* Hide images by default */
-  width: 50px; /* Or your desired size */
-  height: 50px; /* Maintain aspect ratio */
-  border-radius: 50%; /* Make image circular */
-}
-
-.navbar a:hover,
-.dropdown:hover .dropbtn {
+.dropbtn:hover {
   background-color: red;
-}
-
-.dropdown-content {
-  display: none;
-  position: absolute;
-  background-color: #f9f9f9;
-  min-width: 160px;
-  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-  z-index: 1;
-}
-
-.dropdown-content a {
-  float: none;
-  color: black;
-  padding: 12px 16px;
-  text-decoration: none;
-  display: block;
-  text-align: left;
-}
-
-.dropdown-content a:hover {
-  background-color: #ddd;
-}
-
-.dropdown:hover .dropdown-content {
-  display: block;
-}
-
-.right-end {
-  margin-left: auto; /* Pushes the Packages dropdown to the far right */
-  margin-right: 100px;
-}
-
-.right-end .dropbtn {
-  padding: 10px 20px; /* Add padding */
-  background: linear-gradient(45deg, #ff6ec4, #912b70, #c34aa3); /* Gradient colors */
-  background-size: 200% 200%;
-  animation: shiny 2s linear infinite;
-  border-radius: 25px; /* Rounded corners */
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
-  display: flex;
-  align-items: center;
-}
-
-.right-end .dropbtn span {
-  color: white;
-  font-weight: bold;
-}
-
-.right-end .dropbtn:hover {
-  background-position: 100% 0;
-}
-
-@keyframes shiny {
-  0% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0% 50%;
-  }
 }
 
 @media (max-width: 600px) {
@@ -230,29 +124,21 @@
     font-weight: 700;
   }
 
-  .dropbtn img {
-    display: block; /* Only show images on small screens */
-    width: 50px;
-    height: 50px;
-  }
-
   .dropdown {
     flex: 0 0 25%; /* Allow four items per row */
     box-sizing: border-box;
   }
 
-  .dropdown-content {
+  .dropdown-content,
+  .dropdown-subcontent {
     position: relative;
     width: 100%;
     min-width: 0;
     box-shadow: none;
   }
 
-  .dropdown-item a {
-    text-align: center;
-  }
-
-  .right-end {
-    display: none; /* Hide the Packages button */
+  .dropdown-item,
+  .dropdown-section {
+    width: 100%; /* Full width for each item and section */
   }
 }
