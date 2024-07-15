@@ -24,8 +24,12 @@ const DropdownComponent = () => {
             onMouseLeave={handleMouseLeave}
           >
             Photography
-            {activeSection === "Photography" && (
-              <div className="dropdown-subcontent">
+            {(activeSection === "Photography" || activeSection === null) && (
+              <div
+                className="dropdown-subcontent"
+                onMouseEnter={() => handleMouseEnter("Photography")}
+                onMouseLeave={handleMouseLeave}
+              >
                 <div className="dropdown-section">
                   <h3>Photography</h3>
                   <a href="#">New Born Photo Shoot</a>
@@ -33,7 +37,11 @@ const DropdownComponent = () => {
                   <a href="#">Photo + Album</a>
                   <a href="#">Photo + Album + Video</a>
                 </div>
-                <img src={newbornImage} alt="Photography" className="dropdown-image" />
+                <img
+                  src={newbornImage}
+                  alt="Photography"
+                  className="dropdown-image"
+                />
               </div>
             )}
           </div>
@@ -43,15 +51,23 @@ const DropdownComponent = () => {
             onMouseLeave={handleMouseLeave}
           >
             Cakes
-            {activeSection === "Cakes" && (
-              <div className="dropdown-subcontent">
+            {(activeSection === "Cakes" || activeSection === null) && (
+              <div
+                className="dropdown-subcontent"
+                onMouseEnter={() => handleMouseEnter("Cakes")}
+                onMouseLeave={handleMouseLeave}
+              >
                 <div className="dropdown-section">
                   <h3>Cakes</h3>
                   <a href="#">Birthday Cakes</a>
                   <a href="#">Wedding Cakes</a>
                   <a href="#">Custom Cakes</a>
                 </div>
-                <img src={newbornImage} alt="Cakes" className="dropdown-image" />
+                <img
+                  src={newbornImage}
+                  alt="Cakes"
+                  className="dropdown-image"
+                />
               </div>
             )}
           </div>
@@ -61,15 +77,23 @@ const DropdownComponent = () => {
             onMouseLeave={handleMouseLeave}
           >
             Entertainment
-            {activeSection === "Entertainment" && (
-              <div className="dropdown-subcontent">
+            {(activeSection === "Entertainment" || activeSection === null) && (
+              <div
+                className="dropdown-subcontent"
+                onMouseEnter={() => handleMouseEnter("Entertainment")}
+                onMouseLeave={handleMouseLeave}
+              >
                 <div className="dropdown-section">
                   <h3>Entertainment</h3>
                   <a href="#">Magicians</a>
                   <a href="#">Clowns</a>
                   <a href="#">Live Bands</a>
                 </div>
-                <img src={newbornImage} alt="Entertainment" className="dropdown-image" />
+                <img
+                  src={newbornImage}
+                  alt="Entertainment"
+                  className="dropdown-image"
+                />
               </div>
             )}
           </div>
@@ -79,15 +103,23 @@ const DropdownComponent = () => {
             onMouseLeave={handleMouseLeave}
           >
             Return Gifts
-            {activeSection === "Return Gifts" && (
-              <div className="dropdown-subcontent">
+            {(activeSection === "Return Gifts" || activeSection === null) && (
+              <div
+                className="dropdown-subcontent"
+                onMouseEnter={() => handleMouseEnter("Return Gifts")}
+                onMouseLeave={handleMouseLeave}
+              >
                 <div className="dropdown-section">
                   <h3>Return Gifts</h3>
                   <a href="#">Toys</a>
                   <a href="#">Books</a>
                   <a href="#">Gift Cards</a>
                 </div>
-                <img src={newbornImage} alt="Return Gifts" className="dropdown-image" />
+                <img
+                  src={newbornImage}
+                  alt="Return Gifts"
+                  className="dropdown-image"
+                />
               </div>
             )}
           </div>
@@ -97,8 +129,12 @@ const DropdownComponent = () => {
             onMouseLeave={handleMouseLeave}
           >
             Food
-            {activeSection === "Food" && (
-              <div className="dropdown-subcontent">
+            {(activeSection === "Food" || activeSection === null) && (
+              <div
+                className="dropdown-subcontent"
+                onMouseEnter={() => handleMouseEnter("Food")}
+                onMouseLeave={handleMouseLeave}
+              >
                 <div className="dropdown-section">
                   <h3>Food</h3>
                   <a href="#">Catering Options</a>
