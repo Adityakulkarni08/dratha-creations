@@ -103,6 +103,44 @@
   background-color: red;
 }
 
+.right-end {
+  margin-left: auto; /* Pushes the Packages dropdown to the far right */
+  margin-right: 100px;
+}
+
+.right-end .dropbtn {
+  padding: 10px 20px; /* Add padding */
+  background: linear-gradient(45deg, #ff6ec4, #912b70, #c34aa3); /* Gradient colors */
+  background-size: 200% 200%;
+  animation: shiny 2s linear infinite;
+  border-radius: 25px; /* Rounded corners */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  display: flex;
+  align-items: center;
+}
+
+.right-end .dropbtn span {
+  color: white;
+  font-weight: bold;
+}
+
+.right-end .dropbtn:hover {
+  background-position: 100% 0;
+}
+
+@keyframes shiny {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+
 @media (max-width: 600px) {
   .navbar {
     background-color: transparent;

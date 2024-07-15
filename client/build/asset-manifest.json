@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.8c04c4a5.css",
-    "main.js": "/static/js/main.652c6e03.js",
+    "main.css": "/static/css/main.2cd153fd.css",
+    "main.js": "/static/js/main.195ad509.js",
     "static/media/yourcelebbanner.png": "/static/media/yourcelebbanner.3b316bb04b2eee52993f.png",
     "static/media/newBornPhotoShoot.png": "/static/media/newBornPhotoShoot.d4169ca4836ef55cff26.png",
     "static/media/birthdaybanner.png": "/static/media/birthdaybanner.1e6676e6cbd3c4756955.png",
@@ -17,6 +17,7 @@
     "static/media/flowersGarlandsWedding.png": "/static/media/flowersGarlandsWedding.506537bc734c4219c74e.png",
     "static/media/decorationHome.png": "/static/media/decorationHome.4fa391336df20ce91d29.png",
     "static/media/banquetHallPuberty.png": "/static/media/banquetHallPuberty.efb2330d5edcd081e718.png",
+    "static/media/engagement.png": "/static/media/engagement.d2bc026e3c9e789e002e.png",
     "static/media/baloonDecorHome.png": "/static/media/baloonDecorHome.9822450fb5bb65cd672a.png",
     "static/media/decorationsHomePuberty.png": "/static/media/decorationsHomePuberty.a0ea708fe334f9c1f04c.png",
     "static/media/decorationsWedding.png": "/static/media/decorationsWedding.96ec6d01658b6e2fe70a.png",
@@ -127,11 +128,11 @@
     "static/media/slick.ttf": "/static/media/slick.c94f7671dcc99dce43e2.ttf",
     "static/media/slick.woff": "/static/media/slick.295183786cd8a1389865.woff",
     "index.html": "/index.html",
-    "main.8c04c4a5.css.map": "/static/css/main.8c04c4a5.css.map",
-    "main.652c6e03.js.map": "/static/js/main.652c6e03.js.map"
+    "main.2cd153fd.css.map": "/static/css/main.2cd153fd.css.map",
+    "main.195ad509.js.map": "/static/js/main.195ad509.js.map"
   },
   "entrypoints": [
-    "static/css/main.8c04c4a5.css",
-    "static/js/main.652c6e03.js"
+    "static/css/main.2cd153fd.css",
+    "static/js/main.195ad509.js"
   ]
 }
