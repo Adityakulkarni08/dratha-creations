@@ -103,29 +103,102 @@
   background-color: red;
 }
 
-.right-end {
+.packages-dropdown {
   margin-left: auto; /* Pushes the Packages dropdown to the far right */
   margin-right: 100px;
 }
 
-.right-end .dropbtn {
-  padding: 10px 20px; /* Add padding */
-  background: linear-gradient(45deg, #ff6ec4, #912b70, #c34aa3); /* Gradient colors */
-  background-size: 200% 200%;
-  animation: shiny 2s linear infinite;
-  border-radius: 25px; /* Rounded corners */
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
-  display: flex;
-  align-items: center;
+/* Specific styles for the Packages dropdown */
+.packages-dropdown .dropdown-content {
+  width: 1000px; /* Adjust width as necessary */
+  height: 350px;
+  padding: 20px; /* Padding inside the box */
+  box-sizing: border-box;
+  right: 0; /* Ensure it stays within the viewport */
+  display: none; /* Ensure it starts hidden */
+  position: absolute;
 }
 
-.right-end .dropbtn span {
+.packages-dropdown:hover .dropdown-content {
+  display: flex; /* Show on hover */
+  align-items: flex-start;
+}
+
+.packages-dropdown .dropdown-content::before {
+  content: "";
+  top: 0;
+  left: 0;
+  width: 30%;
+  height: 100%;
+  background-color: #f04e98; /* Pink background for the first section */
+  position: absolute;
+  z-index: -1;
+}
+
+.packages-dropdown .first-section {
+  width: 30%;
   color: white;
-  font-weight: bold;
+  padding: 20px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  z-index: 1;
 }
 
-.right-end .dropbtn:hover {
-  background-position: 100% 0;
+.packages-dropdown .second-section {
+  width: 70%;
+  padding: 20px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  z-index: 1;
+}
+
+.package-item {
+  text-align: center;
+  border: 1px solid #ddd;
+  padding: 10px;
+  margin: 10px;
+  border-radius: 5px;
+  background-color: white;
+}
+
+.package-item img {
+  width: 40px;
+  height: 40px;
+  margin-bottom: 10px;
+}
+
+.package-item h3 {
+  margin: 5px 0;
+  font-size: 16px;
+  font-weight: bold;
+  color: #f04e98;
+}
+
+.package-item p {
+  margin: 0;
+  font-size: 14px;
+  color: #666;
+}
+
+.enquiry-button {
+  background-color: white;
+  color: #f04e98;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 25px;
+  font-weight: bold;
+  cursor: pointer;
+  align-self: flex-start;
+}
+
+.enquiry-button:hover {
+  background-color: #f04e98;
+  color: white;
 }
 
 @keyframes shiny {
@@ -139,7 +212,6 @@
     background-position: 0% 50%;
   }
 }
-
 
 @media (max-width: 600px) {
   .navbar {
@@ -179,4 +251,17 @@
   .dropdown-section {
     width: 100%; /* Full width for each item and section */
   }
+}
+
+.packages-btn {
+  padding: 10px 20px;
+  background: linear-gradient(45deg, #ff6ec4, #912b70, #c34aa3);
+  background-size: 200% 200%;
+  animation: shiny 2s linear infinite;
+  border-radius: 25px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  color: white;
+  font-weight: bold;
 }

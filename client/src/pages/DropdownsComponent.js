@@ -46,7 +46,11 @@ const DropdownComponent = () => {
                   <a href="#">Photo + Album</a>
                   <a href="#">Photo + Album + Video</a>
                 </div>
-                <img src={newbornImage} alt="Photography" className="dropdown-image" />
+                <img
+                  src={newbornImage}
+                  alt="Photography"
+                  className="dropdown-image"
+                />
               </div>
             )}
           </div>
@@ -68,7 +72,11 @@ const DropdownComponent = () => {
                   <a href="#">Wedding Cakes</a>
                   <a href="#">Custom Cakes</a>
                 </div>
-                <img src={newbornImage} alt="Cakes" className="dropdown-image" />
+                <img
+                  src={newbornImage}
+                  alt="Cakes"
+                  className="dropdown-image"
+                />
               </div>
             )}
           </div>
@@ -90,7 +98,11 @@ const DropdownComponent = () => {
                   <a href="#">Clowns</a>
                   <a href="#">Live Bands</a>
                 </div>
-                <img src={newbornImage} alt="Entertainment" className="dropdown-image" />
+                <img
+                  src={newbornImage}
+                  alt="Entertainment"
+                  className="dropdown-image"
+                />
               </div>
             )}
           </div>
@@ -112,7 +124,11 @@ const DropdownComponent = () => {
                   <a href="#">Books</a>
                   <a href="#">Gift Cards</a>
                 </div>
-                <img src={newbornImage} alt="Return Gifts" className="dropdown-image" />
+                <img
+                  src={newbornImage}
+                  alt="Return Gifts"
+                  className="dropdown-image"
+                />
               </div>
             )}
           </div>
@@ -141,25 +157,49 @@ const DropdownComponent = () => {
           </div>
         </div>
       </div>
-      <div className="dropdown right-end">
-        <button className="dropbtn">
+      <div className="dropdown right-end packages-dropdown">
+        <button className="dropbtn packages-btn">
           <span>Packages</span>
         </button>
         <div className="dropdown-content">
-          <div className="dropdown-item">
-            <img src={engagement} alt="Birthday Packages" />
-            <h3>Birthday Packages</h3>
-            <p>Curated event packages from the best event planners.</p>
+          <div className="first-section">
+            <h2>Select Your Packages</h2>
+            <p>
+              Curated event packages from the best event planners in the city
+              for every occasion and every budget. Select from fixed packages in
+              a range of budgets and volume of people for the fastest way to
+              bring your celebration to life.
+            </p>
+            <button className="enquiry-button">Quick Enquiry</button>
           </div>
-          <div className="dropdown-item">
-            <img src={engagement} alt="Housewarming Packages" />
-            <h3>Housewarming Packages</h3>
-            <p>Curated event packages from the best event planners.</p>
-          </div>
-          <div className="dropdown-item">
-            <img src={engagement} alt="Wedding Packages" />
-            <h3>Wedding Packages</h3>
-            <p>Curated event packages from the best event planners.</p>
+          <div className="second-section">
+            <div className="package-item">
+              <img
+                src={newbornImage}
+                alt="Birthday Packages"
+                className="img-section"
+              />
+              <h3>Birthday Packages</h3>
+              <p>Curated event packages from the best event planners.</p>
+            </div>
+            <div className="package-item">
+              <img
+                src={newbornImage}
+                alt="Housewarming Packages"
+                className="img-section"
+              />
+              <h3>Housewarming Packages</h3>
+              <p>Curated event packages from the best event planners.</p>
+            </div>
+            <div className="package-item">
+              <img
+                src={newbornImage}
+                alt="Wedding Packages"
+                className="img-section"
+              />
+              <h3>Wedding Packages</h3>
+              <p>Curated event packages from the best event planners.</p>
+            </div>
           </div>
         </div>
       </div>

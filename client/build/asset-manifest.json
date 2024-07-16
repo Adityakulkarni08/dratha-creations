@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.2cd153fd.css",
-    "main.js": "/static/js/main.195ad509.js",
+    "main.css": "/static/css/main.5ea5e06c.css",
+    "main.js": "/static/js/main.82f13907.js",
     "static/media/yourcelebbanner.png": "/static/media/yourcelebbanner.3b316bb04b2eee52993f.png",
     "static/media/newBornPhotoShoot.png": "/static/media/newBornPhotoShoot.d4169ca4836ef55cff26.png",
     "static/media/birthdaybanner.png": "/static/media/birthdaybanner.1e6676e6cbd3c4756955.png",
@@ -128,11 +128,11 @@
     "static/media/slick.ttf": "/static/media/slick.c94f7671dcc99dce43e2.ttf",
     "static/media/slick.woff": "/static/media/slick.295183786cd8a1389865.woff",
     "index.html": "/index.html",
-    "main.2cd153fd.css.map": "/static/css/main.2cd153fd.css.map",
-    "main.195ad509.js.map": "/static/js/main.195ad509.js.map"
+    "main.5ea5e06c.css.map": "/static/css/main.5ea5e06c.css.map",
+    "main.82f13907.js.map": "/static/js/main.82f13907.js.map"
   },
   "entrypoints": [
-    "static/css/main.2cd153fd.css",
-    "static/js/main.195ad509.js"
+    "static/css/main.5ea5e06c.css",
+    "static/js/main.82f13907.js"
   ]
 }
