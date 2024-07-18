@@ -21,6 +21,10 @@ import TrendDetail from "./components/TrendDetail.js"
 import SubTrendDetail from "./components/SubTrendDetail.js"
 import EventDetail from "./components/EventDetail.js"
 import SubEventDetail from "./components/SubEventDetail.js"
+import BirthdayPackages from "./components/BirthdayPackages.js"
+import HousewarmingPackages from "./components/HousewarmingPackages.js";
+import WeddingPackages from "./components/WeddingPackages.js";
+
 import 'semantic-ui-css/semantic.min.css';
 
 function App() {
@@ -60,6 +64,10 @@ function App() {
               <Route path="/trend/:title/:subTitle" element={<SubTrendDetail />} />
               <Route path="/event/:title" element={<EventDetail />} />
               <Route path="/event/:title/:subTitle" element={<SubEventDetail />} />
+              <Route path="/birthday-package" element={<BirthdayPackages />} />
+              <Route path="/housewarming-package" element={<HousewarmingPackages />} />
+              <Route path="/wedding-package" element={<WeddingPackages />} />
+
             </Routes>
           </ScrollToTop>
         </Router>
