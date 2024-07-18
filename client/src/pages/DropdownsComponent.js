@@ -26,7 +26,7 @@ const DropdownComponent = () => {
         onMouseLeave={handleMouseLeave}
       >
         <button className="dropbtn">Decorations</button>
-        <div className="dropdown-content">
+        <div className="dropdown-content centered-dropdown">
           <div
             className="dropdown-item"
             onMouseEnter={() => handleMouseEnter("Photography")}
@@ -157,7 +157,7 @@ const DropdownComponent = () => {
           </div>
         </div>
       </div>
-      <div className="dropdown right-end packages-dropdown">
+      <div className="dropdown packages-dropdown">
         <button className="dropbtn packages-btn">
           <span>Packages</span>
         </button>
