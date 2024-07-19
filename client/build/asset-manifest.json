@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.12819f6b.css",
-    "main.js": "/static/js/main.48861ba5.js",
+    "main.css": "/static/css/main.87a6b3ba.css",
+    "main.js": "/static/js/main.8ffed6d3.js",
     "static/media/yourcelebbanner.png": "/static/media/yourcelebbanner.3b316bb04b2eee52993f.png",
     "static/media/newBornPhotoShoot.png": "/static/media/newBornPhotoShoot.d4169ca4836ef55cff26.png",
     "static/media/birthdaybanner.png": "/static/media/birthdaybanner.1e6676e6cbd3c4756955.png",
@@ -79,6 +79,7 @@
     "static/media/dj.png": "/static/media/dj.75af4c52a215a1a72feb.png",
     "static/media/tinThrowing.png": "/static/media/tinThrowing.2c3c310b9a9c436f883a.png",
     "static/media/baloonShooting.png": "/static/media/baloonShooting.e84adb14cd41489a14a0.png",
+    "static/media/bdaypackages.png": "/static/media/bdaypackages.2717b62b92cffa972492.png",
     "static/media/rajasthaniDesigns.png": "/static/media/rajasthaniDesigns.25d09f8513b168e223d9.png",
     "static/media/kingCrown.png": "/static/media/kingCrown.8f45a3a09e18f41a3657.png",
     "static/media/clutches.png": "/static/media/clutches.fe004753b23246717ba6.png",
@@ -128,11 +129,11 @@
     "static/media/slick.ttf": "/static/media/slick.c94f7671dcc99dce43e2.ttf",
     "static/media/slick.woff": "/static/media/slick.295183786cd8a1389865.woff",
     "index.html": "/index.html",
-    "main.12819f6b.css.map": "/static/css/main.12819f6b.css.map",
-    "main.48861ba5.js.map": "/static/js/main.48861ba5.js.map"
+    "main.87a6b3ba.css.map": "/static/css/main.87a6b3ba.css.map",
+    "main.8ffed6d3.js.map": "/static/js/main.8ffed6d3.js.map"
   },
   "entrypoints": [
-    "static/css/main.12819f6b.css",
-    "static/js/main.48861ba5.js"
+    "static/css/main.87a6b3ba.css",
+    "static/js/main.8ffed6d3.js"
   ]
 }
