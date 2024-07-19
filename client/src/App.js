@@ -17,15 +17,20 @@ import CreateCategory from "./pages/Admin/CreateCategory.js";
 import CreateSubcategory from "./pages/Admin/CreateSubcategory.js";
 import ServiceDetail from "./components/ServiceDetail.js";
 import SubServiceDetail from "./components/SubServiceDetail.js";
-import TrendDetail from "./components/TrendDetail.js"
-import SubTrendDetail from "./components/SubTrendDetail.js"
-import EventDetail from "./components/EventDetail.js"
-import SubEventDetail from "./components/SubEventDetail.js"
-import BirthdayPackages from "./components/BirthdayPackages.js"
+import TrendDetail from "./components/TrendDetail.js";
+import SubTrendDetail from "./components/SubTrendDetail.js";
+import EventDetail from "./components/EventDetail.js";
+import SubEventDetail from "./components/SubEventDetail.js";
+import BirthdayPackages from "./components/BirthdayPackages.js";
 import HousewarmingPackages from "./components/HousewarmingPackages.js";
 import WeddingPackages from "./components/WeddingPackages.js";
+import NewBorn from "./components/MobileComponents/NewBorn.js"
+import BabyShower from "./components/MobileComponents/BabyShower.js"
+import Birthday from "./components/MobileComponents/Birthday.js"
+import HouseWarming from "./components/MobileComponents/HouseWarming.js"
+import Engagement from "./components/MobileComponents/Engagement.js"
 
-import 'semantic-ui-css/semantic.min.css';
+import "semantic-ui-css/semantic.min.css";
 
 function App() {
   useEffect(() => {
@@ -56,18 +61,40 @@ function App() {
               <Route path="/contact" element={<Contact />} />
               <Route path="/get-demo" element={<DemoProduct />} />
               <Route path="/admin-panel" element={<AdminPanel />} />
-              <Route path="/dashboard/admin/create-category" element={<CreateCategory />} />
-              <Route path="/dashboard/admin/create-subcategory" element={<CreateSubcategory />} />
+              <Route
+                path="/dashboard/admin/create-category"
+                element={<CreateCategory />}
+              />
+              <Route
+                path="/dashboard/admin/create-subcategory"
+                element={<CreateSubcategory />}
+              />
               <Route path="/service/:title" element={<ServiceDetail />} />
-              <Route path="/service/:title/:subTitle" element={<SubServiceDetail />} />
+              <Route
+                path="/service/:title/:subTitle"
+                element={<SubServiceDetail />}
+              />
               <Route path="/trend/:title" element={<TrendDetail />} />
-              <Route path="/trend/:title/:subTitle" element={<SubTrendDetail />} />
+              <Route
+                path="/trend/:title/:subTitle"
+                element={<SubTrendDetail />}
+              />
               <Route path="/event/:title" element={<EventDetail />} />
-              <Route path="/event/:title/:subTitle" element={<SubEventDetail />} />
+              <Route
+                path="/event/:title/:subTitle"
+                element={<SubEventDetail />}
+              />
               <Route path="/birthday-package" element={<BirthdayPackages />} />
-              <Route path="/housewarming-package" element={<HousewarmingPackages />} />
+              <Route
+                path="/housewarming-package"
+                element={<HousewarmingPackages />}
+              />
               <Route path="/wedding-package" element={<WeddingPackages />} />
-
+              <Route path="/new-born" element={<NewBorn />} />
+              <Route path="/baby-shower" element={<BabyShower />} />
+              <Route path="/birthday" element={<Birthday />} />
+              <Route path="/house-warming" element={<HouseWarming />} />
+              <Route path="/engagement" element={<Engagement />} />
             </Routes>
           </ScrollToTop>
         </Router>
