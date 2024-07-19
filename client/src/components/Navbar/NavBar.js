@@ -67,7 +67,18 @@ const NavBar = () => {
                 className="search-input"
               />
               <button type="submit" className="search-button">
-                {/* Insert search icon SVG or image here */}
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  className="h-5 w-5"
+                  viewBox="0 0 20 20"
+                  fill="currentColor"
+                >
+                  <path
+                    fillRule="evenodd"
+                    d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1111.196 3.573l4.555 4.554a1 1 0 01-1.414 1.415l-4.555-4.554A6 6 0 012 8z"
+                    clipRule="evenodd"
+                  />
+                </svg>
               </button>
             </form>
           </div>

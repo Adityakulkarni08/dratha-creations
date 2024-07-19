@@ -10,30 +10,70 @@
   align-items: center;
   width: 100%;
   position: relative;
+  background-color: #f9f9f9; /* Light background */
+  border: 1px solid #ccc; /* Add border */
+  transition: box-shadow 0.3s ease; /* Smooth transition for shadow */
+  font-size: 800;
+}
+
+.search-form:hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add shadow on hover */
 }
 
 .search-input {
-  padding-left: 2.5rem;
-  padding-right: 0.75rem;
-  padding-top: 0.5rem;
-  padding-bottom: 0.5rem;
-  border: 1px solid #ccc;
-  border-radius: 9999px;
+  padding-left: 1.5rem; /* Adjusted padding to fit icon */
+  padding-right: 2.8rem; /* Adjusted padding to fit button */
+  padding-top: 0.8rem;
+  padding-bottom: 0.8rem;
+  border: none;
+  border-radius: 0; /* Remove rounded corners */
   width: 100%;
+  background-color:#ffffff; /* Transparent background */
+  color: #ccc;
+  font-weight: 900;
+  
 }
 
 .search-button {
   position: absolute;
-  left: 0;
+  right: 0; /* Move to the right side */
   top: 50%;
   transform: translateY(-50%);
   padding: 0.5rem;
+  border: none;
+  background-color: #f04e98; /* Button color */
+  color: #fff; /* Text color */
+  cursor: pointer;
+  border-radius: 0; /* Remove rounded corners */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.3s ease; /* Smooth transition for background */
+}
+
+.search-button:hover {
+  background-color: #d04e98; /* Darker button color on hover */
+}
+
+.search-button svg {
+  height: 1.95rem; /* Adjust the size of the icon */
+  width: 1.35rem; /* Adjust the size of the icon */
+}
+
+.search-input:hover {
+  border-color: #7a1313;
+}
+
+/* Focus Styles */
+.search-input:focus {
+  background-color: #ffffff; /* Change background color on focus */
+  outline: none; /* Remove default outline */
 }
 
 /* Top Bar Styles */
 .top-bar {
-  background-color: #ffffff;
-  color: #333;
+  background-color: #fff; /* White background */
+  color: #333; /* Dark text color */
   padding: 10px 20px;
   display: flex;
   justify-content: flex-end; /* Align items to the right end */
@@ -43,12 +83,12 @@
   top: 0;
   width: 100%;
   z-index: 40; /* Ensure it stays on top of other elements */
+  transition: background-color 0.3s ease; /* Smooth transition for background */
 }
 
 .contact-info {
   display: flex;
   align-items: center;
-  
 }
 
 .whatsapp-icon {
@@ -109,10 +149,13 @@
 
 nav.fixed {
   top: 60px; /* Adjust this value to ensure the navbar is below the top bar */
+  transition: top 0.3s ease; /* Smooth transition for position */
 }
 
 nav.fixed.bg-white {
   top: 60px; /* Adjust this value to ensure the navbar is below the top bar when scrolled */
+  background-color: #fff; /* White background */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add subtle shadow */
 }
 
 /* Additional Styles for Close Button */
@@ -121,4 +164,16 @@ nav.fixed.bg-white {
   border: none;
   font-size: 1.5rem;
   cursor: pointer;
+}
+
+/* Animation for Menu */
+.menu-animation {
+  transition: transform 0.3s ease, opacity 0.3s ease; /* Smooth transition for transform and opacity */
+  opacity: 0;
+  transform: translateY(-20px); /* Start position */
+}
+
+.menu-animation-open {
+  opacity: 1;
+  transform: translateY(0); /* End position */
 }
