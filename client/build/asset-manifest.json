@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.468602f5.css",
-    "main.js": "/static/js/main.89e5747f.js",
+    "main.css": "/static/css/main.4670f0ef.css",
+    "main.js": "/static/js/main.3fbc6ca9.js",
     "static/media/yourcelebbanner.png": "/static/media/yourcelebbanner.3b316bb04b2eee52993f.png",
     "static/media/newBornPhotoShoot.png": "/static/media/newBornPhotoShoot.d4169ca4836ef55cff26.png",
     "static/media/birthdaybanner.png": "/static/media/birthdaybanner.1e6676e6cbd3c4756955.png",
@@ -103,13 +103,16 @@
     "static/media/stringBags.png": "/static/media/stringBags.21e6204f29eb87b2b935.png",
     "static/media/cakeTrending.png": "/static/media/cakeTrending.f3b8f74c581d6bacfcff.png",
     "static/media/assortedCake.png": "/static/media/assortedCake.ffee4b1ef47f339db4a5.png",
+    "static/media/newbornmobile.png": "/static/media/newbornmobile.66a06d7a9fc3c4fb1ae4.png",
     "static/media/outline-icons.svg": "/static/media/outline-icons.9c4845b4b41ef40a22fa.svg",
     "static/media/icons.eot": "/static/media/icons.a01e3f2d6c83dc3aee17.eot",
     "static/media/icons.ttf": "/static/media/icons.c656b8caa454ed19b9a2.ttf",
     "static/media/brand-icons.eot": "/static/media/brand-icons.d68fa3e67dbb653a13ce.eot",
     "static/media/brand-icons.ttf": "/static/media/brand-icons.65a2fb6d9aaa164b41a0.ttf",
     "static/media/birthday.jpg": "/static/media/birthday.69ce48b7ce2afdd8a21d.jpg",
+    "static/media/candidmobile.png": "/static/media/candidmobile.0c0629a2fb4c32d0ed1c.png",
     "static/media/brand-icons.woff": "/static/media/brand-icons.cac87dc00c87a5d74711.woff",
+    "static/media/traditionalmobile.png": "/static/media/traditionalmobile.90c192b8cddf4b7ba84b.png",
     "static/media/brand-icons.woff2": "/static/media/brand-icons.278156e41e0ad908cf7f.woff2",
     "static/media/icons.woff": "/static/media/icons.425399f81e4ce7cbd967.woff",
     "static/media/icons.woff2": "/static/media/icons.38c6d8bab26db77d8c80.woff2",
@@ -129,11 +132,11 @@
     "static/media/slick.ttf": "/static/media/slick.c94f7671dcc99dce43e2.ttf",
     "static/media/slick.woff": "/static/media/slick.295183786cd8a1389865.woff",
     "index.html": "/index.html",
-    "main.468602f5.css.map": "/static/css/main.468602f5.css.map",
-    "main.89e5747f.js.map": "/static/js/main.89e5747f.js.map"
+    "main.4670f0ef.css.map": "/static/css/main.4670f0ef.css.map",
+    "main.3fbc6ca9.js.map": "/static/js/main.3fbc6ca9.js.map"
   },
   "entrypoints": [
-    "static/css/main.468602f5.css",
-    "static/js/main.89e5747f.js"
+    "static/css/main.4670f0ef.css",
+    "static/js/main.3fbc6ca9.js"
   ]
 }

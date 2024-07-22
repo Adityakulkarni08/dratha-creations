@@ -20,6 +20,7 @@
   box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
   z-index: 1;
   width: 200px; /* Adjust width as necessary */
+  height: 300px;
   padding: 10px; /* Padding inside the box */
   box-sizing: border-box;
   transition: all 0.3s ease-in-out;
@@ -49,7 +50,7 @@
   box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
   z-index: 1;
   width: 600px; /* Adjust width as necessary */
-  height: 220px; /* Set the height as specified */
+  height: 300px; /* Set the height as specified */
   padding: 20px; /* Padding inside the box */
   box-sizing: border-box;
   display: flex;
