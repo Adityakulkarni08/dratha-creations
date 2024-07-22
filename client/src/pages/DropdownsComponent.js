@@ -115,9 +115,9 @@ const DropdownComponent = () => {
                     onMouseLeave={handleMouseLeave}
                   >
                     <div className="dropdown-section">
-                      <h3>Photography</h3>
-                      <a href="#">New Born Photo Shoot</a>
-                      <a href="#">Digital Photography</a>
+                      <h3>Decorations</h3>
+                      <a href="#">Banquet Hall Decoration</a>
+                      <a href="#">Decorations at Home </a>
                       <a href="#">Photo + Album</a>
                       <a href="#">Photo + Album + Video</a>
                     </div>
@@ -293,14 +293,14 @@ const DropdownComponent = () => {
             onMouseEnter={handleMouseLeave}
             onMouseLeave={handleMouseLeave}
           >
-            <button className="dropbtn">New Born</button>
+            <button className="dropbtn">Birthday</button>
             <div className="dropdown-content centered-dropdown">
               <div
                 className="dropdown-item"
                 onMouseEnter={() => handleMouseEnter("Photography")}
                 onMouseLeave={handleMouseLeave}
               >
-                Photography
+                DECORATIONS
                 {activeSection === "Photography" && (
                   <div
                     className="dropdown-subcontent"
@@ -327,7 +327,7 @@ const DropdownComponent = () => {
                 onMouseEnter={() => handleMouseEnter("Cakes")}
                 onMouseLeave={handleMouseLeave}
               >
-                Cakes
+                PHOTOGRAPHY
                 {activeSection === "Cakes" && (
                   <div
                     className="dropdown-subcontent"
@@ -353,7 +353,7 @@ const DropdownComponent = () => {
                 onMouseEnter={() => handleMouseEnter("Entertainment")}
                 onMouseLeave={handleMouseLeave}
               >
-                Entertainment
+                CAKES
                 {activeSection === "Entertainment" && (
                   <div
                     className="dropdown-subcontent"
@@ -379,7 +379,7 @@ const DropdownComponent = () => {
                 onMouseEnter={() => handleMouseEnter("Return Gifts")}
                 onMouseLeave={handleMouseLeave}
               >
-                Return Gifts
+                ENTERTAINMENT
                 {activeSection === "Return Gifts" && (
                   <div
                     className="dropdown-subcontent"
@@ -405,7 +405,34 @@ const DropdownComponent = () => {
                 onMouseEnter={() => handleMouseEnter("Food")}
                 onMouseLeave={handleMouseLeave}
               >
-                Food
+                RETURN GIFTS
+                {activeSection === "Food" && (
+                  <div
+                    className="dropdown-subcontent"
+                    onMouseEnter={() => handleMouseEnter("Food")}
+                    onMouseLeave={handleMouseLeave}
+                  >
+                    <div className="dropdown-section">
+                      <h3>Food</h3>
+                      <a href="#">Catering Options</a>
+                      <a href="#">Custom Menu Designs</a>
+                      <a href="#">Buffet Setups</a>
+                      <a href="#">Full-Service Dining</a>
+                    </div>
+                    <img
+                      src={birthdayImg}
+                      alt="Food"
+                      className="dropdown-image"
+                    />
+                  </div>
+                )}
+              </div>
+              <div
+                className="dropdown-item"
+                onMouseEnter={() => handleMouseEnter("Food")}
+                onMouseLeave={handleMouseLeave}
+              >
+                FOOD
                 {activeSection === "Food" && (
                   <div
                     className="dropdown-subcontent"
@@ -434,14 +461,14 @@ const DropdownComponent = () => {
             onMouseEnter={handleMouseLeave}
             onMouseLeave={handleMouseLeave}
           >
-            <button className="dropbtn">New Born</button>
+            <button className="dropbtn">House Warming</button>
             <div className="dropdown-content centered-dropdown">
               <div
                 className="dropdown-item"
                 onMouseEnter={() => handleMouseEnter("Photography")}
                 onMouseLeave={handleMouseLeave}
               >
-                Photography
+                DECORATIONS
                 {activeSection === "Photography" && (
                   <div
                     className="dropdown-subcontent"
@@ -468,7 +495,7 @@ const DropdownComponent = () => {
                 onMouseEnter={() => handleMouseEnter("Cakes")}
                 onMouseLeave={handleMouseLeave}
               >
-                Cakes
+                PHOTOGRAPHY
                 {activeSection === "Cakes" && (
                   <div
                     className="dropdown-subcontent"
@@ -494,7 +521,7 @@ const DropdownComponent = () => {
                 onMouseEnter={() => handleMouseEnter("Entertainment")}
                 onMouseLeave={handleMouseLeave}
               >
-                Entertainment
+                ENTERTAINMENT
                 {activeSection === "Entertainment" && (
                   <div
                     className="dropdown-subcontent"
@@ -520,7 +547,7 @@ const DropdownComponent = () => {
                 onMouseEnter={() => handleMouseEnter("Return Gifts")}
                 onMouseLeave={handleMouseLeave}
               >
-                Return Gifts
+                RETURN GIFTS
                 {activeSection === "Return Gifts" && (
                   <div
                     className="dropdown-subcontent"
@@ -546,7 +573,7 @@ const DropdownComponent = () => {
                 onMouseEnter={() => handleMouseEnter("Food")}
                 onMouseLeave={handleMouseLeave}
               >
-                Food
+                FOOD
                 {activeSection === "Food" && (
                   <div
                     className="dropdown-subcontent"
@@ -575,14 +602,14 @@ const DropdownComponent = () => {
             onMouseEnter={handleMouseLeave}
             onMouseLeave={handleMouseLeave}
           >
-            <button className="dropbtn">New Born</button>
+            <button className="dropbtn">Engagement</button>
             <div className="dropdown-content centered-dropdown">
               <div
                 className="dropdown-item"
                 onMouseEnter={() => handleMouseEnter("Photography")}
                 onMouseLeave={handleMouseLeave}
               >
-                Photography
+                DECORATIONS
                 {activeSection === "Photography" && (
                   <div
                     className="dropdown-subcontent"
@@ -609,7 +636,7 @@ const DropdownComponent = () => {
                 onMouseEnter={() => handleMouseEnter("Cakes")}
                 onMouseLeave={handleMouseLeave}
               >
-                Cakes
+                PHOTOGRAPHY
                 {activeSection === "Cakes" && (
                   <div
                     className="dropdown-subcontent"
@@ -635,7 +662,7 @@ const DropdownComponent = () => {
                 onMouseEnter={() => handleMouseEnter("Entertainment")}
                 onMouseLeave={handleMouseLeave}
               >
-                Entertainment
+                MAKEUP
                 {activeSection === "Entertainment" && (
                   <div
                     className="dropdown-subcontent"
@@ -661,7 +688,7 @@ const DropdownComponent = () => {
                 onMouseEnter={() => handleMouseEnter("Return Gifts")}
                 onMouseLeave={handleMouseLeave}
               >
-                Return Gifts
+                ENTERTAINMENT
                 {activeSection === "Return Gifts" && (
                   <div
                     className="dropdown-subcontent"
@@ -687,7 +714,34 @@ const DropdownComponent = () => {
                 onMouseEnter={() => handleMouseEnter("Food")}
                 onMouseLeave={handleMouseLeave}
               >
-                Food
+                RETURN GIFTS
+                {activeSection === "Food" && (
+                  <div
+                    className="dropdown-subcontent"
+                    onMouseEnter={() => handleMouseEnter("Food")}
+                    onMouseLeave={handleMouseLeave}
+                  >
+                    <div className="dropdown-section">
+                      <h3>Food</h3>
+                      <a href="#">Catering Options</a>
+                      <a href="#">Custom Menu Designs</a>
+                      <a href="#">Buffet Setups</a>
+                      <a href="#">Full-Service Dining</a>
+                    </div>
+                    <img
+                      src={birthdayImg}
+                      alt="Food"
+                      className="dropdown-image"
+                    />
+                  </div>
+                )}
+              </div>
+              <div
+                className="dropdown-item"
+                onMouseEnter={() => handleMouseEnter("Food")}
+                onMouseLeave={handleMouseLeave}
+              >
+                FOOD
                 {activeSection === "Food" && (
                   <div
                     className="dropdown-subcontent"
@@ -716,14 +770,14 @@ const DropdownComponent = () => {
             onMouseEnter={handleMouseLeave}
             onMouseLeave={handleMouseLeave}
           >
-            <button className="dropbtn">New Born</button>
+            <button className="dropbtn">Wedding</button>
             <div className="dropdown-content centered-dropdown">
               <div
                 className="dropdown-item"
                 onMouseEnter={() => handleMouseEnter("Photography")}
                 onMouseLeave={handleMouseLeave}
               >
-                Photography
+                DECORATIONS
                 {activeSection === "Photography" && (
                   <div
                     className="dropdown-subcontent"
@@ -750,7 +804,7 @@ const DropdownComponent = () => {
                 onMouseEnter={() => handleMouseEnter("Cakes")}
                 onMouseLeave={handleMouseLeave}
               >
-                Cakes
+                PHOTOGRAPHY
                 {activeSection === "Cakes" && (
                   <div
                     className="dropdown-subcontent"
@@ -776,7 +830,7 @@ const DropdownComponent = () => {
                 onMouseEnter={() => handleMouseEnter("Entertainment")}
                 onMouseLeave={handleMouseLeave}
               >
-                Entertainment
+                CAKES
                 {activeSection === "Entertainment" && (
                   <div
                     className="dropdown-subcontent"
@@ -802,7 +856,7 @@ const DropdownComponent = () => {
                 onMouseEnter={() => handleMouseEnter("Return Gifts")}
                 onMouseLeave={handleMouseLeave}
               >
-                Return Gifts
+                MAKEUP
                 {activeSection === "Return Gifts" && (
                   <div
                     className="dropdown-subcontent"
@@ -828,7 +882,88 @@ const DropdownComponent = () => {
                 onMouseEnter={() => handleMouseEnter("Food")}
                 onMouseLeave={handleMouseLeave}
               >
-                Food
+                MEHNDI
+                {activeSection === "Food" && (
+                  <div
+                    className="dropdown-subcontent"
+                    onMouseEnter={() => handleMouseEnter("Food")}
+                    onMouseLeave={handleMouseLeave}
+                  >
+                    <div className="dropdown-section">
+                      <h3>Food</h3>
+                      <a href="#">Catering Options</a>
+                      <a href="#">Custom Menu Designs</a>
+                      <a href="#">Buffet Setups</a>
+                      <a href="#">Full-Service Dining</a>
+                    </div>
+                    <img
+                      src={birthdayImg}
+                      alt="Food"
+                      className="dropdown-image"
+                    />
+                  </div>
+                )}
+              </div>
+              <div
+                className="dropdown-item"
+                onMouseEnter={() => handleMouseEnter("Food")}
+                onMouseLeave={handleMouseLeave}
+              >
+                ENTERTAINMENT
+                {activeSection === "Food" && (
+                  <div
+                    className="dropdown-subcontent"
+                    onMouseEnter={() => handleMouseEnter("Food")}
+                    onMouseLeave={handleMouseLeave}
+                  >
+                    <div className="dropdown-section">
+                      <h3>Food</h3>
+                      <a href="#">Catering Options</a>
+                      <a href="#">Custom Menu Designs</a>
+                      <a href="#">Buffet Setups</a>
+                      <a href="#">Full-Service Dining</a>
+                    </div>
+                    <img
+                      src={birthdayImg}
+                      alt="Food"
+                      className="dropdown-image"
+                    />
+                  </div>
+                )}
+              </div>
+              <div
+                className="dropdown-item"
+                onMouseEnter={() => handleMouseEnter("Food")}
+                onMouseLeave={handleMouseLeave}
+              >
+                RETURN GIFTS
+                {activeSection === "Food" && (
+                  <div
+                    className="dropdown-subcontent"
+                    onMouseEnter={() => handleMouseEnter("Food")}
+                    onMouseLeave={handleMouseLeave}
+                  >
+                    <div className="dropdown-section">
+                      <h3>Food</h3>
+                      <a href="#">Catering Options</a>
+                      <a href="#">Custom Menu Designs</a>
+                      <a href="#">Buffet Setups</a>
+                      <a href="#">Full-Service Dining</a>
+                    </div>
+                    <img
+                      src={birthdayImg}
+                      alt="Food"
+                      className="dropdown-image"
+                    />
+                  </div>
+                )}
+              </div>
+              <div
+                className="dropdown-item"
+                onMouseEnter={() => handleMouseEnter("Food")}
+                onMouseLeave={handleMouseLeave}
+              >
+                FOOD
                 {activeSection === "Food" && (
                   <div
                     className="dropdown-subcontent"
@@ -857,14 +992,14 @@ const DropdownComponent = () => {
             onMouseEnter={handleMouseLeave}
             onMouseLeave={handleMouseLeave}
           >
-            <button className="dropbtn">New Born</button>
+            <button className="dropbtn">Puberty</button>
             <div className="dropdown-content centered-dropdown">
               <div
                 className="dropdown-item"
                 onMouseEnter={() => handleMouseEnter("Photography")}
                 onMouseLeave={handleMouseLeave}
               >
-                Photography
+                DECORATIONS
                 {activeSection === "Photography" && (
                   <div
                     className="dropdown-subcontent"
@@ -891,7 +1026,7 @@ const DropdownComponent = () => {
                 onMouseEnter={() => handleMouseEnter("Cakes")}
                 onMouseLeave={handleMouseLeave}
               >
-                Cakes
+                PHOTOGRAPHY
                 {activeSection === "Cakes" && (
                   <div
                     className="dropdown-subcontent"
@@ -917,7 +1052,7 @@ const DropdownComponent = () => {
                 onMouseEnter={() => handleMouseEnter("Entertainment")}
                 onMouseLeave={handleMouseLeave}
               >
-                Entertainment
+                MAKEUP
                 {activeSection === "Entertainment" && (
                   <div
                     className="dropdown-subcontent"
@@ -943,7 +1078,7 @@ const DropdownComponent = () => {
                 onMouseEnter={() => handleMouseEnter("Return Gifts")}
                 onMouseLeave={handleMouseLeave}
               >
-                Return Gifts
+                MEHNDI
                 {activeSection === "Return Gifts" && (
                   <div
                     className="dropdown-subcontent"
@@ -969,7 +1104,7 @@ const DropdownComponent = () => {
                 onMouseEnter={() => handleMouseEnter("Food")}
                 onMouseLeave={handleMouseLeave}
               >
-                Food
+                ENTERTAINMENT
                 {activeSection === "Food" && (
                   <div
                     className="dropdown-subcontent"
@@ -986,6 +1121,58 @@ const DropdownComponent = () => {
                     <img
                       src={birthdayImg}
                       alt="Food"
+                      className="dropdown-image"
+                    />
+                  </div>
+                )}
+              </div>
+              <div
+                className="dropdown-item"
+                onMouseEnter={() => handleMouseEnter("Cakes")}
+                onMouseLeave={handleMouseLeave}
+              >
+                RETURN GIFTS
+                {activeSection === "Cakes" && (
+                  <div
+                    className="dropdown-subcontent"
+                    onMouseEnter={() => handleMouseEnter("Cakes")}
+                    onMouseLeave={handleMouseLeave}
+                  >
+                    <div className="dropdown-section">
+                      <h3>Cakes</h3>
+                      <a href="#">Birthday Cakes</a>
+                      <a href="#">Wedding Cakes</a>
+                      <a href="#">Custom Cakes</a>
+                    </div>
+                    <img
+                      src={birthdayImg}
+                      alt="Cakes"
+                      className="dropdown-image"
+                    />
+                  </div>
+                )}
+              </div>
+              <div
+                className="dropdown-item"
+                onMouseEnter={() => handleMouseEnter("Cakes")}
+                onMouseLeave={handleMouseLeave}
+              >
+                FOOD
+                {activeSection === "Cakes" && (
+                  <div
+                    className="dropdown-subcontent"
+                    onMouseEnter={() => handleMouseEnter("Cakes")}
+                    onMouseLeave={handleMouseLeave}
+                  >
+                    <div className="dropdown-section">
+                      <h3>Cakes</h3>
+                      <a href="#">Birthday Cakes</a>
+                      <a href="#">Wedding Cakes</a>
+                      <a href="#">Custom Cakes</a>
+                    </div>
+                    <img
+                      src={birthdayImg}
+                      alt="Cakes"
                       className="dropdown-image"
                     />
                   </div>
@@ -998,14 +1185,14 @@ const DropdownComponent = () => {
             onMouseEnter={handleMouseLeave}
             onMouseLeave={handleMouseLeave}
           >
-            <button className="dropbtn">New Born</button>
+            <button className="dropbtn">Surprise Party</button>
             <div className="dropdown-content centered-dropdown">
               <div
                 className="dropdown-item"
                 onMouseEnter={() => handleMouseEnter("Photography")}
                 onMouseLeave={handleMouseLeave}
               >
-                Photography
+                DECORATIONS
                 {activeSection === "Photography" && (
                   <div
                     className="dropdown-subcontent"
@@ -1032,7 +1219,7 @@ const DropdownComponent = () => {
                 onMouseEnter={() => handleMouseEnter("Cakes")}
                 onMouseLeave={handleMouseLeave}
               >
-                Cakes
+                FOOD
                 {activeSection === "Cakes" && (
                   <div
                     className="dropdown-subcontent"
@@ -1048,85 +1235,6 @@ const DropdownComponent = () => {
                     <img
                       src={birthdayImg}
                       alt="Cakes"
-                      className="dropdown-image"
-                    />
-                  </div>
-                )}
-              </div>
-              <div
-                className="dropdown-item"
-                onMouseEnter={() => handleMouseEnter("Entertainment")}
-                onMouseLeave={handleMouseLeave}
-              >
-                Entertainment
-                {activeSection === "Entertainment" && (
-                  <div
-                    className="dropdown-subcontent"
-                    onMouseEnter={() => handleMouseEnter("Entertainment")}
-                    onMouseLeave={handleMouseLeave}
-                  >
-                    <div className="dropdown-section">
-                      <h3>Entertainment</h3>
-                      <a href="#">Magicians</a>
-                      <a href="#">Clowns</a>
-                      <a href="#">Live Bands</a>
-                    </div>
-                    <img
-                      src={birthdayImg}
-                      alt="Entertainment"
-                      className="dropdown-image"
-                    />
-                  </div>
-                )}
-              </div>
-              <div
-                className="dropdown-item"
-                onMouseEnter={() => handleMouseEnter("Return Gifts")}
-                onMouseLeave={handleMouseLeave}
-              >
-                Return Gifts
-                {activeSection === "Return Gifts" && (
-                  <div
-                    className="dropdown-subcontent"
-                    onMouseEnter={() => handleMouseEnter("Return Gifts")}
-                    onMouseLeave={handleMouseLeave}
-                  >
-                    <div className="dropdown-section">
-                      <h3>Return Gifts</h3>
-                      <a href="#">Toys</a>
-                      <a href="#">Books</a>
-                      <a href="#">Gift Cards</a>
-                    </div>
-                    <img
-                      src={birthdayImg}
-                      alt="Return Gifts"
-                      className="dropdown-image"
-                    />
-                  </div>
-                )}
-              </div>
-              <div
-                className="dropdown-item"
-                onMouseEnter={() => handleMouseEnter("Food")}
-                onMouseLeave={handleMouseLeave}
-              >
-                Food
-                {activeSection === "Food" && (
-                  <div
-                    className="dropdown-subcontent"
-                    onMouseEnter={() => handleMouseEnter("Food")}
-                    onMouseLeave={handleMouseLeave}
-                  >
-                    <div className="dropdown-section">
-                      <h3>Food</h3>
-                      <a href="#">Catering Options</a>
-                      <a href="#">Custom Menu Designs</a>
-                      <a href="#">Buffet Setups</a>
-                      <a href="#">Full-Service Dining</a>
-                    </div>
-                    <img
-                      src={birthdayImg}
-                      alt="Food"
                       className="dropdown-image"
                     />
                   </div>
