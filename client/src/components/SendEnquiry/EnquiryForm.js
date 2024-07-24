@@ -33,6 +33,17 @@ const EnquiryForm = ({ onClose }) => {
         ? process.env.REACT_APP_API_URL_DEVELOPMENT
         : process.env.REACT_APP_API_URL_PRODUCTION;
 
+    console.log("API URL:", apiUrl); // Log the API URL to verify
+    console.log("NODE_ENV:", process.env.NODE_ENV);
+    console.log(
+      "REACT_APP_API_URL_DEVELOPMENT:",
+      process.env.REACT_APP_API_URL_DEVELOPMENT
+    );
+    console.log(
+      "REACT_APP_API_URL_PRODUCTION:",
+      process.env.REACT_APP_API_URL_PRODUCTION
+    );
+
     fetch(`${apiUrl}/api/send-enquiry`, {
       method: "POST",
       headers: {
