@@ -1,13 +1,13 @@
 import express from "express";
-import cors from "cors"
+import cors from "cors";
 import path, { dirname } from "path";
 import multer from "multer";
 import { fileURLToPath } from "url";
-import authRoutes from "./routes/authRoutes.js"
+import authRoutes from "./routes/authRoutes.js";
 import nodemailer from 'nodemailer';
-import dotenv from "dotenv"
+import dotenv from "dotenv";
 import connectDB from './config/db.js';
-import categoryRoutes from "./routes/categoryRoutes.js"
+import categoryRoutes from "./routes/categoryRoutes.js";
 import Category from "./models/Category.js";
 
 const __filename = fileURLToPath(import.meta.url);
@@ -49,8 +49,8 @@ app.get('/api/v1/category/get-categories', async (req, res) => {
 });
 
 // Add route for sending emails
-app.post('/api/send-enquiry', async (req, res) => {
-  const { service, phone, email } = req.body;
+app.post('/api/send-enquiry', upload.none(), async (req, res) => {
+  const { name, email, phone, state, city, celebration, services, celebrationDate, priceRange, requirements } = req.body;
 
   const transporter = nodemailer.createTransport({
     service: 'gmail',
@@ -62,9 +62,20 @@ app.post('/api/send-enquiry', async (req, res) => {
 
   const mailOptions = {
     from: process.env.EMAIL_USER,
-    to: 'rangachimalgi123@gmail.com',  // Replace with the fixed recipient email address
+    to: 'rnsfreelancers89@gmail.com',  // Replace with the fixed recipient email address
     subject: 'New Service Enquiry',
-    text: `Service: ${service}\nPhone: ${phone}\nEmail: ${email}`,
+    text: `
+      Name: ${name}
+      Email: ${email}
+      Phone: ${phone}
+      State: ${state}
+      City: ${city}
+      Celebration: ${celebration}
+      Services: ${services}
+      Celebration Date: ${celebrationDate}
+      Price Range: ${priceRange}
+      Requirements: ${requirements}
+    `,
   };
 
   try {
@@ -79,7 +90,7 @@ app.post('/api/send-enquiry', async (req, res) => {
 app.use(express.static(path.join(__dirname, 'client', 'build')));
 
 app.get('*', function (req, res) {
-  const index = path.join(__dirname,'client', 'build', 'index.html');
+  const index = path.join(__dirname, 'client', 'build', 'index.html');
   res.sendFile(index);
 });
 

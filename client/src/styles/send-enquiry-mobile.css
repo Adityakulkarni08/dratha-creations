@@ -1,0 +1,140 @@
+.enquiry-form-wrapper-mobile {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    background-color: rgba(0, 0, 0, 0.5); /* Optional: Adds a semi-transparent overlay */
+    overflow-y: auto; /* Add vertical scrolling if needed */
+  }
+  
+  .enquiry-form-container-mobile {
+    background-color: white;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    border-radius: 10px;
+    width: 90%; /* Full width on mobile */
+    max-width: 400px; /* Max width */
+    margin: 20px 0; /* Add some margin to the top and bottom */
+    position: relative;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .enquiry-form-container-mobile .close-button {
+    background: none;
+    border: none;
+    font-size: 1.5em;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+    color: #888;
+    transition: color 0.3s ease;
+  }
+  
+  .enquiry-form-container-mobile .close-button:hover {
+    color: #f04e98;
+  }
+  
+  .enquiry-form-mobile {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .enquiry-form-mobile h2 {
+    margin-bottom: 20px;
+    font-size: 1.5em;
+    color: #333;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .enquiry-form-mobile .form-group {
+    margin-bottom: 15px;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .enquiry-form-mobile .form-group label {
+    margin-bottom: 5px;
+    font-weight: bold;
+  }
+  
+  .enquiry-form-mobile .form-group input,
+  .enquiry-form-mobile .form-group textarea,
+  .enquiry-form-mobile .form-group select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+    font-size: 1em;
+  }
+  
+  .enquiry-form-mobile .form-group textarea {
+    resize: none;
+  }
+  
+  .enquiry-form-mobile .form-group.terms {
+    display: flex;
+    align-items: center;
+  }
+  
+  .enquiry-form-mobile .form-group.terms input {
+    width: auto;
+    margin-right: 10px;
+  }
+  
+  .enquiry-form-mobile .form-group.terms label {
+    font-size: 0.9em;
+  }
+  
+  .enquiry-form-mobile .form-group.terms a {
+    color: #f04e98;
+    text-decoration: none;
+  }
+  
+  .enquiry-form-mobile .form-group.terms a:hover {
+    text-decoration: underline;
+  }
+  
+  .enquiry-form-mobile button {
+    background-color: #f04e98;
+    color: white;
+    border: none;
+    padding: 15px;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-size: 1em;
+  }
+  
+  .enquiry-form-mobile button:hover {
+    background-color: #c34aa3;
+  }
+  
+  .success-message-mobile {
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #4BB543;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 1em;
+    z-index: 1001;
+  }
+  
+  /* Hide the mobile button on larger screens */
+  @media (min-width: 769px) {
+    .send-enquiry-button-mobile {
+      display: none;
+    }
+  }
+  

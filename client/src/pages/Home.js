@@ -9,6 +9,8 @@ import Services from '../components/Services';
 import EventPackages from '../components/EventPackages';
 import WhyHomeEvents from "../components/WhyHomeEvents"
 import Celebration from '../components/Celebration';
+import SendEnquiryButton from '../components/SendEnquiry/SendEnquiryButton';
+import SendEnquiryMobileButton from '../components/MobileComponents/SendEnquiryMobileButton';
 
 const Home = () => {
     return (
@@ -23,6 +25,8 @@ const Home = () => {
             <Celebration />
             <Cta/>
             <Footer />
+            <SendEnquiryButton /> 
+            <SendEnquiryMobileButton />
         </>
 
     )
