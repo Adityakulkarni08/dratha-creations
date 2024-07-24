@@ -13,7 +13,7 @@ const EnquiryForm = ({ onClose }) => {
     services: "",
     celebrationDate: "",
     priceRange: "",
-    requirements: ""
+    requirements: "",
   });
   const [showSuccessMessage, setShowSuccessMessage] = useState(false);
 
@@ -21,46 +21,52 @@ const EnquiryForm = ({ onClose }) => {
     const { name, value } = e.target;
     setFormData({
       ...formData,
-      [name]: value
+      [name]: value,
     });
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    fetch('http://localhost:8087/api/send-enquiry', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json'
-      },
-      body: JSON.stringify(formData)
-    })
-    .then(response => response.json())
-    .then(data => {
-      console.log('Success:', data);
-      setShowSuccessMessage(true);
-      setTimeout(() => {
-        setShowSuccessMessage(false);
-        onClose();
-      }, 2000); // Display the message for 2 seconds
+    const apiUrl =
+      process.env.NODE_ENV === "development"
+        ? process.env.REACT_APP_API_URL_DEVELOPMENT
+        : process.env.REACT_APP_API_URL_PRODUCTION;
 
-      // Clear the form
-      setFormData({
-        name: "",
-        email: "",
-        phone: "",
-        state: "",
-        city: "",
-        celebration: "",
-        services: "",
-        celebrationDate: "",
-        priceRange: "",
-        requirements: ""
-      });
+    fetch(`${apiUrl}/api/send-enquiry`, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(formData),
     })
-    .catch((error) => {
-      console.error('Error:', error);
-    });
+      .then((response) => response.json())
+      .then((data) => {
+        console.log("Success:", data);
+        setShowSuccessMessage(true);
+        setTimeout(() => {
+          setShowSuccessMessage(false);
+          onClose();
+        }, 2000); // Display the message for 2 seconds
+
+        // Clear the form
+        setFormData({
+          firstName: "",
+          lastName: "",
+          email: "",
+          phone: "",
+          state: "",
+          city: "",
+          celebration: "",
+          services: "",
+          celebrationDate: "",
+          priceRange: "",
+          requirements: "",
+        });
+      })
+      .catch((error) => {
+        console.error("Error:", error);
+      });
   };
 
   return (
@@ -70,9 +76,13 @@ const EnquiryForm = ({ onClose }) => {
           <img src={image} alt="Event" className="side-image" />
         </div>
         <div className="enquiry-form-container">
-          <button className="close-button" onClick={onClose}>×</button>
+          <button className="close-button" onClick={onClose}>
+            ×
+          </button>
           <form className="enquiry-form" onSubmit={handleSubmit}>
-            <h2><span>Enquiry</span> <span className="highlight">Now</span></h2>
+            <h2>
+              <span>Enquiry</span> <span className="highlight">Now</span>
+            </h2>
             <div className="form-row">
               <div className="form-group">
                 <label>Name*</label>
@@ -204,11 +214,16 @@ const EnquiryForm = ({ onClose }) => {
             <div className="form-group file-upload">
               <label>Submit Your Event Ideas:</label>
               <input type="file" />
-              <small>Supported Formats: png, jpg, jpeg, .doc, .docx, .pdf | Size: Upto 5 Mb</small>
+              <small>
+                Supported Formats: png, jpg, jpeg, .doc, .docx, .pdf | Size:
+                Upto 5 Mb
+              </small>
             </div>
             <div className="form-group terms">
               <input type="checkbox" required />
-              <label>I have read and accept the <a href="#">terms and conditions</a></label>
+              <label>
+                I have read and accept the <a href="#">terms and conditions</a>
+              </label>
             </div>
             <button type="submit">SUBMIT</button>
           </form>
