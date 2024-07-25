@@ -9,6 +9,7 @@ import dotenv from "dotenv";
 import connectDB from './config/db.js';
 import categoryRoutes from "./routes/categoryRoutes.js";
 import Category from "./models/Category.js";
+import "./keepAlive.js"
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
