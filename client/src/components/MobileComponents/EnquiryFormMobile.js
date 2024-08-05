@@ -67,7 +67,21 @@ const EnquiryFormMobile = ({ onClose }) => {
   return (
     <div className="enquiry-form-wrapper-mobile">
       <div className="enquiry-form-container-mobile">
-        <button className="close-button-mobile" onClick={onClose}>×</button>
+        <button className="close-button-mobile" onClick={onClose}>
+          ×
+        </button>
+        <h1
+          style={{
+            marginBottom: "20px",
+            fontSize: "1.5em",
+            color: "#f04e98",
+            textAlign: "center",
+            fontFamily: "Arial, sans-serif",
+            fontWeight: "bold",
+          }}
+        >
+          Enquiry Now
+        </h1>
         <form className="enquiry-form-mobile" onSubmit={handleSubmit}>
           <div className="form-group">
             <label>First Name*</label>
@@ -201,7 +215,10 @@ const EnquiryFormMobile = ({ onClose }) => {
           <div className="form-group file-upload">
             <label>Submit Your Event Ideas:</label>
             <input type="file" />
-            <small>Supported Formats: png, jpg, jpeg, .doc, .docx, .pdf | Size: Upto 5 Mb</small>
+            <small>
+              Supported Formats: png, jpg, jpeg, .doc, .docx, .pdf | Size: Upto
+              5 Mb
+            </small>
           </div>
           <div className="form-group terms">
             <input type="checkbox" required />
