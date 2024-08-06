@@ -227,8 +227,11 @@ const categories = [
 const Cta = () => {
     return (
         <div className="w-full text-black bg-white py-16">
-            <div className="mx-8 w-full text-center">
-                <p className='text-2xl md:text-4xl font-bold mb-8'>More From The Home Events</p>
+            <div className="mx-8 w-full">
+                <div className="flex items-center mb-8">
+                    <p className='text-2xl md:text-4xl font-bold text-teal-500'>More From The Drata</p>
+                    <div className="flex-grow border-t border-teal-500 ml-4"></div>
+                </div>
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
                     {categories.map((category, index) => (
                         <div key={index} className="text-left">
