@@ -1,72 +1,129 @@
 .why-home-events-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px;
-    background-color: #f0f0f0; /* Light grey background color */
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-color: #f0f0f0; /* Light grey background color */
 }
 
 .content {
-    max-width: 50%;
+  max-width: 50%;
 }
 
 .content h2 {
-    color: #00bcd4; /* Replace with your desired color */
-    font-size: 20px;
+  color: #00bcd4; /* Replace with your desired color */
+  font-size: 20px;
 }
 
 .content h1 {
-    font-size: 36px;
-    font-weight: bold;
+  font-size: 36px;
+  font-weight: bold;
 }
 
 .content p {
-    font-size: 16px;
-    margin-top: 20px;
+  font-size: 16px;
+  margin-top: 20px;
 }
 
 .know-more-btn {
-    background-color: #e91e63; /* Replace with your desired color */
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    cursor: pointer;
-    font-size: 16px;
-    border-radius: 25px; /* Make the button more rounded */
-    font-weight: 700;
-    transition: background-color 0.3s, transform 0.3s;
+  background-color: #e91e63; /* Replace with your desired color */
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  border-radius: 25px; /* Make the button more rounded */
+  font-weight: 700;
+  transition: background-color 0.3s, transform 0.3s;
 }
 
 .know-more-btn:hover {
-    background-color: #32cacf; /* Darken the button color on hover */
-    transform: scale(1.05); /* Slightly enlarge the button on hover */
+  background-color: #32cacf; /* Darken the button color on hover */
+  transform: scale(1.05); /* Slightly enlarge the button on hover */
 }
 
 .image-container {
-    position: relative;
-    max-width: 50%;
+  position: relative;
+  max-width: 50%;
 }
 
 .image-container img {
-    width: 100%;
-    height: auto;
-    border-radius: 10px;
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
 }
 
 .play-btn {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background-color: #e91e63; /* Replace with your desired color */
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    cursor: pointer;
-    font-size: 16px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #e91e63; /* Replace with your desired color */
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
 }
 
 .wide-image {
-    width: 100%;
-    height: auto;
+  width: 100%;
+  height: auto;
+}
+/* Mobile View */
+@media (max-width: 768px) {
+  .why-home-events-container {
+    flex-direction: column;
+    padding: 10px;
+    margin: 0; /* Remove any margin for the container */
+  }
+
+  .content,
+  .image-container {
+    max-width: 100%;
+    text-align: center;
+    margin: 0; /* Remove any margin for the content and image containers */
+    padding: 0; /* Remove any padding for the content and image containers */
+  }
+
+  .content h1,
+  .content h2,
+  .content p,
+  .know-more-btn,
+  .play-btn {
+    margin: 0; /* Remove margin-top and margin-bottom */
+    padding: 0; /* Remove default padding */
+  }
+
+  .content h1 {
+    font-size: 28px;
+    margin-bottom: 10px; /* Add bottom margin for spacing */
+  }
+
+  .content h2 {
+    font-size: 20px;
+    margin-bottom: 10px; /* Add bottom margin for spacing */
+  }
+
+  .content p {
+    font-size: 14px;
+    margin-bottom: 10px; /* Add bottom margin for spacing */
+  }
+
+  .know-more-btn {
+    padding: 8px 16px;
+    font-size: 14px;
+    margin-bottom: 10px; /* Add bottom margin for spacing */
+  }
+
+  .image-container img {
+    border-radius: 5px;
+  }
+
+  .play-btn {
+    padding: 8px 16px;
+    font-size: 14px;
+    margin-bottom: 10px; /* Add bottom margin for spacing */
+  }
 }
