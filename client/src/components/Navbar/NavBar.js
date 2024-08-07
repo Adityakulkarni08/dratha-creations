@@ -82,7 +82,7 @@ const NavBar = () => {
               </button>
             </form>
           </div>
-          <div className="flex items-center">
+          {/* <div className="flex items-center">
             <button
               className="p-2 rounded-lg lg:hidden text-blue-900"
               onClick={handleClick}
@@ -101,7 +101,7 @@ const NavBar = () => {
                 ) : (
                   <path
                     fillRule="evenodd"
-                    d="M4 5h16a1 1 0 0 1 0 2H4a1 1 0 1 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2z"
+                    d="M4 5h16a1 1 0 0 1 0 2H4a1 1 0 1 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 1 1 0-2z"
                   />
                 )}
               </svg>
@@ -109,9 +109,9 @@ const NavBar = () => {
             <div className="hidden space-x-6 lg:inline-block p-5">
               <NavLinks handleCloseMenu={handleCloseMenu} />
             </div>
-          </div>
+          </div> */}
         </div>
-        <div
+        {/* <div
           className={`fixed transition-transform duration-300 ease-in-out transit flex justify-center left-0 w-full h-auto bg-white block lg:hidden shadow-xl top-14 ${
             isOpen ? "block" : "hidden"
           } `}
@@ -132,7 +132,7 @@ const NavBar = () => {
             </button>
             <NavLinks handleCloseMenu={handleCloseMenu} />
           </div>
-        </div>
+        </div> */}
       </nav>
     </>
   );

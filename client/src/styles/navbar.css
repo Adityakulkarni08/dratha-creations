@@ -31,7 +31,6 @@
   background-color:#ffffff; /* Transparent background */
   color: #ccc;
   font-weight: 900;
-  
 }
 
 .search-button {
@@ -132,6 +131,55 @@
 
   .fixed + .flex {
     padding-top: 120px; /* Adjust this value to ensure the content below the navbar is not overlapped */
+  }
+
+  .nav-menu {
+    display: none;
+  }
+
+  .nav-menu.active {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+    background-color: #fff;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    transition: transform 0.3s ease;
+  }
+
+  .nav-links {
+    padding: 1rem;
+    text-align: center;
+  }
+
+  .search-form {
+    margin-bottom: 1rem; /* Add some space between the search form and the nav links */
+  }
+
+  .search-button {
+    right: 0.5rem; /* Adjust position if needed */
+  }
+
+  .nav-links {
+    padding: 1rem 2rem; /* Adjust padding for better touch targets */
+  }
+
+  .mobile-menu-left {
+    position: absolute;
+    left: 0;
+    top: 60px;
+    width: 100%;
+    height: auto;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+    transform: translateX(-100%);
+  }
+
+  .mobile-menu-left.active {
+    transform: translateX(0);
   }
 }
 
