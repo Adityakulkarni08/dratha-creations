@@ -86,17 +86,17 @@
 .enquiry-form-mobile .form-group input,
 .enquiry-form-mobile .form-group textarea,
 .enquiry-form-mobile .form-group select {
-  width: 100%;
-  padding: 10px;
+  width: 300px;
+  padding: 15px; /* Increased padding */
   border: 1px solid #ddd;
   border-radius: 5px;
-  font-size: 1em;
+  font-size: 1.1em; /* Increased font size */
   box-sizing: border-box; /* Ensure padding and border are included in the element's total width and height */
 }
 
 .enquiry-form-mobile .form-group input::placeholder,
 .enquiry-form-mobile .form-group textarea::placeholder {
-  font-size: 0.9em;
+  font-size: 1em; /* Increased placeholder font size */
   color: #888;
 }
 
@@ -131,12 +131,12 @@
   background-color: #f04e98;
   color: white;
   border: none;
-  padding: 15px;
+  padding: 20px; /* Increased padding */
   border-radius: 5px;
   font-weight: bold;
   cursor: pointer;
   transition: background-color 0.3s ease;
-  font-size: 1em;
+  font-size: 1.1em; /* Increased font size */
   width: 100%;
 }
 
