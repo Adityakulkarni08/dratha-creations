@@ -27,4 +27,54 @@ export const eventData = {
       }
     ],
   },
+  "Wedding Packages": {
+    description:
+      "Here you can add more content specific to Birthday Decorations.",
+    image: birthdayImage,
+    subServices: [
+      {
+        title: "Birthday Packages",
+        image: baloonDecor,
+        subServices: [
+            {
+                title: "test",
+                image: baloonDecor
+            }
+        ]
+      },
+      {
+        title: "House Warming",
+        image: baloonDecor,
+      },
+      {
+        title: "Wedding Packages",
+        image: baloonDecor
+      }
+    ],
+  },
+  "House Warming": {
+    description:
+      "Here you can add more content specific to Birthday Decorations.",
+    image: birthdayImage,
+    subServices: [
+      {
+        title: "Birthday Packages",
+        image: baloonDecor,
+        subServices: [
+            {
+                title: "test",
+                image: baloonDecor
+            }
+        ]
+      },
+      {
+        title: "House Warming",
+        image: baloonDecor,
+      },
+      {
+        title: "Wedding Packages",
+        image: baloonDecor
+      }
+    ],
+  },
 };

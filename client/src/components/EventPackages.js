@@ -1,10 +1,18 @@
 import React, { useState } from "react";
 import Slider from "react-slick";
 import ServiceCard from "./ServiceCard";
-import birthdayTrending from "../images/birthdayTrending.png";
+import birthdayTrending from "../images/birthdayPackages.png";
+import houseWarmingPackages from "../images/houseWarmingPackages.png";
+import weddingPackages from "../images/weddingPackages.png";
+import { Link } from "react-router-dom";
+import "../styles/EventPackages.css"
 
 const EventPackages = () => {
-  const events = [{ image: birthdayTrending, title: "Birthday Packages" }];
+  const events = [
+    { image: birthdayTrending, title: "Birthday Packages" },
+    { image: houseWarmingPackages, title: "House Warming" },
+    { image: weddingPackages, title: "Wedding Packages" },
+  ];
 
   const settings = {
     dots: true,
@@ -54,17 +62,24 @@ const EventPackages = () => {
             every occasion and every budget.
           </p>
           <Slider {...settings}>
-            {events.map((event, index) => (
-              <div key={index} className="trend-card-wrapper">
-                <div className="slider-card">
-                  <ServiceCard
-                    image={event.image}
-                    title={event.title}
-                    route={`/event/${event.title}`}
-                  />
-                </div>
-              </div>
-            ))}
+            <div>
+              <Link to="/birthday-package">
+                <img src={birthdayTrending} alt="Birthday Packages" />
+              </Link>
+              <h3>Birthday Packages</h3>
+            </div>
+            <div>
+              <Link to="/housewarming-package" >
+                <img src={houseWarmingPackages} alt="Housewarming Packages" />
+              </Link>
+              <h3>Housewarming Packages</h3>
+            </div>
+            <div >
+              <Link to="/wedding-package">
+                <img src={weddingPackages} alt="Wedding Packages" />
+              </Link>
+              <h3>Wedding Packages</h3>
+            </div>
           </Slider>
         </div>
       </div>

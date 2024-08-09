@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.800c172c.css",
-    "main.js": "/static/js/main.8518d9b9.js",
+    "main.css": "/static/css/main.2b273381.css",
+    "main.js": "/static/js/main.e3efce0a.js",
     "static/media/yourcelebbanner.png": "/static/media/yourcelebbanner.3b316bb04b2eee52993f.png",
     "static/media/newBornPhotoShoot.png": "/static/media/newBornPhotoShoot.d4169ca4836ef55cff26.png",
     "static/media/birthdaybanner.png": "/static/media/birthdaybanner.1e6676e6cbd3c4756955.png",
@@ -67,6 +67,7 @@
     "static/media/decorationsHouseWarming.png": "/static/media/decorationsHouseWarming.9a38ec114949635f20b7.png",
     "static/media/digitalPhoto.png": "/static/media/digitalPhoto.6b48b5687dcf5228811f.png",
     "static/media/jungleTheme.png": "/static/media/jungleTheme.65dd87df512f3697c08b.png",
+    "static/media/houseWarmingPackages.png": "/static/media/houseWarmingPackages.9b71a68adc481f1d2fd7.png",
     "static/media/enquiry.png": "/static/media/enquiry.3f6d2a9258267f052bf1.png",
     "static/media/bearTheme.png": "/static/media/bearTheme.6be7e64b8bf116c190ce.png",
     "static/media/photoAlbum.png": "/static/media/photoAlbum.09f76f15c8332d8976f7.png",
@@ -91,7 +92,9 @@
     "static/media/others.png": "/static/media/others.822b07b2bc4f45d701c3.png",
     "static/media/sangeetDecor.png": "/static/media/sangeetDecor.0cd0b870e14cf1333d80.png",
     "static/media/birthdaydecor.png": "/static/media/birthdaydecor.b155ef4aa0e83b689cc1.png",
+    "static/media/birthdayPackages.png": "/static/media/birthdayPackages.796b3e3862da72d1eab8.png",
     "static/media/unicornTheme.png": "/static/media/unicornTheme.55649d26a4c7c9666b22.png",
+    "static/media/weddingPackages.png": "/static/media/weddingPackages.d77417df75b2e1cf586f.png",
     "static/media/newBornTrending.png": "/static/media/newBornTrending.3d98e5752f777f674e1e.png",
     "static/media/weddingMehndi.png": "/static/media/weddingMehndi.0512205f4510ed9705b4.png",
     "static/media/birthdayTrending.png": "/static/media/birthdayTrending.7f839c181878634febb4.png",
@@ -132,11 +135,11 @@
     "static/media/slick.ttf": "/static/media/slick.c94f7671dcc99dce43e2.ttf",
     "static/media/slick.woff": "/static/media/slick.295183786cd8a1389865.woff",
     "index.html": "/index.html",
-    "main.800c172c.css.map": "/static/css/main.800c172c.css.map",
-    "main.8518d9b9.js.map": "/static/js/main.8518d9b9.js.map"
+    "main.2b273381.css.map": "/static/css/main.2b273381.css.map",
+    "main.e3efce0a.js.map": "/static/js/main.e3efce0a.js.map"
   },
   "entrypoints": [
-    "static/css/main.800c172c.css",
-    "static/js/main.8518d9b9.js"
+    "static/css/main.2b273381.css",
+    "static/js/main.e3efce0a.js"
   ]
 }

@@ -1,0 +1,19 @@
+.trending-container .slick-slide {
+    padding: 0 10px; /* Adjust the padding to increase/decrease the space between the cards */
+  }
+  
+  .trending-container .slick-list {
+    margin: 0 -10px; /* This compensates for the padding so the slider is centered */
+  }
+  
+  .trending-container .slick-slide img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px; /* Optional: To add rounded corners to images */
+  }
+  
+  .trending-container h3 {
+    text-align: center;
+    margin-top: 10px; /* Adjust the spacing between the image and the title */
+  }
+  
