@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.d1bf1d94.css",
-    "main.js": "/static/js/main.1aee9019.js",
+    "main.css": "/static/css/main.b102e067.css",
+    "main.js": "/static/js/main.c843bfcd.js",
     "static/media/yourcelebbanner.png": "/static/media/yourcelebbanner.3b316bb04b2eee52993f.png",
     "static/media/newBornPhotoShoot.png": "/static/media/newBornPhotoShoot.d4169ca4836ef55cff26.png",
     "static/media/birthdaybanner.png": "/static/media/birthdaybanner.1e6676e6cbd3c4756955.png",
@@ -95,6 +95,7 @@
     "static/media/birthdayPackages.png": "/static/media/birthdayPackages.796b3e3862da72d1eab8.png",
     "static/media/unicornTheme.png": "/static/media/unicornTheme.55649d26a4c7c9666b22.png",
     "static/media/weddingPackages.png": "/static/media/weddingPackages.d77417df75b2e1cf586f.png",
+    "static/media/logo.png": "/static/media/logo.a69493d26de4af245044.png",
     "static/media/newBornTrending.png": "/static/media/newBornTrending.3d98e5752f777f674e1e.png",
     "static/media/weddingMehndi.png": "/static/media/weddingMehndi.0512205f4510ed9705b4.png",
     "static/media/birthdayTrending.png": "/static/media/birthdayTrending.7f839c181878634febb4.png",
@@ -134,11 +135,11 @@
     "static/media/slick.ttf": "/static/media/slick.c94f7671dcc99dce43e2.ttf",
     "static/media/slick.woff": "/static/media/slick.295183786cd8a1389865.woff",
     "index.html": "/index.html",
-    "main.d1bf1d94.css.map": "/static/css/main.d1bf1d94.css.map",
-    "main.1aee9019.js.map": "/static/js/main.1aee9019.js.map"
+    "main.b102e067.css.map": "/static/css/main.b102e067.css.map",
+    "main.c843bfcd.js.map": "/static/js/main.c843bfcd.js.map"
   },
   "entrypoints": [
-    "static/css/main.d1bf1d94.css",
-    "static/js/main.1aee9019.js"
+    "static/css/main.b102e067.css",
+    "static/js/main.c843bfcd.js"
   ]
 }

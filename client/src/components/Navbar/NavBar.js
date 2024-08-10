@@ -4,6 +4,7 @@ import NavLinks from "../Navbar/NavLinks";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faWhatsapp } from "@fortawesome/free-brands-svg-icons";
 import "../../styles/navbar.css";
+import logoImage from "../../images/logo.png"
 
 const NavBar = () => {
   const [top, setTop] = useState(true);
@@ -41,7 +42,11 @@ const NavBar = () => {
         <div className="contact-info">
           <span className="mr-4">Phone: (123) 456-7890</span>
           <span>Email: info@example.com</span>
-          <a href="https://wa.me/1234567890" target="_blank" rel="noopener noreferrer">
+          <a
+            href="https://wa.me/1234567890"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <FontAwesomeIcon icon={faWhatsapp} className="whatsapp-icon" />
           </a>
         </div>
@@ -54,10 +59,12 @@ const NavBar = () => {
         <div className="flex flex-row justify-between items-center py-2 px-4 md:px-12">
           <div className="flex items-center">
             <Link to="/" onClick={handleCloseMenu}>
-              <h1 className="font-extrabold text-4xl text-blue-900">Dratha</h1>
+              <img src={logoImage} alt="Dratha Logo" className="h-12" />{" "}
+              {/* Adjust height as needed */}
             </Link>
           </div>
-          <div className="flex-1 mx-4">
+
+          {/* <div className="flex-1 mx-4">
             <form onSubmit={handleSearchSubmit} className="search-form">
               <input
                 type="search"
@@ -81,7 +88,7 @@ const NavBar = () => {
                 </svg>
               </button>
             </form>
-          </div>
+          </div> */}
           {/* <div className="flex items-center">
             <button
               className="p-2 rounded-lg lg:hidden text-blue-900"
