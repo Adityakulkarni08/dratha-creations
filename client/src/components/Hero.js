@@ -5,13 +5,25 @@ import banner from "../images/banner.png";
 import birthdayBanner from "../images/birthdaybanner.png";
 import houseWarming from "../images/housewarmingbanner.png";
 import yourCeleb from "../images/yourcelebbanner.png";
-import EnquiryForm from './EnquiryForm'; // Import your existing EnquiryForm component
+import EnquiryForm from './EnquiryForm';
+import EnquiryFormMobile from "./MobileComponents/EnquiryFormMobile";
 
 const images = [banner, birthdayBanner, houseWarming, yourCeleb];
 
 const Hero = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isFormOpen, setIsFormOpen] = useState(false); // State to control form visibility
+  const [isMobile, setIsMobile] = useState(window.innerWidth <= 768); // State to check if it's mobile view
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth <= 768);
+    };
+
+    window.addEventListener("resize", handleResize);
+
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -60,8 +72,14 @@ const Hero = () => {
         </div>
       </div>
 
-      {/* Render the EnquiryForm component when isFormOpen is true */}
-      <EnquiryForm isOpen={isFormOpen} onClose={handleCloseForm} />
+      {/* Conditionally render EnquiryForm or EnquiryFormMobile based on screen size */}
+      {isFormOpen && (
+        isMobile ? (
+          <EnquiryFormMobile onClose={handleCloseForm} />
+        ) : (
+          <EnquiryForm isOpen={isFormOpen} onClose={handleCloseForm} />
+        )
+      )}
     </>
   );
 };
