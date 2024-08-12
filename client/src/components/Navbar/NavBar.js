@@ -4,7 +4,7 @@ import NavLinks from "../Navbar/NavLinks";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faWhatsapp } from "@fortawesome/free-brands-svg-icons";
 import "../../styles/navbar.css";
-import logoImage from "../../images/logo.png"
+import logoImage from "../../images/logo.png";
 
 const NavBar = () => {
   const [top, setTop] = useState(true);
@@ -62,6 +62,14 @@ const NavBar = () => {
               <img src={logoImage} alt="Dratha Logo" className="h-12" />{" "}
               {/* Adjust height as needed */}
             </Link>
+            <a
+              href="https://wa.me/1234567890"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="ml-2 whatsapp-icon-mobile"
+            >
+              <FontAwesomeIcon icon={faWhatsapp} className="whatsapp-icon" />
+            </a>
           </div>
 
           {/* <div className="flex-1 mx-4">

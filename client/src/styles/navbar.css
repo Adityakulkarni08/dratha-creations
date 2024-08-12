@@ -100,6 +100,37 @@
   margin-left: 10px;
 }
 
+.top-bar .whatsapp-icon {
+  display: inline-block; /* Display on larger screens */
+}
+
+@media (max-width: 768px) {
+  .top-bar .whatsapp-icon {
+    display: none; /* Hide on mobile screens */
+  }
+
+  .whatsapp-icon-mobile {
+    display: inline-block; /* Show beside logo on mobile screens */
+  }
+}
+
+.whatsapp-icon-mobile {
+  display: none; /* Hide by default */
+}
+
+@media (max-width: 768px) {
+  .whatsapp-icon-mobile {
+    display: inline-block; /* Show on mobile view */
+  }
+}
+
+@media (min-width: 769px) {
+  .whatsapp-icon-mobile {
+    display: none; /* Hide on desktop view */
+  }
+}
+
+
 /* Mobile Styles */
 @media (max-width: 768px) {
   .search-container {
