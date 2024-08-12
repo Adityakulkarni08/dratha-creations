@@ -1,31 +1,32 @@
-.testimonials-container {
+  .testimonials-container {
     background-color: #f9f9f9; /* Change background color as needed */
     padding: 50px 20px;
     text-align: center;
   }
-  
+
   .testimonials-container h2 {
     color: #000;
     margin-bottom: 10px;
   }
-  
+
   .testimonials-container p {
     color: #666;
     margin-bottom: 20px;
   }
-  
+
   .testimonials-grid {
     display: flex;
     justify-content: space-around;
     align-items: center;
+    flex-wrap: wrap; /* Added flex-wrap to ensure responsiveness */
   }
-  
+
   .testimonial-card {
     max-width: 300px;
     margin: 20px;
     text-align: center;
   }
-  
+
   .testimonial-avatar {
     width: 100px;
     height: 100px;
@@ -33,27 +34,80 @@
     border: 3px solid #ff69b4; /* Color of the border around the avatar */
     margin-bottom: 20px;
   }
-  
+
   blockquote {
     quotes: "“" "”";
     font-style: italic;
     color: #333;
   }
-  
+
   .testimonial-name {
     font-weight: bold;
     color: #ff69b4; /* Color of the name */
   }
-  
+
   .testimonial-location {
     color: #999;
   }
-  
+
   .read-more-link {
     color: #007bff; /* Color of the read more link */
     text-decoration: none;
     font-weight: bold;
   }
+  .testimonial-slider {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
   
+  .prev-button, .next-button {
+    background-color: transparent;
+    border: none;
+    font-size: 2rem;
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  
+  .prev-button {
+    left: 10px;
+  }
+  
+  .next-button {
+    right: 10px;
+  }
+  
+  .dots-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+  }
+  
+  .dot {
+    height: 15px;
+    width: 15px;
+    margin: 0 5px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .dot.active {
+    background-color: #ff69b4; /* Color for active dot */
+  }
+
   /* Responsive adjustments can be added as needed */
-  
+  @media (max-width: 768px) {
+    .testimonials-grid {
+      flex-direction: column; /* Stack the testimonials vertically on smaller screens */
+    }
+
+    .testimonial-card {
+      margin: 10px auto; /* Center the cards on smaller screens */
+    }
+  }

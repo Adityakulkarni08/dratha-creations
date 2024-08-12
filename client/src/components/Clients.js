@@ -1,37 +1,77 @@
-import React from "react";
-import kws from "../images/clients/kws.png";
-import geps from "../images/clients/geps.png";
-import protergia from "../images/clients/protergia.png";
+import React, { useState } from "react";
+import { useSwipeable } from "react-swipeable";  // Import the swipeable hook
 import img from "../images/web.svg";
 import img2 from "../images/app.svg";
-import img3 from "../images/hosting.svg";
 import "../styles/clients.css";
-
-
-const clientImage = {
-  height: "10rem",
-  width: "auto",
-  mixBlendMode: "colorBurn",
-};
 
 const Clients = () => {
   const testimonials = [
     {
       image: img,
       quote:
-        "I have thought to celebrate my baby first birthday with them and took initiative for tat. I booked through Druthi Creations ...",
-      name: "Sarath",
-      location: "Bangalore",
+        "I started off with a very vague idea as to what can be done for my son's first birthday and Kavitha f...",
+      name: "Vaishnavi Reddy",
+      location: "Chennai",
     },
     {
       image: img2,
       quote:
-        "The best event management team to get our function done without any hustle. We enquired Druthi Creations ",
-      name: "Sharan",
-      location: "Bangalore",
+        "I just like just i mean wanted to say a huge thank you for the amazing party decor. It was absolutely stunning and s...",
+      name: "Bindhu Shree",
+      location: "Chennai",
     },
-    // ... add more testimonials as needed
+    {
+      image: img2,
+      quote:
+        "I just wanted to say a huge thank you for the amazing party decor. It was absolutely stunning and s...",
+      name: "Bindhu Shree",
+      location: "Chennai",
+    },
+    {
+      image: img2,
+      quote:
+        "I just wanted to say a huge thank you for the amazing party decor. It was absolutely stunning and s...",
+      name: "Bindhu Shree",
+      location: "Chennai",
+    },
+    {
+      image: img2,
+      quote:
+        "I just wanted to say a huge thank you for the amazing party decor. It was absolutely stunning and s...",
+      name: "Bindhu Shree",
+      location: "Chennai",
+    },
   ];
+
+  const slides = [];
+  for (let i = 0; i < testimonials.length; i += 2) {
+    slides.push(testimonials.slice(i, i + 2));
+  }
+
+  const [currentIndex, setCurrentIndex] = useState(0);
+
+  const nextTestimonials = () => {
+    setCurrentIndex((prevIndex) => (prevIndex + 1) % slides.length);
+  };
+
+  const prevTestimonials = () => {
+    setCurrentIndex((prevIndex) =>
+      prevIndex === 0 ? slides.length - 1 : prevIndex - 1
+    );
+  };
+
+  const goToSlide = (index) => {
+    setCurrentIndex(index);
+  };
+
+  // Swipe handlers
+  const handlers = useSwipeable({
+    onSwipedLeft: () => nextTestimonials(),
+    onSwipedRight: () => prevTestimonials(),
+    preventDefaultTouchmoveEvent: true,
+    trackMouse: true,  // Optional, to enable swipe with a mouse as well
+  });
+
   return (
     <div className="mt-8 bg-gray-100">
       <section data-aos="fade-up">
@@ -54,19 +94,35 @@ const Clients = () => {
             joyful moments. Here's our clients telling why we are the best event
             organisers in the city.
           </p>
-          <div className="testimonials-grid">
-            {testimonials.map((testimonial, index) => (
-              <div key={index} className="testimonial-card">
-                <img
-                  src={testimonial.image}
-                  alt={`Avatar of ${testimonial.name}`}
-                  className="testimonial-avatar"
-                />
-                <blockquote>"{testimonial.quote}"</blockquote>
-                <p className="testimonial-name">{testimonial.name}</p>
-                <p className="testimonial-location">{testimonial.location}</p>
-                
-              </div>
+          <div {...handlers} className="testimonial-slider"> {/* Add swipe handlers here */}
+            <button onClick={prevTestimonials} className="prev-button">
+              &#8592;
+            </button>
+            <div className="testimonials-grid">
+              {slides[currentIndex].map((testimonial, index) => (
+                <div key={index} className="testimonial-card">
+                  <img
+                    src={testimonial.image}
+                    alt={`Avatar of ${testimonial.name}`}
+                    className="testimonial-avatar"
+                  />
+                  <blockquote>"{testimonial.quote}"</blockquote>
+                  <p className="testimonial-name">{testimonial.name}</p>
+                  <p className="testimonial-location">{testimonial.location}</p>
+                </div>
+              ))}
+            </div>
+            <button onClick={nextTestimonials} className="next-button">
+              &#8594;
+            </button>
+          </div>
+          <div className="dots-container">
+            {slides.map((_, index) => (
+              <span
+                key={index}
+                className={`dot ${index === currentIndex ? "active" : ""}`}
+                onClick={() => goToSlide(index)}
+              ></span>
             ))}
           </div>
         </div>
