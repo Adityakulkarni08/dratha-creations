@@ -1,5 +1,8 @@
 import React, { useState } from "react";
 import birthdaypackages from "../images/bdaypackages.png";
+import weddingBudget from "../images/weddingBudget.png";
+import weddingElite from "../images/weddingElite.png"
+import weddingCeleb from "../images/weddingCeleb.png"
 import "../styles/birthday-packages.css";
 
 const WeddingPackages = () => {
@@ -31,18 +34,18 @@ const WeddingPackages = () => {
         </button>
       </div>
       <div className="package-content">
-        {(activeTab === "BUDGET" || activeTab === "ELITE" || activeTab === "CELEBRITY") && (
+        {activeTab === "BUDGET" && (
           <>
             <PackageSection
-              title="Basic Package"
-              image={birthdaypackages}
+              title="Budget Package"
+              image={weddingBudget}
               details={[
-                "Back Drop Decoration",
-                "Entrance Arch",
-                "Welcome Board",
-                "1 Feet Baby name light",
-                "Balloon Bunches in the hall (if allowed at venue)",
-                "Theme Based Cylinder Table",
+                "Budget wedding hall",
+                "Name Board of BRIDE and Groom",
+                "Breakfast-250 nos",
+                "Traditional & Candid Photography",
+                "MAC HD Makeup With Hairstyling (Bride & Groom)",
+                "Muthurtha Malai-2 Nos",
               ]}
               inclusions={{
                 decoration: true,
@@ -52,44 +55,49 @@ const WeddingPackages = () => {
                 discount: "5000 OFF",
               }}
             />
+          </>
+        )}
+        {activeTab === "ELITE" && (
+          <>
             <PackageSection
-              title="Pro Package"
-              image={birthdaypackages}
+              title="Elite Package"
+              image={weddingElite}
               details={[
-                "Advanced Back Drop Decoration",
-                "Grand Entrance Arch",
-                "Personalized Welcome Board",
-                "2 Feet Baby name light",
-                "Extra Balloon Bunches in the hall (if allowed at venue)",
-                "Deluxe Theme Based Cylinder Table",
-                "Custom Themed Props",
+                "Elite wedding hall",
+                "Customized Name Board & Entrance",
+                "Breakfast-500 nos",
+                "Traditional & Candid Photography",
+                "MAC HD Makeup With Hairstyling (matching venni) for muhurtham",
+                "Muthurtha Malai-2 Nos",
               ]}
               inclusions={{
                 decoration: true,
-                photography: true,
-                price: "₹29,999",
-                originalPrice: "₹34,999",
+                photography: false,
+                price: "₹19,999",
+                originalPrice: "₹24,999",
                 discount: "5000 OFF",
               }}
             />
+          </>
+        )}
+        {activeTab === "CELEBRITY" && (
+          <>
             <PackageSection
-              title="Premium Package"
-              image={birthdaypackages}
+              title="Celebrity Package"
+              image={weddingCeleb}
               details={[
-                "Luxury Back Drop Decoration",
-                "Royal Entrance Arch",
-                "Exclusive Welcome Board",
-                "3 Feet Baby name light",
-                "Premium Balloon Bunches in the hall (if allowed at venue)",
-                "Elite Theme Based Cylinder Table",
-                "Exclusive Themed Props",
-                "Professional Photography",
+                "Celebrity wedding hall",
+                "Customized Name Board & Entrance",
+                "Breakfast-500 nos",
+                "Traditional & Candid Photography",
+                "E Invite",
+                "Traditional Makeup With Hairstyling (matching venni) for muhurtham",
               ]}
               inclusions={{
                 decoration: true,
-                photography: true,
-                price: "₹39,999",
-                originalPrice: "₹44,999",
+                photography: false,
+                price: "₹19,999",
+                originalPrice: "₹24,999",
                 discount: "5000 OFF",
               }}
             />
@@ -129,8 +137,8 @@ const PackageSection = ({ title, image, details, inclusions }) => (
       </p>
       <p className="price">
         starts from <span className="discounted-price">{inclusions.price}</span>{" "}
-        <span className="original-price">{inclusions.originalPrice}</span>{" "}
-        ({inclusions.discount})
+        <span className="original-price">{inclusions.originalPrice}</span> (
+        {inclusions.discount})
       </p>
       <button className="enquiry-button">QUICK ENQUIRY</button>
     </div>

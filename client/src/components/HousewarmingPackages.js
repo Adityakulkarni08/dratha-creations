@@ -1,5 +1,9 @@
 import React, { useState } from "react";
 import birthdaypackages from "../images/bdaypackages.png";
+import houseWarmBasic from "../images/houseWarmBasic.png"
+import houseWarmBudget from "../images/houseWarmBudget.png"
+import houseWarmElite from "../images/houseWarmElite.png"
+import houseWarmCeleb from "../images/houseWarmCeleb.png"
 import "../styles/birthday-packages.css";
 
 const HousewarmingPackages = () => {
@@ -8,9 +12,15 @@ const HousewarmingPackages = () => {
   return (
     <div className="package-container">
       <div className="package-header">
-        <h1>House Warming Package Details</h1>
+        <h1>HouseWarming Package Details</h1>
       </div>
       <div className="package-tabs">
+        <button
+          className={`tab-button ${activeTab === "BASIC" ? "active" : ""}`}
+          onClick={() => setActiveTab("BASIC")}
+        >
+          BASIC
+        </button>
         <button
           className={`tab-button ${activeTab === "BUDGET" ? "active" : ""}`}
           onClick={() => setActiveTab("BUDGET")}
@@ -31,18 +41,18 @@ const HousewarmingPackages = () => {
         </button>
       </div>
       <div className="package-content">
-        {(activeTab === "BUDGET" || activeTab === "ELITE" || activeTab === "CELEBRITY") && (
+        {activeTab === "BASIC" && (
           <>
             <PackageSection
               title="Basic Package"
-              image={birthdaypackages}
+              image={houseWarmBasic}
               details={[
-                "Back Drop Decoration",
-                "Entrance Arch",
                 "Welcome Board",
-                "1 Feet Baby name light",
-                "Balloon Bunches in the hall (if allowed at venue)",
-                "Theme Based Cylinder Table",
+                "Entrance Decoration",
+                "Simple Full House Decoration",
+                "Vasakal Malai",
+                "Traditional & Candid Photography",
+                "Thambulam Bags 50Nos",
               ]}
               inclusions={{
                 decoration: true,
@@ -52,44 +62,72 @@ const HousewarmingPackages = () => {
                 discount: "5000 OFF",
               }}
             />
+          </>
+        )}
+        {activeTab === "BUDGET" && (
+          <>
             <PackageSection
-              title="Pro Package"
-              image={birthdaypackages}
+              title="Budget Package"
+              image={houseWarmBudget}
               details={[
-                "Advanced Back Drop Decoration",
-                "Grand Entrance Arch",
-                "Personalized Welcome Board",
-                "2 Feet Baby name light",
-                "Extra Balloon Bunches in the hall (if allowed at venue)",
-                "Deluxe Theme Based Cylinder Table",
-                "Custom Themed Props",
+                "Welcome Board",
+                "Entrance Decoration",
+                "Simple Full House Decoration",
+                "Vasakal Malai",
+                "Traditional & Candid Photography",
+                "Thambulam Bags 50Nos",
               ]}
               inclusions={{
                 decoration: true,
-                photography: true,
-                price: "₹29,999",
-                originalPrice: "₹34,999",
+                photography: false,
+                price: "₹19,999",
+                originalPrice: "₹24,999",
                 discount: "5000 OFF",
               }}
             />
+          </>
+        )}
+        {activeTab === "ELITE" && (
+          <>
             <PackageSection
-              title="Premium Package"
-              image={birthdaypackages}
+              title="Elite Package"
+              image={houseWarmElite}
               details={[
-                "Luxury Back Drop Decoration",
-                "Royal Entrance Arch",
-                "Exclusive Welcome Board",
-                "3 Feet Baby name light",
-                "Premium Balloon Bunches in the hall (if allowed at venue)",
-                "Elite Theme Based Cylinder Table",
-                "Exclusive Themed Props",
-                "Professional Photography",
+                "Welcome Board",
+                "Entrance Decoration",
+                "Simple Full House Decoration",
+                "Vasakal Malai",
+                "Traditional & Candid Photography",
+                "Thambulam Bags 50Nos",
               ]}
               inclusions={{
                 decoration: true,
-                photography: true,
-                price: "₹39,999",
-                originalPrice: "₹44,999",
+                photography: false,
+                price: "₹19,999",
+                originalPrice: "₹24,999",
+                discount: "5000 OFF",
+              }}
+            />
+          </>
+        )}
+        {activeTab === "CELEBRITY" && (
+          <>
+            <PackageSection
+              title="Celebrity Package"
+              image={houseWarmCeleb}
+              details={[
+                "Welcome Board",
+                "Entrance Decoration",
+                "Simple Full House Decoration",
+                "Vasakal Malai",
+                "Traditional & Candid Photography",
+                "Thambulam Bags 50Nos",
+              ]}
+              inclusions={{
+                decoration: true,
+                photography: false,
+                price: "₹19,999",
+                originalPrice: "₹24,999",
                 discount: "5000 OFF",
               }}
             />
@@ -129,8 +167,8 @@ const PackageSection = ({ title, image, details, inclusions }) => (
       </p>
       <p className="price">
         starts from <span className="discounted-price">{inclusions.price}</span>{" "}
-        <span className="original-price">{inclusions.originalPrice}</span>{" "}
-        ({inclusions.discount})
+        <span className="original-price">{inclusions.originalPrice}</span> (
+        {inclusions.discount})
       </p>
       <button className="enquiry-button">QUICK ENQUIRY</button>
     </div>

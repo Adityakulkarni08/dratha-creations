@@ -1,6 +1,15 @@
 import React, { useState } from "react";
 import birthdaypackages from "../images/bdaypackages.png";
+import birthdayBasicPro from "../images/birthdayBasicPro.png"
+import birthdayBasicPremium from "../images/birthdayBasicPremium.png"
+import birthdayEliteBasic from "../images/birthdayEliteBasic.png"
+import birthdayElitePro from "../images/birthdayElitePro.png"
+import birthdayElitePremium from "../images/birthdayElitePremium.png"
+import birthdayCelebBasic from "../images/birthdayCelebBasic.png"
+import birthdayCelebPro from "../images/birthdayCelebPro.png"
+import birthdayCelebPremium from "../images/birthdayCelebPremium.png"
 import "../styles/birthday-packages.css";
+
 
 const BirthdayPackages = () => {
   const [activeTab, setActiveTab] = useState("BUDGET");
@@ -31,7 +40,7 @@ const BirthdayPackages = () => {
         </button>
       </div>
       <div className="package-content">
-        {(activeTab === "BUDGET" || activeTab === "ELITE" || activeTab === "CELEBRITY") && (
+        {activeTab === "BUDGET" && (
           <>
             <PackageSection
               title="Basic Package"
@@ -54,15 +63,14 @@ const BirthdayPackages = () => {
             />
             <PackageSection
               title="Pro Package"
-              image={birthdaypackages}
+              image={birthdayBasicPro}
               details={[
-                "Advanced Back Drop Decoration",
-                "Grand Entrance Arch",
-                "Personalized Welcome Board",
-                "2 Feet Baby name light",
-                "Extra Balloon Bunches in the hall (if allowed at venue)",
-                "Deluxe Theme Based Cylinder Table",
-                "Custom Themed Props",
+                "Back Drop Decoration",
+                "Entrance Arch",
+                "Welcome Board",
+                "1 Feet Baby name light",
+                "Balloon Bunches in the hall (if allowed at venue)",
+                "Theme Based Cylinder Table",
               ]}
               inclusions={{
                 decoration: true,
@@ -74,16 +82,14 @@ const BirthdayPackages = () => {
             />
             <PackageSection
               title="Premium Package"
-              image={birthdaypackages}
+              image={birthdayBasicPremium}
               details={[
-                "Luxury Back Drop Decoration",
-                "Royal Entrance Arch",
-                "Exclusive Welcome Board",
-                "3 Feet Baby name light",
-                "Premium Balloon Bunches in the hall (if allowed at venue)",
-                "Elite Theme Based Cylinder Table",
-                "Exclusive Themed Props",
-                "Professional Photography",
+                "Back Drop Decoration",
+                "Entrance Arch",
+                "Welcome Board",
+                "1 Feet Baby name light",
+                "Balloon Bunches in the hall (if allowed at venue)",
+                "Theme Based Cylinder Table",
               ]}
               inclusions={{
                 decoration: true,
@@ -93,6 +99,128 @@ const BirthdayPackages = () => {
                 discount: "5000 OFF",
               }}
             />
+          </>
+        )}
+        {activeTab === "ELITE" && (
+          <>
+            <PackageSection
+              title="Basic Package"
+              image={birthdayEliteBasic}
+              details={[
+                "Back Drop Decoration",
+                "Entrance Arch",
+                "Welcome Board",
+                "2 Feet Baby name light",
+                "Balloon Bunches in the hall (if allowed at venue)",
+                "Theme Based Cylinder Table",
+              ]}
+              inclusions={{
+                decoration: true,
+                photography: true,
+                price: "₹29,999",
+                originalPrice: "₹34,999",
+                discount: "5000 OFF",
+              }}
+            />
+            <PackageSection
+              title="Pro Package"
+              image={birthdayElitePro}
+              details={[
+                "Back Drop Decoration",
+                "Entrance Arch",
+                "Welcome Board",
+                "2 Feet Baby name light",
+                "Balloon Bunches in the hall (if allowed at venue)",
+                "Theme Based Cylinder Table",
+              ]}
+              inclusions={{
+                decoration: true,
+                photography: true,
+                price: "₹49,999",
+                originalPrice: "₹54,999",
+                discount: "5000 OFF",
+              }}
+            />
+            <PackageSection
+              title="Premium Package"
+              image={birthdayElitePremium}
+              details={[
+                "Back Drop Decoration",
+                "Entrance Arch",
+                "Welcome Board",
+                "2 Feet Baby name light",
+                "Balloon Bunches in the hall (if allowed at venue)",
+                "Theme Based Cylinder Table",
+              ]}
+              inclusions={{
+                decoration: true,
+                photography: true,
+                price: "₹69,999",
+                originalPrice: "₹74,999",
+                discount: "5000 OFF",
+              }}
+            />
+          </>
+        )}
+        {activeTab === "CELEBRITY" && (
+          <>
+            <PackageSection
+              title="Basic Package"
+              image={birthdayCelebBasic}
+              details={[
+                "Back Drop Decoration",
+                "Entrance Arch",
+                "Welcome Board",
+                "2 Feet Baby name light",
+                "Balloon Bunches in the hall (if allowed at venue)",
+                "Theme Based Cylinder Table",
+              ]}
+              inclusions={{
+                decoration: true,
+                photography: true,
+                price: "₹29,999",
+                originalPrice: "₹34,999",
+                discount: "5000 OFF",
+              }}
+            />
+            <PackageSection
+              title="Pro Package"
+              image={birthdayCelebPro}
+              details={[
+                "Back Drop Decoration",
+                "Entrance Arch",
+                "Welcome Board",
+                "2 Feet Baby name light",
+                "Balloon Bunches in the hall (if allowed at venue)",
+                "Theme Based Cylinder Table",
+              ]}
+              inclusions={{
+                decoration: true,
+                photography: true,
+                price: "₹49,999",
+                originalPrice: "₹54,999",
+                discount: "5000 OFF",
+              }}
+            />
+            <PackageSection
+              title="Premium Package"
+              image={birthdayCelebPremium}
+              details={[
+                "Back Drop Decoration",
+                "Entrance Arch",
+                "Welcome Board",
+                "2 Feet Baby name light",
+                "Balloon Bunches in the hall (if allowed at venue)",
+                "Theme Based Cylinder Table",
+              ]}
+              inclusions={{
+                decoration: true,
+                photography: true,
+                price: "₹69,999",
+                originalPrice: "₹74,999",
+                discount: "5000 OFF",
+              }}
+            />{" "}
           </>
         )}
       </div>
@@ -129,8 +257,8 @@ const PackageSection = ({ title, image, details, inclusions }) => (
       </p>
       <p className="price">
         starts from <span className="discounted-price">{inclusions.price}</span>{" "}
-        <span className="original-price">{inclusions.originalPrice}</span>{" "}
-        ({inclusions.discount})
+        <span className="original-price">{inclusions.originalPrice}</span> (
+        {inclusions.discount})
       </p>
       <button className="enquiry-button">QUICK ENQUIRY</button>
     </div>
