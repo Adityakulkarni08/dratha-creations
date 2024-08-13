@@ -75,9 +75,10 @@ const BirthdayPackages = () => {
               inclusions={{
                 decoration: true,
                 photography: true,
-                price: "₹29,999",
-                originalPrice: "₹34,999",
-                discount: "5000 OFF",
+                cakes: false,
+                price: "₹34,999",
+                originalPrice: "₹44,999",
+                discount: "10,000 OFF",
               }}
             />
             <PackageSection
@@ -93,10 +94,16 @@ const BirthdayPackages = () => {
               ]}
               inclusions={{
                 decoration: true,
+                cakes: true,
                 photography: true,
-                price: "₹39,999",
-                originalPrice: "₹44,999",
-                discount: "5000 OFF",
+                videography: true,
+                album: true,
+                returngift: true,
+                einvite: true,
+                entertainment: true,
+                price: "₹49,999",
+                originalPrice: "₹64,999",
+                discount: "15,000 OFF",
               }}
             />
           </>
@@ -116,9 +123,9 @@ const BirthdayPackages = () => {
               ]}
               inclusions={{
                 decoration: true,
-                photography: true,
-                price: "₹29,999",
-                originalPrice: "₹34,999",
+                photography: false,
+                price: "₹34,999",
+                originalPrice: "₹39,999",
                 discount: "5000 OFF",
               }}
             />
@@ -135,10 +142,15 @@ const BirthdayPackages = () => {
               ]}
               inclusions={{
                 decoration: true,
+                cakes: true,
                 photography: true,
-                price: "₹49,999",
-                originalPrice: "₹54,999",
-                discount: "5000 OFF",
+                album: true,
+                returngift: true,
+                einvite: true,
+                entertainment: false,
+                price: "₹74,999",
+                originalPrice: "₹89,999",
+                discount: "15,000 OFF",
               }}
             />
             <PackageSection
@@ -154,10 +166,15 @@ const BirthdayPackages = () => {
               ]}
               inclusions={{
                 decoration: true,
+                cakes: true,
                 photography: true,
-                price: "₹69,999",
-                originalPrice: "₹74,999",
-                discount: "5000 OFF",
+                album: true,
+                returngift: true,
+                einvite: true,
+                entertainment: true,
+                price: "₹1,09,999",
+                originalPrice: "₹1,29,999",
+                discount: "20,000 OFF",
               }}
             />
           </>
@@ -177,10 +194,10 @@ const BirthdayPackages = () => {
               ]}
               inclusions={{
                 decoration: true,
-                photography: true,
-                price: "₹29,999",
-                originalPrice: "₹34,999",
-                discount: "5000 OFF",
+                photography: false,
+                price: "₹59,999",
+                originalPrice: "₹69,999",
+                discount: "10,000 OFF",
               }}
             />
             <PackageSection
@@ -196,10 +213,15 @@ const BirthdayPackages = () => {
               ]}
               inclusions={{
                 decoration: true,
+                cakes: true,
                 photography: true,
-                price: "₹49,999",
-                originalPrice: "₹54,999",
-                discount: "5000 OFF",
+                album: true,
+                returngift: true,
+                einvite: true,
+                entertainment: true,
+                price: "₹1,49,999",
+                originalPrice: "₹1,64,999",
+                discount: "15,000 OFF",
               }}
             />
             <PackageSection
@@ -215,10 +237,15 @@ const BirthdayPackages = () => {
               ]}
               inclusions={{
                 decoration: true,
+                cakes: true,
                 photography: true,
-                price: "₹69,999",
-                originalPrice: "₹74,999",
-                discount: "5000 OFF",
+                album: true,
+                returngift: true,
+                einvite: true,
+                entertainment: true,
+                price: "₹1,79,999",
+                originalPrice: "₹1,99,999",
+                discount: "20,000 OFF",
               }}
             />{" "}
           </>
@@ -228,41 +255,105 @@ const BirthdayPackages = () => {
   );
 };
 
-const PackageSection = ({ title, image, details, inclusions }) => (
-  <div className="package-section">
-    <div className="package-image">
-      <img src={image} alt={title} className="birthday-packages" />
+const PackageSection = ({ title, image, details, inclusions }) => {
+  const {
+    decoration,
+    photography,
+    cakes, 
+    videography,
+    album,
+    returngift,
+    einvite,
+    entertainment,
+    price,
+    originalPrice,
+    discount,
+  } = inclusions;
+
+  return (
+    <div className="package-section">
+      <div className="package-image">
+        <img src={image} alt={title} className="birthday-packages" />
+      </div>
+      <div className="package-details">
+        <h2>{title}</h2>
+        <ul>
+          {details.map((item, index) => (
+            <li key={index}>{item}</li>
+          ))}
+        </ul>
+        <a href="#" className="read-more">
+          READ MORE +
+        </a>
+      </div>
+      <div className="package-inclusions">
+        <h3>Inclusions (Customizable)</h3>
+        <p>
+          <span className="included">✓</span> Decoration
+        </p>
+        <p>
+          <span className={photography ? "included" : "not-included"}>
+            {photography ? "✓" : "x"}
+          </span>{" "}
+          Photography
+        </p>
+        {/* Conditionally render cakes inclusion */}
+        {cakes !== undefined && (
+          <p>
+            <span className={cakes ? "included" : "not-included"}>
+              {cakes ? "✓" : "x"}
+            </span>{" "}
+            Cakes
+          </p>
+        )}
+        {videography !== undefined && (
+          <p>
+            <span className={videography ? "included" : "not-included"}>
+              {videography ? "✓" : "x"}
+            </span>{" "}
+            Videography
+          </p>
+        )}
+        {album !== undefined && (
+          <p>
+            <span className={album ? "included" : "not-included"}>
+              {album ? "✓" : "x"}
+            </span>{" "}
+            Album
+          </p>
+        )}
+        {returngift !== undefined && (
+          <p>
+            <span className={returngift ? "included" : "not-included"}>
+              {returngift ? "✓" : "x"}
+            </span>{" "}
+            Return Gift
+          </p>
+        )}
+        {einvite !== undefined && (
+          <p>
+            <span className={einvite ? "included" : "not-included"}>
+              {einvite ? "✓" : "x"}
+            </span>{" "}
+            E-invite
+          </p>
+        )}
+        {entertainment !== undefined && (
+          <p>
+            <span className={entertainment ? "included" : "not-included"}>
+              {entertainment ? "✓" : "x"}
+            </span>{" "}
+            Entertainment
+          </p>
+        )}
+        <p className="price">
+          starts from <span className="discounted-price">{price}</span>{" "}
+          <span className="original-price">{originalPrice}</span> ({discount})
+        </p>
+        <button className="enquiry-button">QUICK ENQUIRY</button>
+      </div>
     </div>
-    <div className="package-details">
-      <h2>{title}</h2>
-      <ul>
-        {details.map((item, index) => (
-          <li key={index}>{item}</li>
-        ))}
-      </ul>
-      <a href="#" className="read-more">
-        READ MORE +
-      </a>
-    </div>
-    <div className="package-inclusions">
-      <h3>Inclusions (Customizable)</h3>
-      <p>
-        <span className="included">✓</span> Decoration
-      </p>
-      <p>
-        <span className={inclusions.photography ? "included" : "not-included"}>
-          {inclusions.photography ? "✓" : "x"}
-        </span>{" "}
-        Photography
-      </p>
-      <p className="price">
-        starts from <span className="discounted-price">{inclusions.price}</span>{" "}
-        <span className="original-price">{inclusions.originalPrice}</span> (
-        {inclusions.discount})
-      </p>
-      <button className="enquiry-button">QUICK ENQUIRY</button>
-    </div>
-  </div>
-);
+  );
+};
 
 export default BirthdayPackages;
