@@ -56,10 +56,13 @@ const HousewarmingPackages = () => {
               ]}
               inclusions={{
                 decoration: true,
-                photography: false,
-                price: "₹19,999",
-                originalPrice: "₹24,999",
-                discount: "5000 OFF",
+                photography: true,
+                garlands: true,
+                food: false,
+                PriestNos: false,
+                returngift: true,
+                invitations: false,
+                price: "₹49,999",
               }}
             />
           </>
@@ -79,10 +82,13 @@ const HousewarmingPackages = () => {
               ]}
               inclusions={{
                 decoration: true,
-                photography: false,
-                price: "₹19,999",
-                originalPrice: "₹24,999",
-                discount: "5000 OFF",
+                garlands: true,
+                food: true,
+                PriestNos: false,
+                photography: true,
+                returngift: true,
+                invitations: true,
+                price: "₹99,999",
               }}
             />
           </>
@@ -102,10 +108,13 @@ const HousewarmingPackages = () => {
               ]}
               inclusions={{
                 decoration: true,
-                photography: false,
-                price: "₹19,999",
-                originalPrice: "₹24,999",
-                discount: "5000 OFF",
+                garlands: true,
+                food: true,
+                PriestNos: true,
+                photography: true,
+                returngift: true,
+                invitations: true,
+                price: "₹1,49,999",
               }}
             />
           </>
@@ -125,10 +134,13 @@ const HousewarmingPackages = () => {
               ]}
               inclusions={{
                 decoration: true,
-                photography: false,
-                price: "₹19,999",
-                originalPrice: "₹24,999",
-                discount: "5000 OFF",
+                garlands: true,
+                food: true,
+                PriestNos: false,
+                photography: true,
+                returngift: true,
+                invitations: true,
+                price: "₹2,49,999",
               }}
             />
           </>
@@ -138,41 +150,97 @@ const HousewarmingPackages = () => {
   );
 };
 
-const PackageSection = ({ title, image, details, inclusions }) => (
-  <div className="package-section">
-    <div className="package-image">
-      <img src={image} alt={title} className="birthday-packages" />
+const PackageSection = ({ title, image, details, inclusions }) => {
+  const {
+    decoration,
+    garlands,
+    food, 
+    PriestNos,
+    photography,
+    returngift,
+    invitations,
+    price,
+    originalPrice,
+    discount,
+  } = inclusions;
+
+  return (
+    <div className="package-section">
+      <div className="package-image">
+        <img src={image} alt={title} className="birthday-packages" />
+      </div>
+      <div className="package-details">
+        <h2>{title}</h2>
+        <ul>
+          {details.map((item, index) => (
+            <li key={index}>{item}</li>
+          ))}
+        </ul>
+        <a href="#" className="read-more">
+          READ MORE +
+        </a>
+      </div>
+      <div className="package-inclusions">
+        <h3>Inclusions (Customizable)</h3>
+        <p>
+          <span className="included">✓</span> Decoration
+        </p>
+        <p>
+          <span className={photography ? "included" : "not-included"}>
+            {photography ? "✓" : "x"}
+          </span>{" "}
+          Photography
+        </p>
+        {/* Conditionally render cakes inclusion */}
+        {garlands !== undefined && (
+          <p>
+            <span className={garlands ? "included" : "not-included"}>
+              {garlands ? "✓" : "x"}
+            </span>{" "}
+            Garlands
+          </p>
+        )}
+        {food !== undefined && (
+          <p>
+            <span className={food ? "included" : "not-included"}>
+              {food ? "✓" : "x"}
+            </span>{" "}
+            Food
+          </p>
+        )}
+        {PriestNos !== undefined && (
+          <p>
+            <span className={PriestNos ? "included" : "not-included"}>
+              {PriestNos ? "✓" : "x"}
+            </span>{" "}
+            Priest- 1 Nos
+          </p>
+        )}
+        {returngift !== undefined && (
+          <p>
+            <span className={returngift ? "included" : "not-included"}>
+              {returngift ? "✓" : "x"}
+            </span>{" "}
+            Return Gift
+          </p>
+        )}
+        {invitations !== undefined && (
+          <p>
+            <span className={invitations ? "included" : "not-included"}>
+              {invitations ? "✓" : "x"}
+            </span>{" "}
+            Invitations
+          </p>
+        )}
+        
+        <p className="price">
+          starts from <span className="discounted-price">{price}</span>{" "}
+          <span className="original-price">{originalPrice}</span> ({discount})
+        </p>
+        <button className="enquiry-button">QUICK ENQUIRY</button>
+      </div>
     </div>
-    <div className="package-details">
-      <h2>{title}</h2>
-      <ul>
-        {details.map((item, index) => (
-          <li key={index}>{item}</li>
-        ))}
-      </ul>
-      <a href="#" className="read-more">
-        READ MORE +
-      </a>
-    </div>
-    <div className="package-inclusions">
-      <h3>Inclusions (Customizable)</h3>
-      <p>
-        <span className="included">✓</span> Decoration
-      </p>
-      <p>
-        <span className={inclusions.photography ? "included" : "not-included"}>
-          {inclusions.photography ? "✓" : "x"}
-        </span>{" "}
-        Photography
-      </p>
-      <p className="price">
-        starts from <span className="discounted-price">{inclusions.price}</span>{" "}
-        <span className="original-price">{inclusions.originalPrice}</span> (
-        {inclusions.discount})
-      </p>
-      <button className="enquiry-button">QUICK ENQUIRY</button>
-    </div>
-  </div>
-);
+  );
+};
 
 export default HousewarmingPackages;
