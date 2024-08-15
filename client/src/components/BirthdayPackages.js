@@ -1,18 +1,26 @@
 import React, { useState } from "react";
 import birthdaypackages from "../images/bdaypackages.png";
-import birthdayBasicPro from "../images/birthdayBasicPro.png"
-import birthdayBasicPremium from "../images/birthdayBasicPremium.png"
-import birthdayEliteBasic from "../images/birthdayEliteBasic.png"
-import birthdayElitePro from "../images/birthdayElitePro.png"
-import birthdayElitePremium from "../images/birthdayElitePremium.png"
-import birthdayCelebBasic from "../images/birthdayCelebBasic.png"
-import birthdayCelebPro from "../images/birthdayCelebPro.png"
-import birthdayCelebPremium from "../images/birthdayCelebPremium.png"
+import birthdayBasicPro from "../images/birthdayBasicPro.png";
+import birthdayBasicPremium from "../images/birthdayBasicPremium.png";
+import birthdayEliteBasic from "../images/birthdayEliteBasic.png";
+import birthdayElitePro from "../images/birthdayElitePro.png";
+import birthdayElitePremium from "../images/birthdayElitePremium.png";
+import birthdayCelebBasic from "../images/birthdayCelebBasic.png";
+import birthdayCelebPro from "../images/birthdayCelebPro.png";
+import birthdayCelebPremium from "../images/birthdayCelebPremium.png";
 import "../styles/birthday-packages.css";
-
 
 const BirthdayPackages = () => {
   const [activeTab, setActiveTab] = useState("BUDGET");
+  const [selectedPackage, setSelectedPackage] = useState(null);
+
+  const handleReadMore = (packageData) => {
+    setSelectedPackage(packageData); // Set the package data to be shown in the modal
+  };
+
+  const closeModal = () => {
+    setSelectedPackage(null); // Close the modal
+  };
 
   return (
     <div className="package-container">
@@ -60,6 +68,7 @@ const BirthdayPackages = () => {
                 originalPrice: "₹24,999",
                 discount: "5000 OFF",
               }}
+              onReadMoreClick={handleReadMore}
             />
             <PackageSection
               title="Pro Package"
@@ -80,6 +89,7 @@ const BirthdayPackages = () => {
                 originalPrice: "₹44,999",
                 discount: "10,000 OFF",
               }}
+              onReadMoreClick={handleReadMore}
             />
             <PackageSection
               title="Premium Package"
@@ -105,6 +115,7 @@ const BirthdayPackages = () => {
                 originalPrice: "₹64,999",
                 discount: "15,000 OFF",
               }}
+              onReadMoreClick={handleReadMore}
             />
           </>
         )}
@@ -128,6 +139,7 @@ const BirthdayPackages = () => {
                 originalPrice: "₹39,999",
                 discount: "5000 OFF",
               }}
+              onReadMoreClick={handleReadMore}
             />
             <PackageSection
               title="Pro Package"
@@ -152,6 +164,7 @@ const BirthdayPackages = () => {
                 originalPrice: "₹89,999",
                 discount: "15,000 OFF",
               }}
+              onReadMoreClick={handleReadMore}
             />
             <PackageSection
               title="Premium Package"
@@ -176,6 +189,7 @@ const BirthdayPackages = () => {
                 originalPrice: "₹1,29,999",
                 discount: "20,000 OFF",
               }}
+              onReadMoreClick={handleReadMore}
             />
           </>
         )}
@@ -199,6 +213,7 @@ const BirthdayPackages = () => {
                 originalPrice: "₹69,999",
                 discount: "10,000 OFF",
               }}
+              onReadMoreClick={handleReadMore}
             />
             <PackageSection
               title="Pro Package"
@@ -223,6 +238,7 @@ const BirthdayPackages = () => {
                 originalPrice: "₹1,64,999",
                 discount: "15,000 OFF",
               }}
+              onReadMoreClick={handleReadMore}
             />
             <PackageSection
               title="Premium Package"
@@ -247,19 +263,49 @@ const BirthdayPackages = () => {
                 originalPrice: "₹1,99,999",
                 discount: "20,000 OFF",
               }}
+              onReadMoreClick={handleReadMore}
             />{" "}
           </>
         )}
+      </div>
+      {selectedPackage && (
+        <Modal packageData={selectedPackage} onClose={closeModal} />
+      )}
+    </div>
+  );
+};
+
+const Modal = ({ packageData, onClose }) => {
+  const { title, image, details, inclusions } = packageData;
+
+  return (
+    <div className="modal-overlay">
+      <div className="modal-content">
+        <button className="close-button" onClick={onClose}>X</button>
+        <div className="modal-image">
+          <img src={image} alt={title} />
+        </div>
+        <div className="modal-details">
+          <h2>{title}</h2>
+          <ul>
+            {details.map((item, index) => (
+              <li key={index}>{item}</li>
+            ))}
+          </ul>
+          
+          <button className="quick-enquiry-button">QUICK ENQUIRY</button>
+        </div>
       </div>
     </div>
   );
 };
 
-const PackageSection = ({ title, image, details, inclusions }) => {
+
+const PackageSection = ({ title, image, details, inclusions, onReadMoreClick }) => {
   const {
     decoration,
     photography,
-    cakes, 
+    cakes,
     videography,
     album,
     returngift,
@@ -270,6 +316,7 @@ const PackageSection = ({ title, image, details, inclusions }) => {
     discount,
   } = inclusions;
 
+  // When the "Read More" button is clicked, call onReadMoreClick with package data
   return (
     <div className="package-section">
       <div className="package-image">
@@ -282,7 +329,14 @@ const PackageSection = ({ title, image, details, inclusions }) => {
             <li key={index}>{item}</li>
           ))}
         </ul>
-        <a href="#" className="read-more">
+        <a
+          href="#"
+          className="read-more"
+          onClick={(e) => {
+            e.preventDefault(); // Prevent the default anchor link behavior
+            onReadMoreClick({ title, image, details, inclusions });
+          }}
+        >
           READ MORE +
         </a>
       </div>
