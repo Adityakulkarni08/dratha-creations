@@ -68,6 +68,17 @@ const BirthdayPackages = () => {
                 originalPrice: "₹24,999",
                 discount: "5000 OFF",
               }}
+              readMoreDetails={[
+                "Back Drop Decoration",
+                "Entrance Arch",
+                "Welcome Board",
+                "1 Feet Baby name light",
+                "Balloon Bunches in the hall (if allowed at venue)",
+                "Theme Based Cylinder Table",
+                "Cake Table Decoration",
+                "Cup Cake Stand",
+                "Cake Stand",
+              ]}
               onReadMoreClick={handleReadMore}
             />
             <PackageSection
@@ -89,6 +100,17 @@ const BirthdayPackages = () => {
                 originalPrice: "₹44,999",
                 discount: "10,000 OFF",
               }}
+              readMoreDetails={[
+                "Back Drop Decoration",
+                "Entrance Arch",
+                "Welcome Board",
+                "1 Feet Baby name light",
+                "Balloon Bunches in the hall (if allowed at venue)",
+                "Theme Based Cylinder Table",
+                "Cup Cake Stand",
+                "Cake Stand",
+                "Photography (One photographer for Traditional & Candid)",
+              ]}
               onReadMoreClick={handleReadMore}
             />
             <PackageSection
@@ -115,6 +137,20 @@ const BirthdayPackages = () => {
                 originalPrice: "₹64,999",
                 discount: "15,000 OFF",
               }}
+              readMoreDetails={[
+                "Back Drop Decoration",
+                "Entrance Arch",
+                "Welcome Board",
+                "1 Feet Baby name light",
+                "Balloon Bunches in the hall (if allowed at venue)",
+                "Theme Based Cylinder Table",
+                "Cup Cake Stand",
+                "Cake Stand",
+                "Photography (One photographer for Traditional & Candid)",
+                "Cake (3kgs)",
+                "Baby Entry",
+                "Mascot",
+              ]}
               onReadMoreClick={handleReadMore}
             />
           </>
@@ -139,6 +175,19 @@ const BirthdayPackages = () => {
                 originalPrice: "₹39,999",
                 discount: "5000 OFF",
               }}
+              readMoreDetails={[
+                "Theme Decoration(Standard Theme only)",
+                "Enterance Arch",
+                "Welcome Board",
+                "Baby Milestone Board",
+                "Photo collage frame(Photos Should be given by Customer)",
+                "2 Feet Baby Name LED Light - Max 8 letters",
+                "Balloons Bunches in the Hall (If Allowed at Venue)",
+                "Theme Based Cylinder Table",
+                "Cup Cake Stand & Cake Stand",
+                "E invite",
+                "Stick Balloons (30 Nos)",
+              ]}
               onReadMoreClick={handleReadMore}
             />
             <PackageSection
@@ -164,6 +213,22 @@ const BirthdayPackages = () => {
                 originalPrice: "₹89,999",
                 discount: "15,000 OFF",
               }}
+              readMoreDetails={[
+                "Theme Decoration(Standard Theme only)",
+                "Enterance Arch",
+                "Welcome Board",
+                "Baby Milestone Board",
+                "Photo collage frame(Photos Should be given by Customer)",
+                "2 Feet Baby Name LED Light - Max 8 letters",
+                "Balloons Bunches in the Hall (If Allowed at Venue)",
+                "Theme Based Cylinder Table",
+                "Cup Cake Stand & Cake Stand",
+                "E invite",
+                "Stick Balloons (30 Nos)",
+                "Photography (One photographer for Traditional & Candid + 5 minutes video with Event Photos)",
+                "Cake(3kgs)",
+                "Return Gifts (Default Gifts Maximum quantity of 25 Nos & extra at cost)",
+              ]}
               onReadMoreClick={handleReadMore}
             />
             <PackageSection
@@ -189,6 +254,25 @@ const BirthdayPackages = () => {
                 originalPrice: "₹1,29,999",
                 discount: "20,000 OFF",
               }}
+              readMoreDetails={[
+                "Theme Decoration(Standard Theme only)",
+                "Enterance Arch",
+                "Welcome Board",
+                "Baby Milestone Board",
+                "Photo collage frame(Photos Should be given by Customer)",
+                "2 Feet Baby Name LED Light - Max 8 letters",
+                "Balloons Bunches in the Hall (If Allowed at Venue)",
+                "Theme Based Cylinder Table",
+                "Cup Cake Stand",
+                "Cake Stand",
+                "E invite",
+                "Stick Balloons - 30 Nos",
+                "Photography (One photographer for Traditional & Candid + 5 minutes video with Event Photos)",
+                "Cake (4.5kgs)",
+                "Return Gifts (Default Gifts Maximum quantity of 35 Nos & extra at cost)",
+                "Mascot",
+                "DJ",
+              ]}
               onReadMoreClick={handleReadMore}
             />
           </>
@@ -213,6 +297,23 @@ const BirthdayPackages = () => {
                 originalPrice: "₹69,999",
                 discount: "10,000 OFF",
               }}
+              readMoreDetails={[
+                "Customize Back Drop Decor",
+                "Theme Based Floor Mat",
+                "Enterance Arch",
+                "Welcome Board",
+                "Photo Booth With Balloon Standee",
+                "Photo collage frame(Photos Should be given by Customer)",
+                "Balloons Standees - 2 Nos with foam Image",
+                "2 Feet Baby Name LED Light - Max 8 letters",
+                "Balloons Bunches in the Hall (If Allowed at Venue)",
+                "Theme based cylinder table",
+                "Cup Cake Stand",
+                "Cake Stand",
+                "Party accessories",
+                "E-invite",
+                "Baby Milestone Board",
+              ]}
               onReadMoreClick={handleReadMore}
             />
             <PackageSection
@@ -238,6 +339,29 @@ const BirthdayPackages = () => {
                 originalPrice: "₹1,64,999",
                 discount: "15,000 OFF",
               }}
+              readMoreDetails={[
+                "Customize Back Drop Decor",
+                "Theme Based Floor Mat",
+                "Enterance Arch",
+                "Welcome Board",
+                "Photo Booth With Balloon Standee",
+                "Photo collage frame(Photos Should be given by Customer)",
+                "Balloons Standees - 2 Nos with foam Image",
+                "2 Feet Baby Name LED Light - Max 8 letters",
+                "Balloons Bunches in the Hall (If Allowed at Venue)",
+                "Theme based cylinder table",
+                "Cup Cake Stand",
+                "Cake Stand",
+                "Baby Milestone Board",
+                "E-invite",
+                "1 Min Birthday Teaser with given Photos of baby",
+                "Photography & Videography (One Traditional & one Candid Photographer+ One Candid Videographer + 5 minutes video)",
+                "Cake (5kg)",
+                "Return Gifts (Default Gifts will Come Maximum Quantity is 50 Nos and Extra at Cost)",
+                "Mascot",
+                "DJ(single Base and Single Top)",
+                "Party accessories",
+              ]}
               onReadMoreClick={handleReadMore}
             />
             <PackageSection
@@ -263,6 +387,20 @@ const BirthdayPackages = () => {
                 originalPrice: "₹1,99,999",
                 discount: "20,000 OFF",
               }}
+              readMoreDetails={[
+                "Back Drop Decoration",
+                "Enterance Arch",
+                "Welcome Board",
+                "1 Feet Baby name light",
+                "Balloon Bunches in the hall (if allowed at venue)",
+                "Theme Based Cylinder Table",
+                "Cup Cake Stand",
+                "Cake Stand",
+                "Photography (One photographer for Traditional & Candid)",
+                "Cake (3kgs)",
+                "Baby Entry",
+                "Mascot",
+              ]}
               onReadMoreClick={handleReadMore}
             />{" "}
           </>
@@ -276,32 +414,44 @@ const BirthdayPackages = () => {
 };
 
 const Modal = ({ packageData, onClose }) => {
-  const { title, image, details, inclusions } = packageData;
+  const { title, image, details, inclusions, readMoreDetails } = packageData;
 
   return (
     <div className="modal-overlay">
       <div className="modal-content">
-        <button className="close-button" onClick={onClose}>X</button>
+        <button className="close-button" onClick={onClose}>
+          X
+        </button>
         <div className="modal-image">
           <img src={image} alt={title} />
+          <button className="quick-enquiry-button">QUICK ENQUIRY</button>
         </div>
         <div className="modal-details">
           <h2>{title}</h2>
-          <ul>
-            {details.map((item, index) => (
-              <li key={index}>{item}</li>
-            ))}
-          </ul>
-          
-          <button className="quick-enquiry-button">QUICK ENQUIRY</button>
+          <div className="read-more-details">
+            <h3>More Information</h3>
+            <ul className="custom-list">
+              {readMoreDetails.map((item, index) => (
+                <li key={index}>
+                  <span className="bullet">•</span> {item}
+                </li>
+              ))}
+            </ul>
+          </div>
         </div>
       </div>
     </div>
   );
 };
 
-
-const PackageSection = ({ title, image, details, inclusions, onReadMoreClick }) => {
+const PackageSection = ({
+  title,
+  image,
+  details,
+  inclusions,
+  readMoreDetails,
+  onReadMoreClick,
+}) => {
   const {
     decoration,
     photography,
@@ -334,7 +484,13 @@ const PackageSection = ({ title, image, details, inclusions, onReadMoreClick }) 
           className="read-more"
           onClick={(e) => {
             e.preventDefault(); // Prevent the default anchor link behavior
-            onReadMoreClick({ title, image, details, inclusions });
+            onReadMoreClick({
+              title,
+              image,
+              details,
+              inclusions,
+              readMoreDetails,
+            });
           }}
         >
           READ MORE +

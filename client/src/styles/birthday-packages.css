@@ -148,7 +148,8 @@
     max-width: 300px;
   }
 
-  .package-details, .package-inclusions {
+  .package-details,
+  .package-inclusions {
     padding: 10px;
     width: 100%;
   }
@@ -172,29 +173,30 @@
   padding: 20px;
   border-radius: 10px;
   position: relative;
-  max-width: 600px;
-  width: 100%;
+  width: 800px; /* Fixed width for larger modal */
+  height: 600px; /* Fixed height */
+  display: flex; /* Image on left, content on right */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
 }
 
-.close-button {
-  position: absolute;
-  top: 10px;
-  right: 10px;
-  background: none;
-  border: none;
-  font-size: 20px;
-  cursor: pointer;
+.modal-image {
+  position: relative;
+  flex: 0 0 300px; /* Fixed width for the image */
+  height: 100%; /* Image takes full height */
 }
 
 .modal-image img {
   width: 100%;
-  height: auto;
+  height: 100%;
+  object-fit: cover; /* Ensures the image covers the available space */
   border-radius: 10px;
 }
 
 .modal-details {
-  margin-top: 20px;
+  flex: 1;
+  padding: 20px;
+  overflow-y: auto; /* Scrollable content */
 }
 
 .modal-details h2 {
@@ -211,17 +213,52 @@
   padding: 5px 0;
 }
 
-.quick-enquiry-button {
-  background-color: #ff4081;
-  color: white;
+.close-button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: none;
   border: none;
-  padding: 10px 20px;
+  font-size: 20px;
   cursor: pointer;
-  border-radius: 5px;
-  margin-top: 20px;
+}
+
+.quick-enquiry-button {
+  position: absolute;
+  bottom: 20px; /* Position the button towards the bottom of the image */
+  left: 50%; /* Center the button horizontally */
+  transform: translateX(-50%);
+  background-color: #f04e98; /* Button background color */
+  color: white; /* Text color */
+  border: none;
+  padding: 12px 30px; /* Padding for the button */
+  cursor: pointer;
+  border-radius: 50px; /* Rounded corners */
+  font-weight: 700; /* Bold text */
+  font-size: 16px; /* Font size for better readability */
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Optional: add a subtle shadow */
 }
 
 .quick-enquiry-button:hover {
-  background-color: #e73370;
+  background-color: #e73370; /* Slightly darker background color on hover */
 }
 
+.custom-list {
+  list-style: none; /* Removes the default bullet points */
+  padding: 0;
+  margin: 0;
+}
+
+.custom-list li {
+  font-size: 18px; /* Increase font size */
+  margin-bottom: 10px; /* Adds spacing between items */
+  display: flex; /* Align bullet and text horizontally */
+  align-items: center;
+}
+
+.custom-list .bullet {
+  color: #f04e98; /* Set bullet color */
+  margin-right: 10px; /* Space between bullet and text */
+  font-size: 22px; /* Adjust bullet size */
+  line-height: 0; /* Align bullet vertically with text */
+}
