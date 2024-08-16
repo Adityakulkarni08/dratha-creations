@@ -132,6 +132,7 @@
   height: auto;
 }
 
+/* Hide image in mobile view */
 @media (max-width: 768px) {
   .package-content {
     flex-direction: column;
@@ -143,15 +144,32 @@
     align-items: center;
   }
 
-  .package-image img {
-    width: 100%;
-    max-width: 300px;
+  .package-image {
+    display: none; /* Hide the image in mobile view */
   }
 
   .package-details,
   .package-inclusions {
     padding: 10px;
     width: 100%;
+  }
+
+  .modal-content {
+    width: 100%; /* Make modal full-width */
+    height: auto; /* Allow modal height to adjust */
+  }
+
+  .modal-image {
+    display: none; /* Hide modal image in mobile view */
+  }
+
+  .modal-details {
+    padding: 20px;
+    overflow-y: auto; /* Scrollable content */
+  }
+
+  .quick-enquiry-button {
+    bottom: 10px; /* Adjust position for mobile view */
   }
 }
 
