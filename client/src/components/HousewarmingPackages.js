@@ -213,110 +213,111 @@ const Modal = ({ packageData, onClose }) => {
         <button className="close-button" onClick={onClose}>
           X
         </button>
-        <div className="modal-image">
-          <img src={image} alt={title} />
-          <button className="quick-enquiry-button">QUICK ENQUIRY</button>
-        </div>
-        <div className="modal-details">
-          <h2>{title}</h2>
+        <h2 className="modal-title">{title}</h2>
+        <div className="modal-body">
+          <div className="modal-image">
+            <img src={image} alt={title} />
+            <button className="quick-enquiry-button">QUICK ENQUIRY</button>
+          </div>
+          <div className="modal-details">
+            {venueReadMore && (
+              <>
+                <h3>Venue</h3>
+                <ul className="custom-list">
+                  {venueReadMore.map((item, index) => (
+                    <li key={index}>
+                      <span className="bullet">•</span> {item}
+                    </li>
+                  ))}
+                </ul>
+              </>
+            )}
 
-          {venueReadMore && (
-            <>
-              <h3>Venue</h3>
-              <ul className="custom-list">
-                {venueReadMore.map((item, index) => (
-                  <li key={index}>
-                    <span className="bullet">•</span> {item}
-                  </li>
-                ))}
-              </ul>
-            </>
-          )}
+            {decorationReadMore && (
+              <>
+                <h3>Decoration</h3>
+                <ul className="custom-list">
+                  {decorationReadMore.map((item, index) => (
+                    <li key={index}>
+                      <span className="bullet">•</span> {item}
+                    </li>
+                  ))}
+                </ul>
+              </>
+            )}
 
-          {decorationReadMore && (
-            <>
-              <h3>Decoration</h3>
-              <ul className="custom-list">
-                {decorationReadMore.map((item, index) => (
-                  <li key={index}>
-                    <span className="bullet">•</span> {item}
-                  </li>
-                ))}
-              </ul>
-            </>
-          )}
+            {foodReadMore && (
+              <>
+                <h3>Food</h3>
+                <ul className="custom-list">
+                  {foodReadMore.map((item, index) => (
+                    <li key={index}>
+                      <span className="bullet">•</span> {item}
+                    </li>
+                  ))}
+                </ul>
+              </>
+            )}
 
-          {foodReadMore && (
-            <>
-              <h3>Food</h3>
-              <ul className="custom-list">
-                {foodReadMore.map((item, index) => (
-                  <li key={index}>
-                    <span className="bullet">•</span> {item}
-                  </li>
-                ))}
-              </ul>
-            </>
-          )}
+            {PhotographyReadMore && (
+              <>
+                <h3>Photography</h3>
+                <ul className="custom-list">
+                  {PhotographyReadMore.map((item, index) => (
+                    <li key={index}>
+                      <span className="bullet">•</span> {item}
+                    </li>
+                  ))}
+                </ul>
+              </>
+            )}
 
-          {PhotographyReadMore && (
-            <>
-              <h3>Photography</h3>
-              <ul className="custom-list">
-                {PhotographyReadMore.map((item, index) => (
-                  <li key={index}>
-                    <span className="bullet">•</span> {item}
-                  </li>
-                ))}
-              </ul>
-            </>
-          )}
+            {garlandsReadMore && (
+              <>
+                <h3>Garlands</h3>
+                <ul className="custom-list">
+                  {garlandsReadMore.map((item, index) => (
+                    <li key={index}>
+                      <span className="bullet">•</span> {item}
+                    </li>
+                  ))}
+                </ul>
+              </>
+            )}
 
-          {garlandsReadMore && (
-            <>
-              <h3>Garlands</h3>
-              <ul className="custom-list">
-                {garlandsReadMore.map((item, index) => (
-                  <li key={index}>
-                    <span className="bullet">•</span> {item}
-                  </li>
-                ))}
-              </ul>
-            </>
-          )}
+            {returnGiftsReadMore && (
+              <>
+                <h3>Return Gifts</h3>
+                <ul className="custom-list">
+                  {returnGiftsReadMore.map((item, index) => (
+                    <li key={index}>
+                      <span className="bullet">•</span> {item}
+                    </li>
+                  ))}
+                </ul>
+              </>
+            )}
 
-          {returnGiftsReadMore && (
-            <>
-              <h3>Return Gifts</h3>
-              <ul className="custom-list">
-                {returnGiftsReadMore.map((item, index) => (
-                  <li key={index}>
-                    <span className="bullet">•</span> {item}
-                  </li>
-                ))}
-              </ul>
-            </>
-          )}
+            {invitationReadMore && (
+              <>
+                <h3>Invitations</h3>
+                <ul className="custom-list">
+                  {invitationReadMore.map((item, index) => (
+                    <li key={index}>
+                      <span className="bullet">•</span> {item}
+                    </li>
+                  ))}
+                </ul>
+              </>
+            )}
 
-          {invitationReadMore && (
-            <>
-              <h3>Invitations</h3>
-              <ul className="custom-list">
-                {invitationReadMore.map((item, index) => (
-                  <li key={index}>
-                    <span className="bullet">•</span> {item}
-                  </li>
-                ))}
-              </ul>
-            </>
-          )}
-
-          {/* Render conditional sections based on inclusions */}
-          {inclusions.cake && <h3>Wedding Cake</h3>}
-          {inclusions.dj && <h3>DJ</h3>}
-          {inclusions.priest && <h3>Priest</h3>}
-          {inclusions.mangalaVathiyam && <h3>Mangala Vathiyam</h3>}
-          {inclusions.brideGroomEntry && <h3>Bride & Groom Entry</h3>}
+            {/* Render conditional sections based on inclusions */}
+            {inclusions.cake && <h3>Wedding Cake</h3>}
+            {inclusions.dj && <h3>DJ</h3>}
+            {inclusions.priest && <h3>Priest</h3>}
+            {inclusions.mangalaVathiyam && <h3>Mangala Vathiyam</h3>}
+            {inclusions.brideGroomEntry && <h3>Bride & Groom Entry</h3>}
+          </div>
         </div>
       </div>
     </div>
