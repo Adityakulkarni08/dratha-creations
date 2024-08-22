@@ -8,11 +8,13 @@ import birthdayElitePremium from "../images/birthdayElitePremium.png";
 import birthdayCelebBasic from "../images/birthdayCelebBasic.png";
 import birthdayCelebPro from "../images/birthdayCelebPro.png";
 import birthdayCelebPremium from "../images/birthdayCelebPremium.png";
+import EnquiryForm from "./SendEnquiry/EnquiryForm";
 import "../styles/birthday-packages.css";
 
 const BirthdayPackages = () => {
   const [activeTab, setActiveTab] = useState("BUDGET");
   const [selectedPackage, setSelectedPackage] = useState(null);
+  const [isEnquiryFormOpen, setEnquiryFormOpen] = useState(false); // Manage the modal state
 
   const handleReadMore = (packageData) => {
     setSelectedPackage(packageData); // Set the package data to be shown in the modal
@@ -20,6 +22,14 @@ const BirthdayPackages = () => {
 
   const closeModal = () => {
     setSelectedPackage(null); // Close the modal
+  };
+
+  const openEnquiryForm = () => {
+    setEnquiryFormOpen(true); // Open the enquiry form
+  };
+
+  const closeEnquiryForm = () => {
+    setEnquiryFormOpen(false); // Close the enquiry form
   };
 
   return (
@@ -80,6 +90,7 @@ const BirthdayPackages = () => {
                 "Cake Stand",
               ]}
               onReadMoreClick={handleReadMore}
+              onQuickEnquiryClick={openEnquiryForm}
             />
             <PackageSection
               title="Pro Package"
@@ -112,6 +123,8 @@ const BirthdayPackages = () => {
                 "Photography (One photographer for Traditional & Candid)",
               ]}
               onReadMoreClick={handleReadMore}
+              onQuickEnquiryClick={openEnquiryForm}
+
             />
             <PackageSection
               title="Premium Package"
@@ -152,6 +165,8 @@ const BirthdayPackages = () => {
                 "Mascot",
               ]}
               onReadMoreClick={handleReadMore}
+              onQuickEnquiryClick={openEnquiryForm}
+
             />
           </>
         )}
@@ -189,6 +204,8 @@ const BirthdayPackages = () => {
                 "Stick Balloons (30 Nos)",
               ]}
               onReadMoreClick={handleReadMore}
+              onQuickEnquiryClick={openEnquiryForm}
+
             />
             <PackageSection
               title="Pro Package"
@@ -230,6 +247,8 @@ const BirthdayPackages = () => {
                 "Return Gifts (Default Gifts Maximum quantity of 25 Nos & extra at cost)",
               ]}
               onReadMoreClick={handleReadMore}
+              onQuickEnquiryClick={openEnquiryForm}
+
             />
             <PackageSection
               title="Premium Package"
@@ -274,6 +293,8 @@ const BirthdayPackages = () => {
                 "DJ",
               ]}
               onReadMoreClick={handleReadMore}
+              onQuickEnquiryClick={openEnquiryForm}
+
             />
           </>
         )}
@@ -315,6 +336,8 @@ const BirthdayPackages = () => {
                 "Baby Milestone Board",
               ]}
               onReadMoreClick={handleReadMore}
+              onQuickEnquiryClick={openEnquiryForm}
+
             />
             <PackageSection
               title="Pro Package"
@@ -363,6 +386,8 @@ const BirthdayPackages = () => {
                 "Party accessories",
               ]}
               onReadMoreClick={handleReadMore}
+              onQuickEnquiryClick={openEnquiryForm}
+
             />
             <PackageSection
               title="Premium Package"
@@ -402,10 +427,14 @@ const BirthdayPackages = () => {
                 "Mascot",
               ]}
               onReadMoreClick={handleReadMore}
+              onQuickEnquiryClick={openEnquiryForm}
+
             />{" "}
           </>
         )}
       </div>
+      {isEnquiryFormOpen && <EnquiryForm onClose={closeEnquiryForm} />}
+
       {selectedPackage && (
         <Modal packageData={selectedPackage} onClose={closeModal} />
       )}
@@ -451,6 +480,7 @@ const PackageSection = ({
   inclusions,
   readMoreDetails,
   onReadMoreClick,
+  onQuickEnquiryClick,
 }) => {
   const {
     decoration,
@@ -560,7 +590,12 @@ const PackageSection = ({
           starts from <span className="discounted-price">{price}</span>{" "}
           <span className="original-price">{originalPrice}</span> ({discount})
         </p>
-        <button className="enquiry-button">QUICK ENQUIRY</button>
+        <button
+          className="enquiry-button"
+          onClick={onQuickEnquiryClick} // Trigger the enquiry form
+        >
+          QUICK ENQUIRY
+        </button>{" "}
       </div>
     </div>
   );
