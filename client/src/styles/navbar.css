@@ -121,15 +121,10 @@
 @media (max-width: 768px) {
   .whatsapp-icon-mobile {
     display: inline-block; /* Show on mobile view */
+    position: absolute;
+    right: 0; 
   }
 }
-
-@media (min-width: 769px) {
-  .whatsapp-icon-mobile {
-    display: none; /* Hide on desktop view */
-  }
-}
-
 
 /* Mobile Styles */
 @media (max-width: 768px) {
