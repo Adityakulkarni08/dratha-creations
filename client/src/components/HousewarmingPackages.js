@@ -1,14 +1,30 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import birthdaypackages from "../images/bdaypackages.png";
 import houseWarmBasic from "../images/houseWarmBasic.png";
 import houseWarmBudget from "../images/houseWarmBudget.png";
 import houseWarmElite from "../images/houseWarmElite.png";
 import houseWarmCeleb from "../images/houseWarmCeleb.png";
+import EnquiryForm from "./SendEnquiry/EnquiryForm";
+import EnquiryFormMobile from "./MobileComponents/EnquiryFormMobile";
 import "../styles/birthday-packages.css";
 
 const HousewarmingPackages = () => {
   const [activeTab, setActiveTab] = useState("BASIC");
   const [selectedPackage, setSelectedPackage] = useState(null);
+  const [isEnquiryFormOpen, setEnquiryFormOpen] = useState(false); // Manage the modal state
+  const [isMobileView, setIsMobileView] = useState(false);
+
+  // Detect screen size
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobileView(window.innerWidth <= 768); // Detect mobile view
+    };
+
+    handleResize(); // Check on initial render
+    window.addEventListener("resize", handleResize);
+
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
 
   const handleReadMore = (packageData) => {
     setSelectedPackage(packageData); // Set the package data to be shown in the modal
@@ -16,6 +32,14 @@ const HousewarmingPackages = () => {
 
   const closeModal = () => {
     setSelectedPackage(null); // Close the modal
+  };
+
+  const openEnquiryForm = () => {
+    setEnquiryFormOpen(true); // Open the enquiry form
+  };
+
+  const closeEnquiryForm = () => {
+    setEnquiryFormOpen(false); // Close the enquiry form
   };
 
   return (
@@ -73,15 +97,25 @@ const HousewarmingPackages = () => {
                 invitations: false,
                 price: "₹49,999",
               }}
-              decorationReadMore={["Welcome Board",
-                "Entrance Decoration","Main Entrance Decoration","Simple Full House Decoration"
+              decorationReadMore={[
+                "Welcome Board",
+                "Entrance Decoration",
+                "Main Entrance Decoration",
+                "Simple Full House Decoration",
               ]}
               garlandsReadMore={[
-                "Vasakal Malai","Kazhuthu Malai","Extra Malai","Extra Flowers"
+                "Vasakal Malai",
+                "Kazhuthu Malai",
+                "Extra Malai",
+                "Extra Flowers",
               ]}
-              PhotographyReadMore={["Traditional & Candid Photography","Album With 120 Images"]}
+              PhotographyReadMore={[
+                "Traditional & Candid Photography",
+                "Album With 120 Images",
+              ]}
               returnGiftsReadMore={["Thambulam Bags 50Nos"]}
               onReadMoreClick={handleReadMore}
+              onQuickEnquiryClick={openEnquiryForm}
             />
           </>
         )}
@@ -108,13 +142,31 @@ const HousewarmingPackages = () => {
                 invitations: true,
                 price: "₹99,999",
               }}
-              decorationReadMore={["Welcome Board","Entrance Decoration","Main Entrance Decoration","Simple Full House Decoration","Simple Tent","Table 10 Nos","Chairs 50 Nos"]}
-              garlandsReadMore={["Vasakal Malai","Kazhuthu Malai","Extra Malai","Extra Flowers"]}
-              foodReadMore={["Breakfast- 50 Nos","Lunch- 25 Nos"]}
-              PhotographyReadMore={["Traditional & Candid Photography","Album With 120 Images"]}
+              decorationReadMore={[
+                "Welcome Board",
+                "Entrance Decoration",
+                "Main Entrance Decoration",
+                "Simple Full House Decoration",
+                "Simple Tent",
+                "Table 10 Nos",
+                "Chairs 50 Nos",
+              ]}
+              garlandsReadMore={[
+                "Vasakal Malai",
+                "Kazhuthu Malai",
+                "Extra Malai",
+                "Extra Flowers",
+              ]}
+              foodReadMore={["Breakfast- 50 Nos", "Lunch- 25 Nos"]}
+              PhotographyReadMore={[
+                "Traditional & Candid Photography",
+                "Album With 120 Images",
+              ]}
               returnGiftsReadMore={["Thambulam Bags 50Nos"]}
               invitationReadMore={["Printed 75 Nos"]}
               onReadMoreClick={handleReadMore}
+              onQuickEnquiryClick={openEnquiryForm}
+
             />
           </>
         )}
@@ -141,13 +193,33 @@ const HousewarmingPackages = () => {
                 invitations: true,
                 price: "₹1,49,999",
               }}
-              decorationReadMore={["Welcome Board","Entrance Decoration","Main Entrance Decoration","Simple Full House Decoration","Simple Tent","Table 20 Nos","Chairs 100 Nos"]}
-              garlandsReadMore={["Vasakal Malai","Kazhuthu Malai","Extra Malai","Extra Flowers"]}
-              foodReadMore={["Breakfast- 75 Nos","Lunch- 35 Nos"]}
-              PhotographyReadMore={["Traditional & Candid Photography","Videography","Family Frame","Album With 120 Images + Full HD Video in Pendrive"]}
+              decorationReadMore={[
+                "Welcome Board",
+                "Entrance Decoration",
+                "Main Entrance Decoration",
+                "Simple Full House Decoration",
+                "Simple Tent",
+                "Table 20 Nos",
+                "Chairs 100 Nos",
+              ]}
+              garlandsReadMore={[
+                "Vasakal Malai",
+                "Kazhuthu Malai",
+                "Extra Malai",
+                "Extra Flowers",
+              ]}
+              foodReadMore={["Breakfast- 75 Nos", "Lunch- 35 Nos"]}
+              PhotographyReadMore={[
+                "Traditional & Candid Photography",
+                "Videography",
+                "Family Frame",
+                "Album With 120 Images + Full HD Video in Pendrive",
+              ]}
               returnGiftsReadMore={["Thambulam Bags 75 Nos"]}
               invitationReadMore={["Printed 100 Nos"]}
               onReadMoreClick={handleReadMore}
+              onQuickEnquiryClick={openEnquiryForm}
+
             />
           </>
         )}
@@ -172,20 +244,48 @@ const HousewarmingPackages = () => {
                 photography: true,
                 returngift: true,
                 invitations: true,
-                priest:true,
+                priest: true,
                 price: "₹2,49,999",
               }}
-              decorationReadMore={["Welcome Board","Entrance Decoration","Main Entrance Decoration","Celebrity Full House Decoration","Arabian Tent","Table 20 Nos","Chairs 150 Nos"]}
-              garlandsReadMore={["Vasakal Malai","Kazhuthu Malai","Extra Malai","Extra Flowers"]}
-              foodReadMore={["Breakfast- 100 Nos","Lunch- 50 Nos"]}
-              PhotographyReadMore={["Traditional & Candid Photography","Videography","Family Frame","Album With 120 Images + Full HD Video in Pendrive"]}
+              decorationReadMore={[
+                "Welcome Board",
+                "Entrance Decoration",
+                "Main Entrance Decoration",
+                "Celebrity Full House Decoration",
+                "Arabian Tent",
+                "Table 20 Nos",
+                "Chairs 150 Nos",
+              ]}
+              garlandsReadMore={[
+                "Vasakal Malai",
+                "Kazhuthu Malai",
+                "Extra Malai",
+                "Extra Flowers",
+              ]}
+              foodReadMore={["Breakfast- 100 Nos", "Lunch- 50 Nos"]}
+              PhotographyReadMore={[
+                "Traditional & Candid Photography",
+                "Videography",
+                "Family Frame",
+                "Album With 120 Images + Full HD Video in Pendrive",
+              ]}
               returnGiftsReadMore={["Thambulam Bags 100Nos"]}
               invitationReadMore={["Printed 150 Nos"]}
               onReadMoreClick={handleReadMore}
+              onQuickEnquiryClick={openEnquiryForm}
+
             />
           </>
         )}
       </div>
+
+      {isEnquiryFormOpen &&
+        (isMobileView ? (
+          <EnquiryFormMobile onClose={closeEnquiryForm} />
+        ) : (
+          <EnquiryForm onClose={closeEnquiryForm} />
+        ))}
+
       {selectedPackage && (
         <Modal packageData={selectedPackage} onClose={closeModal} />
       )}
@@ -337,6 +437,7 @@ const PackageSection = ({
   returnGiftsReadMore,
   invitationReadMore,
   onReadMoreClick,
+  onQuickEnquiryClick,
 }) => {
   const {
     decoration,
@@ -426,11 +527,15 @@ const PackageSection = ({
           </span>{" "}
           Invitations
         </p>
-
         <p className="price">
           starts from <span className="discounted-price">{price}</span>
         </p>
-        <button className="enquiry-button">QUICK ENQUIRY</button>
+        <button
+          className="enquiry-button"
+          onClick={onQuickEnquiryClick} // Trigger the enquiry form
+        >
+          QUICK ENQUIRY
+        </button>{" "}
       </div>
     </div>
   );

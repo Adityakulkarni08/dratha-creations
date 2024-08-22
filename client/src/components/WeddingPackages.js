@@ -1,13 +1,29 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import birthdaypackages from "../images/bdaypackages.png";
 import weddingBudget from "../images/weddingBudget.png";
 import weddingElite from "../images/weddingElite.png";
 import weddingCeleb from "../images/weddingCeleb.png";
+import EnquiryForm from "./SendEnquiry/EnquiryForm";
+import EnquiryFormMobile from "./MobileComponents/EnquiryFormMobile";
 import "../styles/birthday-packages.css";
 
 const WeddingPackages = () => {
   const [activeTab, setActiveTab] = useState("BUDGET");
   const [selectedPackage, setSelectedPackage] = useState(null);
+  const [isEnquiryFormOpen, setEnquiryFormOpen] = useState(false); // Manage the modal state
+  const [isMobileView, setIsMobileView] = useState(false);
+
+  // Detect screen size
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobileView(window.innerWidth <= 768); // Detect mobile view
+    };
+
+    handleResize(); // Check on initial render
+    window.addEventListener("resize", handleResize);
+
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
 
   const handleReadMore = (packageData) => {
     setSelectedPackage(packageData); // Set the package data to be shown in the modal
@@ -15,6 +31,14 @@ const WeddingPackages = () => {
 
   const closeModal = () => {
     setSelectedPackage(null); // Close the modal
+  };
+
+  const openEnquiryForm = () => {
+    setEnquiryFormOpen(true); // Open the enquiry form
+  };
+
+  const closeEnquiryForm = () => {
+    setEnquiryFormOpen(false); // Close the enquiry form
   };
 
   return (
@@ -113,6 +137,7 @@ const WeddingPackages = () => {
               entertainmentReadMore={[false]}
               invitationReadMore={[false]}
               onReadMoreClick={handleReadMore}
+              onQuickEnquiryClick={openEnquiryForm}
             />
           </>
         )}
@@ -197,6 +222,7 @@ const WeddingPackages = () => {
               ]}
               invitationReadMore={["Printed Invitations (500 Nos)"]}
               onReadMoreClick={handleReadMore}
+              onQuickEnquiryClick={openEnquiryForm}
             />
           </>
         )}
@@ -299,10 +325,19 @@ const WeddingPackages = () => {
                 { title: "DJ" },
               ]}
               onReadMoreClick={handleReadMore}
+              onQuickEnquiryClick={openEnquiryForm}
             />
           </>
         )}
       </div>
+
+      {isEnquiryFormOpen &&
+        (isMobileView ? (
+          <EnquiryFormMobile onClose={closeEnquiryForm} />
+        ) : (
+          <EnquiryForm onClose={closeEnquiryForm} />
+        ))}
+
       {selectedPackage && (
         <Modal packageData={selectedPackage} onClose={closeModal} />
       )}
@@ -529,6 +564,7 @@ const PackageSection = ({
   invitationReadMore,
   lightMusicReadMore,
   onReadMoreClick,
+  onQuickEnquiryClick,
 }) => {
   const {
     decoration,
@@ -653,8 +689,12 @@ const PackageSection = ({
             Family Makeup
           </p>
         )}
-
-        <button className="enquiry-button">QUICK ENQUIRY</button>
+        <button
+          className="enquiry-button"
+          onClick={onQuickEnquiryClick} // Trigger the enquiry form
+        >
+          QUICK ENQUIRY
+        </button>{" "}
       </div>
     </div>
   );
