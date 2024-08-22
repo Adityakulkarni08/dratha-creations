@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import birthdaypackages from "../images/bdaypackages.png";
 import birthdayBasicPro from "../images/birthdayBasicPro.png";
 import birthdayBasicPremium from "../images/birthdayBasicPremium.png";
@@ -9,12 +9,27 @@ import birthdayCelebBasic from "../images/birthdayCelebBasic.png";
 import birthdayCelebPro from "../images/birthdayCelebPro.png";
 import birthdayCelebPremium from "../images/birthdayCelebPremium.png";
 import EnquiryForm from "./SendEnquiry/EnquiryForm";
+import EnquiryFormMobile from "./MobileComponents/EnquiryFormMobile"
 import "../styles/birthday-packages.css";
 
 const BirthdayPackages = () => {
   const [activeTab, setActiveTab] = useState("BUDGET");
   const [selectedPackage, setSelectedPackage] = useState(null);
   const [isEnquiryFormOpen, setEnquiryFormOpen] = useState(false); // Manage the modal state
+  const [isMobileView, setIsMobileView] = useState(false);
+
+  // Detect screen size
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobileView(window.innerWidth <= 768); // Detect mobile view
+    };
+
+    handleResize(); // Check on initial render
+    window.addEventListener("resize", handleResize);
+
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
 
   const handleReadMore = (packageData) => {
     setSelectedPackage(packageData); // Set the package data to be shown in the modal
@@ -433,8 +448,12 @@ const BirthdayPackages = () => {
           </>
         )}
       </div>
-      {isEnquiryFormOpen && <EnquiryForm onClose={closeEnquiryForm} />}
-
+      {isEnquiryFormOpen &&
+        (isMobileView ? (
+          <EnquiryFormMobile onClose={closeEnquiryForm} />
+        ) : (
+          <EnquiryForm onClose={closeEnquiryForm} />
+        ))}
       {selectedPackage && (
         <Modal packageData={selectedPackage} onClose={closeModal} />
       )}
