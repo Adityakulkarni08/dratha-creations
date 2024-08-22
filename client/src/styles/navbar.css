@@ -120,9 +120,11 @@
 
 @media (max-width: 768px) {
   .whatsapp-icon-mobile {
-    display: inline-block; /* Show on mobile view */
+    display: inline-block;
     position: absolute;
-    right: 0; 
+    right: 40px; /* Move it a bit left from the edge (adjust the value as needed) */
+    top: 50%;
+    transform: translateY(-50%);
   }
 }
 
