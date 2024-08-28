@@ -1,0 +1,19 @@
+version: '3.8'
+
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    environment:
+      - MONGO_URL=mongodb+srv://rangachimalgi123:Tacmp%40123@cluster0.yosnvuo.mongodb.net/druthi
+      - DB_CONNECT=false
+    ports:
+      - "8087:8087"
+    depends_on:
+      - mongo
+
+  mongo:
+    image: mongo:latest
+    ports:
+      - "27017:27017"

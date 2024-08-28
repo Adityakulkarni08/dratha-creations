@@ -21,7 +21,12 @@ const upload = multer({ storage: storage });
 dotenv.config();
 
 //connect to database
-connectDB();
+const startApp = async () => {
+  await connectDB();  // Connect to the database
+  
+  // Your application logic here
+  console.log('Application started.');
+};
 
 const app = express();
 
