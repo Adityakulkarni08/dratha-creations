@@ -6,10 +6,14 @@ services:
       context: .
       dockerfile: Dockerfile
     environment:
-      - MONGO_URL=mongodb+srv://rangachimalgi123:Tacmp%40123@cluster0.yosnvuo.mongodb.net/druthi
-      - DB_CONNECT=false
+      # Direct environment variable definition
+      - ENV_VAR_NAME=value
+    env_file:
+      # External environment file
+      - .env
     ports:
-      - "8087:8087"
+      # Correct port mapping
+      - "8080:80"
     depends_on:
       - mongo
 
