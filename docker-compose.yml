@@ -8,12 +8,12 @@ services:
     environment:
       # Direct environment variable definition
       - ENV_VAR_NAME=value
-    env_file:
+      # env_file:
       # External environment file
-      - .env
+      # - .env
     ports:
       # Correct port mapping
-      - "8080:80"
+      - "8087:8087"
     depends_on:
       - mongo
 
@@ -21,3 +21,4 @@ services:
     image: mongo:latest
     ports:
       - "27017:27017"
+
